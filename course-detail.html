@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Details | Toppers Guru</title>
+    <meta name="description" content="Get comprehensive course details, syllabus outlines, and class schedules at Toppers Guru Krishna Nagar, Delhi." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=2.0" />
+  </head>
+  <body>
+
+    <!-- Header / Navbar Section -->
+    <header id="header-container" data-active=""></header>
+
+    <!-- Main Content -->
+    <main class="bg-gradient-soft min-h-screen pt-5 mt-5">
+      <div class="container pt-5 pb-5">
+        
+        <!-- Back Link -->
+        <div class="mb-4">
+          <a href="courses.html" class="text-decoration-none text-orange fw-bold d-inline-flex align-items-center gap-2 hover-navy">
+            <i class="fa-solid fa-arrow-left-long"></i> <span data-i18n="courseDetail.backToCourses">Back to Courses</span>
+          </a>
+        </div>
+
+        <div class="row gy-5">
+          <!-- Left Main Detail Block -->
+          <div class="col-lg-8">
+            <div class="bg-white rounded-4 p-4 p-md-5 border shadow-sm">
+              <span class="positioning-line" id="courseCategory" data-i18n="courseDetail.programDetails">Program Details</span>
+              <h1 class="heading-section text-navy fs-1 mb-4" id="courseTitle" data-i18n="courseDetail.comprehensiveProgram">Comprehensive Course Program</h1>
+              
+              <!-- Tag for Fee -->
+              <div class="mb-4 d-none" id="courseFeeWrapper">
+                <span class="badge bg-orange py-2 px-3 text-white rounded-3 fs-6" id="courseFee">Fee: -</span>
+              </div>
+
+              <p class="fs-5 text-muted leading-relaxed mb-5" id="courseDesc" data-i18n="courseDetail.programDesc">
+                Join our expertly crafted program designed to build strong fundamentals and ensure academic success.
+              </p>
+
+              <!-- Quick Perks Grid -->
+              <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                  <div class="p-3 rounded-3 bg-slate border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                    <i class="fa-solid fa-calendar-check text-orange fs-3 mb-2"></i>
+                    <span class="fw-bold text-navy" data-i18n="courseDetail.flexibleTiming">Flexible Timing</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded-3 bg-slate border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                    <i class="fa-solid fa-book text-orange fs-3 mb-2"></i>
+                    <span class="fw-bold text-navy" data-i18n="courseDetail.studyMaterial">Study Material</span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded-3 bg-slate border text-center h-100 d-flex flex-column align-items-center justify-content-center">
+                    <i class="fa-solid fa-user-graduate text-orange fs-3 mb-2"></i>
+                    <span class="fw-bold text-navy" data-i18n="courseDetail.expertFaculty">Expert Faculty</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Learning Objectives -->
+              <div class="border-top pt-4">
+                <h3 class="font-display text-navy mb-4" data-i18n="courseDetail.whatYouWillLearn">What You Will Learn</h3>
+                <ul class="list-unstyled space-y-3 mb-0">
+                  <li class="d-flex align-items-start gap-3 mb-3">
+                    <i class="fa-solid fa-circle-check text-orange fs-5 mt-1"></i>
+                    <span class="text-muted fs-6">Complete syllabus coverage with in-depth conceptual clarity.</span>
+                  </li>
+                  <li class="d-flex align-items-start gap-3 mb-3">
+                    <i class="fa-solid fa-circle-check text-orange fs-5 mt-1"></i>
+                    <span class="text-muted fs-6">Regular mock tests and computer-based assessment runs.</span>
+                  </li>
+                  <li class="d-flex align-items-start gap-3 mb-3">
+                    <i class="fa-solid fa-circle-check text-orange fs-5 mt-1"></i>
+                    <span class="text-muted fs-6">Personalized attention for weak students and concept mapping tricks.</span>
+                  </li>
+                  <li class="d-flex align-items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-orange fs-5 mt-1"></i>
+                    <span class="text-muted fs-6">Previous year question paper analysis, revisions, and exam strategies.</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Sidebar Booking Form -->
+          <div class="col-lg-4">
+            <div class="form-card sticky-lg-top" style="top: 100px;">
+              <h3 class="form-title" data-i18n="courseDetail.enquireNow">Enquire Now</h3>
+              <p class="form-subtitle" data-i18n="courseDetail.fillForm">Fill out the form below to get complete details about this course.</p>
+              
+              <form id="enquiryForm">
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label"><span data-i18n="contact.sendInquiry">Full Name</span> *</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="Enter your full name" required />
+                </div>
+                
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="emailInput" placeholder="Enter your email (optional)" />
+                </div>
+                
+                <div class="mb-3">
+                  <label for="phoneInput" class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phoneInput" placeholder="Enter 10-digit mobile number" required />
+                </div>
+                
+                <div class="mb-4">
+                  <label for="courseSelect" class="form-label">Course Interest *</label>
+                  <select class="form-select" id="courseSelect" required>
+                    <option value="" disabled>Select a course</option>
+                    <option value="nios" selected>NIOS / BOSSE</option>
+                    <option value="cbse">CBSE Coaching</option>
+                    <option value="cuet">CUET / CLAT</option>
+                    <option value="distance">Distance Education</option>
+                    <option value="skill">Skill Courses</option>
+                    <option value="mnemonic">Mnemonics Science</option>
+                    <option value="ai">AI Learning</option>
+                    <option value="prof">Professional Courses</option>
+                  </select>
+                </div>
+                
+                <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display" data-i18n="home.enquireNow">Enquire Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer-container"></footer>
+
+    <!-- Custom On-page Popup Dialog -->
+    <div class="alert-popup-overlay" id="successOverlay">
+      <div class="alert-popup">
+        <div class="mb-4">
+          <span class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle" style="width: 70px; height: 70px; font-size: 32px;">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+        </div>
+        <h3 class="font-display font-weight-800 text-navy mb-3" data-i18n="success.title">Inquiry Submitted!</h3>
+        <p class="text-muted mb-4" data-i18n="success.desc">
+          Thank you for your interest. Our academic counselors will get back to you shortly to guide you through the process.
+        </p>
+        <button class="btn btn-premium btn-navy-outline px-4 py-2 font-display" id="closeAlertBtn" data-i18n="success.backBtn">Close Window</button>
+      </div>
+    </div>
+
+    <!-- Floating Quick Actions -->
+    <a href="https://wa.me/919315593990" class="whatsapp-floating shadow-lg animate-pulse" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <a href="tel:+919315593990" class="phone-floating shadow-lg" aria-label="Call Now">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Bootstrap 5 Bundle JS (contains Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Global Custom JavaScript -->
+    <script src="js/component.js"></script>
+  <script src="js/main.js?v=2.0"></script>
+    
+    <script>
+      // Auto-set copyright year
+      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+      // Courses database for dynamic client lookup
+      const coursesData = {
+        "nios-10": { name: "Class 10 (NIOS)", category: "NIOS/BOSSE", formVal: "nios", fee: "₹600/month", description: "Complete secondary education through NIOS board with expert guidance, assignment files, and study syllabus assistance." },
+        "nios-12": { name: "Class 12 (NIOS)", category: "NIOS/BOSSE", formVal: "nios", fee: "₹700/month", description: "Senior secondary education with flexible subject options, practical file support, and board exam guidance." },
+        "bosse-10": { name: "Class 10 (BOSSE)", category: "NIOS/BOSSE", formVal: "nios", fee: "₹600/month", description: "Board of Open Schooling and Skill Education secondary program with concept notes and examination assistance." },
+        "bosse-12": { name: "Class 12 (BOSSE)", category: "NIOS/BOSSE", formVal: "nios", fee: "₹700/month", description: "Board of Open Schooling and Skill Education senior secondary program with assignment files and marksheet counselling." },
+        "academic-support": { name: "Full Academic Support", category: "NIOS/BOSSE", formVal: "nios", description: "Comprehensive tutoring support including Tutor Marked Assignments (TMA), practical files preparation, and previous year board questions solving." },
+        "cbse-1-5": { name: "Class 1–5 Tuition", category: "CBSE Coaching", formVal: "cbse", description: "Foundational primary school coaching focusing on basics, creative mapping, and conceptual clarity across all subjects." },
+        "cbse-6-10": { name: "Class 6–10 Tuition", category: "CBSE Coaching", formVal: "cbse", description: "Conceptual coaching for secondary and middle school students with weekly mock tests, subject guidance, and performance reports." },
+        "commerce": { name: "Class 11–12 Commerce", category: "CBSE Coaching", formVal: "cbse", description: "Expert board coaching for Accountancy, Business Studies, Economics, and Mathematics by specialized educators." },
+        "humanities": { name: "Class 11–12 Humanities", category: "CBSE Coaching", formVal: "cbse", description: "Comprehensive coaching for History, Political Science, Geography, Sociology, and English with board writing tips." },
+        "cuet": { name: "CUET Preparation", category: "CUET/CLAT", formVal: "cuet", description: "Crack admissions in Delhi University (DU), BHU, JNU, and top central universities with our computer-based entrance prep course." },
+        "clat": { name: "CLAT Preparation", category: "CUET/CLAT", formVal: "cuet", description: "Target top National Law Universities (NLUs) with our professional law entrance program covering legal reasoning, aptitude, and mock tests." },
+        "judiciary": { name: "Judiciary Foundation", category: "CUET/CLAT", formVal: "cuet", description: "Early Concept foundation classes for undergraduate law aspirants looking to clear judicial service examinations." },
+        "mock-test": { name: "Entrance Mock Test Program", category: "CUET/CLAT", formVal: "cuet", description: "NTA-simulated online testing engine with mock series, topic analysis, and expert domain test reviews." },
+        "distance-ug": { name: "Distance Graduation (BA, B.Com, BBA)", category: "Distance Education", formVal: "distance", description: "UGC & DEB approved undergraduate programs. Complete counseling, assignment guidance, and university coordination." },
+        "distance-pg": { name: "Distance Post Graduation (MA, M.Com, MBA)", category: "Distance Education", formVal: "distance", description: "Advance your corporate profile with recognized MBA, MA, and M.Com distance courses from approved universities." },
+        "distance-dip": { name: "Distance Certificate & Diploma", category: "Distance Education", formVal: "distance", description: "Short-term university diplomas in libraries, management, operations, and IT." },
+        "ecce": { name: "ECCE & Pre-Primary Teacher Training", category: "Distance Education", formVal: "distance", description: "Early Childhood Care & Education certificate and Pre-Primary Teacher Training for nursery school teaching careers." },
+        "digital-marketing": { name: "Digital Marketing Certification", category: "Skill Courses", formVal: "skill", description: "NSDC aligned professional training program covering Search Engine Optimization (SEO), Social Media, Search Ads, and analytics." },
+        "computer-skills": { name: "Computer & IT Skills", category: "Skill Courses", formVal: "skill", description: "Practical IT skills, programming foundations, Microsoft Office, web design, and operating systems certification." },
+        "tally": { name: "Tally Prime & GST Accounting", category: "Skill Courses", formVal: "skill", description: "Accounting skills training covering Tally Prime, double-entry bookkeeping, GST returns, invoice filing, and balance sheets." },
+        "electrician": { name: "NSDC Electrician Training", category: "Skill Courses", formVal: "skill", description: "Practical vocational training for building electricians, line installations, electrical safety, and maintenance work." },
+        "healthcare": { name: "Healthcare & Paramedical Support", category: "Skill Courses", formVal: "skill", description: "Vocational training for nursing support, first-aid care, laboratory assistants, and paramedical care." },
+        "hospitality": { name: "Hospitality Management", category: "Skill Courses", formVal: "skill", description: "Vocational hospitality training covering front office management, hotel desk operations, and communication skills." },
+        "memory-course": { name: "Mnemonics Memory Course", category: "Mnemonics Science", formVal: "mnemonic", description: "Scientific associations, Speed Reading, and mind mapping to memorize long answers, years, formulas, and vocabularies easily." },
+        "fast-learning": { name: "Speed Study & Fast Learning", category: "Mnemonics Science", formVal: "mnemonic", description: "Spaced repetition and active recall techniques designed to save hours of study time and speed up revisions." },
+        "concept-clarity": { name: "Concept Clarity & Visualization", category: "Mnemonics Science", formVal: "mnemonic", description: "Visual training that converts dry text into vivid diagrams and interactive mind maps for faster retention." },
+        "special-weak": { name: "Memory Program for Weak Students", category: "Mnemonics Science", formVal: "mnemonic", description: "Targeted coaching for students struggling with low concentration, exam anxiety, and forgetfulness." },
+        "ai-learning": { name: "AI Learning Program", category: "AI Learning", formVal: "ai", description: "Introduction to Artificial Intelligence tools, prompt engineering, and core technology paradigms for students." },
+        "smart-study": { name: "Smart Study Systems", category: "AI Learning", formVal: "ai", description: "Utilize artificial intelligence study planners and digital flashcards to optimize exam preparation schedules." },
+        "personalized-learning": { name: "Adaptive Personalized Learning", category: "AI Learning", formVal: "ai", description: "Custom computer-led learning paths that adjust study load automatically according to student scores." },
+        "law": { name: "LLB / BA LLB Guidance", category: "Professional Courses", formVal: "prof", description: "Admission guidance, university mapping, and counseling support for professional law programs." },
+        "teacher-training": { name: "B.Ed / M.Ed Coaching", category: "Professional Courses", formVal: "prof", description: "Teacher training degree program admissions guidance and subject prep from recognized universities." },
+        "ecce-prof": { name: "Early Childhood Teacher Training", category: "Professional Courses", formVal: "prof", description: "Professional certification for early childhood care and pre-primary teaching careers." },
+        "paramedical-prof": { name: "Paramedical Degree/Diploma", category: "Professional Courses", formVal: "prof", description: "Advanced medical laboratory technology and nursing diploma admission counseling." },
+        "pharmacy": { name: "B.Pharma / D.Pharma admissions", category: "Professional Courses", formVal: "prof", description: "Pharmacy degree and diploma admission counseling and course outline alignment." },
+        "medical": { name: "Ayush medical courses (BAMS/BHMS/BUMS)", category: "Professional Courses", formVal: "prof", description: "Medical undergraduate Ayush and dental programs counseling and selection guidance." }
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('id');
+
+        if (courseId && coursesData[courseId]) {
+          const course = coursesData[courseId];
+          
+          // Set text
+          document.getElementById('courseTitle').textContent = course.name;
+          document.getElementById('courseCategory').textContent = course.category;
+          document.getElementById('courseDesc').textContent = course.description;
+          
+          // Remove translating attribute so text displays correctly
+          document.getElementById('courseTitle').removeAttribute('data-i18n');
+          document.getElementById('courseCategory').removeAttribute('data-i18n');
+          document.getElementById('courseDesc').removeAttribute('data-i18n');
+
+          // Handle Fee display
+          if (course.fee) {
+            document.getElementById('courseFee').textContent = "Fee: " + course.fee;
+            document.getElementById('courseFeeWrapper').classList.remove('d-none');
+          } else {
+            document.getElementById('courseFeeWrapper').classList.add('d-none');
+          }
+
+          // Pre-select in select form dropdown
+          const courseSelect = document.getElementById('courseSelect');
+          if (courseSelect) {
+            courseSelect.value = course.formVal;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

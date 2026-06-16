@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details | Toppers Guru</title>
+    <meta name="description" content="Read expert academic tips, guides, and exam strategies from Toppers Guru coaching institute." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=2.0" />
+  </head>
+  <body>
+
+    <!-- Header / Navbar Section -->
+    <header id="header-container" data-active=""></header>
+
+    <!-- Main Content -->
+    <main class="bg-gradient-soft min-h-screen pt-5 mt-5">
+      <div class="container pt-5 pb-5">
+        
+        <!-- Back Link -->
+        <div class="mb-4">
+          <a href="blog.html" class="text-decoration-none text-orange fw-bold d-inline-flex align-items-center gap-2 hover-navy">
+            <i class="fa-solid fa-arrow-left-long"></i> <span>Back to Blogs</span>
+          </a>
+        </div>
+
+        <!-- Article Layout -->
+        <div class="row gy-5">
+          <div class="col-lg-8">
+            <article class="bg-white rounded-4 p-4 p-md-5 border shadow-sm">
+              <div class="mb-4">
+                <span class="badge bg-orange text-white py-2 px-4 rounded-pill fs-7" id="postCategory">Category</span>
+              </div>
+              <h1 class="heading-section text-navy fs-2 mb-4" id="postTitle">Loading Article...</h1>
+              
+              <div class="d-flex gap-4 text-muted text-sm mb-5 pb-3 border-bottom font-semibold">
+                <span><i class="fa-solid fa-calendar me-2 text-orange"></i><span id="postDate">Date</span></span>
+                <span><i class="fa-solid fa-user me-2 text-orange"></i><span id="postAuthor">Author</span></span>
+              </div>
+
+              <!-- Main Post Image -->
+              <div class="mb-5 overflow-hidden rounded-4 shadow-sm" style="max-height: 420px;">
+                <img src="" alt="" id="postImage" class="w-100 h-auto object-fit-cover" />
+              </div>
+
+              <!-- Content Body -->
+              <div class="fs-5 text-muted leading-relaxed" id="postContent">
+                Loading...
+              </div>
+
+            </article>
+          </div>
+
+          <!-- Right Sidebar counsellor request -->
+          <div class="col-lg-4">
+            <div class="form-card sticky-lg-top" style="top: 100px;">
+              <h3 class="form-title">Need Assistance?</h3>
+              <p class="form-subtitle">Fill out the form below and our academic counselor will get in touch with you shortly.</p>
+              
+              <form id="enquiryForm">
+                <div class="mb-3">
+                  <label for="nameInput" class="form-label"><span data-i18n="contact.sendInquiry">Full Name</span> *</label>
+                  <input type="text" class="form-control" id="nameInput" placeholder="Enter your full name" required />
+                </div>
+                
+                <div class="mb-3">
+                  <label for="emailInput" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="emailInput" placeholder="Enter your email (optional)" />
+                </div>
+                
+                <div class="mb-3">
+                  <label for="phoneInput" class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phoneInput" placeholder="Enter 10-digit mobile number" required />
+                </div>
+                
+                <div class="mb-4">
+                  <label for="courseSelect" class="form-label">Course Interest *</label>
+                  <select class="form-select" id="courseSelect" required>
+                    <option value="" disabled selected>Select a course</option>
+                    <option value="nios">NIOS / BOSSE</option>
+                    <option value="cbse">CBSE Coaching</option>
+                    <option value="cuet">CUET / CLAT</option>
+                    <option value="distance">Distance Education</option>
+                    <option value="skill">Skill Courses</option>
+                  </select>
+                </div>
+                
+                <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display" data-i18n="home.enquireNow">Submit Request</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer-container"></footer>
+
+    <!-- Custom On-page Popup Dialog -->
+    <div class="alert-popup-overlay" id="successOverlay">
+      <div class="alert-popup">
+        <div class="mb-4">
+          <span class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle" style="width: 70px; height: 70px; font-size: 32px;">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+        </div>
+        <h3 class="font-display font-weight-800 text-navy mb-3" data-i18n="success.title">Inquiry Submitted!</h3>
+        <p class="text-muted mb-4" data-i18n="success.desc">
+          Thank you for your interest. Our academic counselors will get back to you shortly to guide you through the process.
+        </p>
+        <button class="btn btn-premium btn-navy-outline px-4 py-2 font-display" id="closeAlertBtn" data-i18n="success.backBtn">Close Window</button>
+      </div>
+    </div>
+
+    <!-- Floating Quick Actions -->
+    <a href="https://wa.me/919315593990" class="whatsapp-floating shadow-lg animate-pulse" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <a href="tel:+919315593990" class="phone-floating shadow-lg" aria-label="Call Now">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Bootstrap 5 Bundle JS (contains Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Global Custom JavaScript -->
+    <script src="js/component.js"></script>
+  <script src="js/main.js?v=2.0"></script>
+    
+    <script>
+      // Auto-set copyright year
+      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+      // Articles database for dynamic client lookup
+      const blogsData = {
+        "nios-help-desk": {
+          title: "NIOS Guidance Help Desk",
+          category: "Help Desk",
+          date: "April 10, 2026",
+          author: "NIOS Expert Team",
+          image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+          content: `
+            <p>Welcome to the Toppers Guru NIOS Guidance Help Desk. We understand that navigating the National Institute of Open Schooling (NIOS) system can sometimes be confusing. Our dedicated team is here to provide complete assistance.</p>
+            <h3>How We Can Help You:</h3>
+            <ul>
+              <li><strong>Admission Assistance:</strong> Step-by-step guidance for online admission, document verification, and fee payment.</li>
+              <li><strong>Subject Selection:</strong> Expert advice on choosing the right subjects based on your future career goals.</li>
+              <li><strong>TMA & Practicals:</strong> Support for Tutor Marked Assignments (TMA) and practical file preparation.</li>
+              <li><strong>Exam Strategy:</strong> Customized study plans and important question banks to ensure you pass with flying colors.</li>
+            </ul>
+            <p>Don't let confusion delay your education. Fill out the inquiry form below, and our NIOS expert will contact you shortly.</p>
+          `
+        },
+        "cuet-help-desk": {
+          title: "CUET Guidance Help Desk",
+          category: "Help Desk",
+          date: "April 12, 2026",
+          author: "CUET Strategy Team",
+          image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45",
+          content: `
+            <p>The Common University Entrance Test (CUET) is your gateway to India's top central universities. The Toppers Guru CUET Help Desk is designed to simplify your preparation journey.</p>
+            <h3>Our Support Services:</h3>
+            <ul>
+              <li><strong>University & Course Mapping:</strong> Helping you map your domain subjects to the specific requirements of your target universities.</li>
+              <li><strong>Form Filling Assistance:</strong> Ensuring error-free application submission to avoid rejections.</li>
+              <li><strong>Mock Tests & Analysis:</strong> Access to our premium test series that simulates the actual NTA testing environment.</li>
+              <li><strong>Counseling:</strong> Post-exam counseling for university preference filling and admission rounds.</li>
+            </ul>
+            <p>Start your CUET preparation on the right track. Reach out to us via the form below for personalized guidance.</p>
+          `
+        },
+        "nios-guide": {
+          title: "NIOS Admission 2026: Complete Guide and Important Dates",
+          category: "NIOS",
+          date: "March 15, 2026",
+          author: "Academic Counselor",
+          image: "https://images.unsplash.com/photo-1687600154329-150952c73169",
+          content: `
+            <p>The National Institute of Open Schooling (NIOS) is a highly respected open education board in India under the Ministry of Education. It allows students to complete their Class 10th and 12th with maximum flexibility. In this guide, we outline the admission process for the 2026 stream.</p>
+            <h3>1. Key Registration Streams:</h3>
+            <ul>
+              <li><strong>Stream 1 (Block 1):</strong> Exams held in April/May. Registration usually closes in July of the previous year.</li>
+              <li><strong>Stream 1 (Block 2):</strong> Exams held in October/November. Registration begins in January and runs through March.</li>
+              <li><strong>Stream 2:</strong> Specifically for students who have previously failed in other school boards to transfer credits (TOC) and reappear quickly.</li>
+            </ul>
+            <h3>2. Required Registration Documents:</h3>
+            <ul>
+              <li>Valid Aadhaar Card or Identity Proof</li>
+              <li>Recent Passport Size Photograph</li>
+              <li>Signature Scan</li>
+              <li>Address Proof (Rent agreement, water/electricity bill, or Aadhaar)</li>
+              <li>Class 8th Certificate (for Class 10 admission) or Class 10th Marksheet (for Class 12 admission)</li>
+            </ul>
+            <h3>3. Passing Criteria:</h3>
+            <p>To secure a pass certificate, students must pass in at least 5 subjects, including a minimum of one language. Toppers Guru offers complete academic guidance, assignment support, and practical classes to ensure you score above 80% easily.</p>
+          `
+        },
+        "cuet-tips": {
+          title: "CUET Preparation Tips: How to Score High in 2026",
+          category: "CUET",
+          date: "March 10, 2026",
+          author: "Exam Strategy Team",
+          image: "https://images.unsplash.com/photo-1651160525531-9d0597d1a1f3",
+          content: `
+            <p>Securing admissions into top-tier central colleges like Hindu, St. Stephen's, SRCC, or LSR in DU requires scoring high in the Common University Entrance Test (CUET). Here is our expert strategy list to help you rank among the top percentiles.</p>
+            <h3>1. Master the NCERT Books:</h3>
+            <p>CUET is strictly based on the Class 12 NCERT syllabus for domain subjects. Thorough reading of NCERT lines, definitions, diagrams, and back exercises is highly crucial.</p>
+            <h3>2. Develop Speed with Mock Tests:</h3>
+            <p>Since the exam is entirely computer-based (CBT), you must build comfort in reading screens and managing virtual buttons. Solve at least 20 section-wise mock tests before the exam date.</p>
+            <h3>3. Focus on General Test (Section III):</h3>
+            <p>Many programs require Section III which tests Quantitative Aptitude, Logical Reasoning, and General Knowledge. Practice short calculation techniques to solve math problems under 45 seconds.</p>
+            <p>At Toppers Guru, we offer dedicated laboratory test setups simulating NTA exam halls to help students conquer exam panic.</p>
+          `
+        },
+        "why-toppers-guru": {
+          title: "Best Coaching in Delhi NCR: Why Choose Topper Guru",
+          category: "Education",
+          date: "March 05, 2026",
+          author: "Admin",
+          image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655",
+          content: `
+            <p>With thousands of coaching centers across Delhi, making the right choice can be overwhelming. Here is why Toppers Guru, established in 1989 in Krishna Nagar, has remained the top academic choice for parents and students for over three decades.</p>
+            <h3>1. Decades of Trust and Legacy</h3>
+            <p>We have successfully taught over 10,000 students. Our history represents Concept-based education and personalized teaching style.</p>
+            <h3>2. ISO 21001:2018 Certified Institution</h3>
+            <p>Our academic systems, faculty training, and student safety records follow international quality standards, ensuring a premium learning environment.</p>
+            <h3>3. Memory Science Training (Mnemonics)</h3>
+            <p>We are the only coaching center integration of Mnemonics. We help weak or average students memorize formulas, history, and definitions in quick sessions.</p>
+          `
+        },
+        "distance-ed-benefits": {
+          title: "Distance Education Benefits: Study While You Work",
+          category: "Distance Ed",
+          date: "February 28, 2026",
+          author: "Career Counselor",
+          image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173",
+          content: `
+            <p>In today's fast-paced corporate market, career upgrades are required. Distance education is the ideal path for working professionals to secure undergraduate or postgraduate degrees without taking a career break.</p>
+            <h3>Key Advantages of Distance Programs:</h3>
+            <ul>
+              <li><strong>Balance Work & Study:</strong> Study during weekends or late evenings. No mandatory daily attendance.</li>
+              <li><strong>Pocket Friendly:</strong> Distance degree fees are usually 60% lower than regular college models.</li>
+              <li><strong>UGC & DEB Recognized:</strong> Degrees are fully valid for Govt job exams, UPSC, banking, and private corporate promotions.</li>
+            </ul>
+            <p>Toppers Guru provides university admission mapping, study materials, assignment files, and complete examination guidelines.</p>
+          `
+        },
+        "top-skills": {
+          title: "Skill Courses for Career Growth: Top 10 in-Demand Skills",
+          category: "Skill Courses",
+          date: "February 20, 2026",
+          author: "Placement Cell",
+          image: "https://images.unsplash.com/photo-1521939708078-d6498bb62747",
+          content: `
+            <p>Degrees alone are no longer enough to secure premium packages. Employers search for job-ready skills. Here is a list of the top vocational and digital skills in-demand in 2026.</p>
+            <h3>Top 3 Professional Skill Sets:</h3>
+            <ul>
+              <li><strong>Digital Marketing:</strong> Mastery over Google Ads, SEO, and Social Media tracking is required by every small and large brand today.</li>
+              <li><strong>Financial Accounting (Tally + GST):</strong> Every business requires a bookkeeper. Learning Tally Prime with GST calculations gets you instant placement.</li>
+              <li><strong>Practical IT & Office Software:</strong> Excel automation, coding basics, and software tools management.</li>
+            </ul>
+            <p>Toppers Guru offers NSDC approved skill courses with placement support. Book a counselling slot today.</p>
+          `
+        },
+        "cbse-last-minute": {
+          title: "CBSE Board Exam Preparation: Last Minute Tips",
+          category: "CBSE",
+          date: "February 15, 2026",
+          author: "Subject Experts",
+          image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45",
+          content: `
+            <p>Board exams are around the corner. Last-minute panic can ruin months of hard preparation. Here is how you should organize your final revision weeks to score above 90%.</p>
+            <h3>1. Stick to Your NCERT Notes:</h3>
+            <p>Do NOT touch new reference books or attempt to study complex topics in the last week. Revise your self-made sheets and solve NCERT highlights.</p>
+            <h3>2. Solve Sample Papers Under Time Limit:</h3>
+            <p>Many students know answers but fail to complete paper writing on time. Practice writing in exam layouts, keeping 15 minutes spare for revision.</p>
+            <h3>3. Relax and Sleep Well:</h3>
+            <p>A tired brain makes simple calculation errors. Ensure 7-8 hours of sleep before exam days to keep your mind sharp.</p>
+          `
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+
+        // Fallback to board strategy if no ID matches
+        const activePost = (postId && blogsData[postId]) ? blogsData[postId] : {
+          title: "Expert Strategies to Score 95%+ in Your Board Exams",
+          category: "Exam Tips",
+          date: "March 22, 2026",
+          author: "Academic Team, Toppers Guru",
+          image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173",
+          content: `
+            <p>Scoring top marks in board exams requires consistent effort, a solid strategy, and proper time management. Thousands of students aim for the 95% club, but only a few make it. Here is the blueprint followed by toppers.</p>
+            <h3>1. Understand the Syllabus and Blueprint</h3>
+            <p>Before you begin reading, download the official syllabus and the question paper design (blueprint). Knowing chapter weightage allows you to prioritize high-yield topics over obscure ones.</p>
+            <h3>2. Build a Realistic Timetable</h3>
+            <p>Don't create a schedule that demands 14 hours of study from day one. Start with 4-5 hours of dedicated self-study and gradually increase it. Make sure to schedule breaks and revision days.</p>
+            <h3>3. Master the NCERT Books</h3>
+            <p>For CBSE students, NCERT textbooks are the holy grail. Do not run after multiple reference books until you have solved every single question from the NCERT text and examples.</p>
+            <h3>4. Solve Previous Year Papers</h3>
+            <p>Solving the last 5-10 years of question papers gives you immense confidence. It helps you identify recurring patterns and the language of questions.</p>
+            <p>At Toppers Guru, we conduct specialized mock test series that simulate the exact board exam environment. Practice makes perfect!</p>
+          `
+        };
+
+        // Render values
+        document.getElementById('postTitle').textContent = activePost.title;
+        document.getElementById('postCategory').textContent = activePost.category;
+        document.getElementById('postDate').textContent = activePost.date;
+        document.getElementById('postAuthor').textContent = activePost.author;
+        document.getElementById('postImage').src = activePost.image;
+        document.getElementById('postImage').alt = activePost.title;
+        document.getElementById('postContent').innerHTML = activePost.content;
+      });
+    </script>
+  </body>
+</html>

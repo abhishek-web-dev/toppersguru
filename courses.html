@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Courses & Programs | Toppers Guru</title>
+    <meta name="description" content="Explore our comprehensive list of academic courses, CBSE tuition, NIOS schooling, competitive prep like CUET, distance education, memory science, and NSDC skill courses." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=2.0" />
+  </head>
+  <body>
+
+    <!-- Header / Navbar Section -->
+    <header id="header-container" data-active="courses"></header>
+
+    <!-- Main Content -->
+    <main class="bg-gradient-soft">
+      
+      <!-- Page Title -->
+      <section class="section-padding pt-5 mt-5 text-center">
+        <div class="container pt-5">
+          <div class="max-w-3xl mx-auto">
+            <span class="positioning-line text-center" data-i18n="courses.comprehensive">Comprehensive Programs</span>
+            <h1 class="hero-title text-navy mb-4" data-i18n="courses.findPerfect">Find Your Perfect Course</h1>
+            <p class="hero-desc mb-0" data-i18n="courses.findDesc">From foundational school education to advanced competitive preparation and skill development.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filter Tabs -->
+      <section class="py-4 bg-white border-top border-bottom sticky-top shadow-sm" style="top: 80px; z-index: 100;">
+        <div class="container">
+          <div class="d-flex align-items-center gap-3 overflow-x-auto py-2" id="filtersContainer" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <button class="course-filter-btn active" data-category="all">All Courses</button>
+            <button class="course-filter-btn" data-category="nios">NIOS/BOSSE</button>
+            <button class="course-filter-btn" data-category="cbse">CBSE Coaching</button>
+            <button class="course-filter-btn" data-category="cuet">CUET/CLAT</button>
+            <button class="course-filter-btn" data-category="distance">Distance Education</button>
+            <button class="course-filter-btn" data-category="skill">Skill Courses (NSDC)</button>
+            <button class="course-filter-btn" data-category="mnemonic">Mnemonics Science</button>
+            <button class="course-filter-btn" data-category="ai">AI Learning</button>
+            <button class="course-filter-btn" data-category="prof">Professional Courses</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course Cards Catalog Grid -->
+      <section class="section-padding bg-background min-h-screen">
+        <div class="container">
+          <div class="row g-4" id="coursesGrid">
+            
+            <!-- Category: NIOS/BOSSE -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="nios">
+              <div class="card-premium-program nios-card">
+                <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                <h3 class="card-program-title">Class 10 (NIOS)</h3>
+                <p class="card-program-desc">Complete secondary education through NIOS board with expert guidance, practical files, and TMA help.</p>
+                <div class="mb-4"><span class="badge bg-navy-light py-2 px-3 text-white rounded-3">Fee: ₹600/month</span></div>
+                <a href="course-detail.html?id=nios-10" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="nios">
+              <div class="card-premium-program nios-card">
+                <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                <h3 class="card-program-title">Class 12 (NIOS)</h3>
+                <p class="card-program-desc">Senior secondary education with flexible subjects, practical file support, and comprehensive exam preparations.</p>
+                <div class="mb-4"><span class="badge bg-navy-light py-2 px-3 text-white rounded-3">Fee: ₹700/month</span></div>
+                <a href="course-detail.html?id=nios-12" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="nios">
+              <div class="card-premium-program nios-card">
+                <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                <h3 class="card-program-title">Class 10 (BOSSE)</h3>
+                <p class="card-program-desc">Board of Open Schooling and Skill Education programs offering flexible curriculum and examinations.</p>
+                <div class="mb-4"><span class="badge bg-navy-light py-2 px-3 text-white rounded-3">Fee: ₹600/month</span></div>
+                <a href="course-detail.html?id=bosse-10" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="nios">
+              <div class="card-premium-program nios-card">
+                <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                <h3 class="card-program-title">Class 12 (BOSSE)</h3>
+                <p class="card-program-desc">Open schooling syllabus for senior secondary under BOSSE board with assignment and marksheet guidance.</p>
+                <div class="mb-4"><span class="badge bg-navy-light py-2 px-3 text-white rounded-3">Fee: ₹700/month</span></div>
+                <a href="course-detail.html?id=bosse-12" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="nios">
+              <div class="card-premium-program nios-card">
+                <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                <h3 class="card-program-title">Full Academic Support</h3>
+                <p class="card-program-desc">Comprehensive tutoring support including assignments help, doubt clearing, and exam papers review.</p>
+                <a href="course-detail.html?id=academic-support" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: CBSE Coaching -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cbse">
+              <div class="card-premium-program cbse-card">
+                <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h3 class="card-program-title">Class 1–5</h3>
+                <p class="card-program-desc">Foundational school level teaching focusing on basics, creative learning, and conceptual clarity.</p>
+                <a href="course-detail.html?id=cbse-1-5" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cbse">
+              <div class="card-premium-program cbse-card">
+                <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h3 class="card-program-title">Class 6–10</h3>
+                <p class="card-program-desc">Comprehensive class coaching for middle and secondary school students with mock exams and regular progress mapping.</p>
+                <a href="course-detail.html?id=cbse-6-10" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cbse">
+              <div class="card-premium-program cbse-card">
+                <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h3 class="card-program-title">Class 11–12 Commerce</h3>
+                <p class="card-program-desc">Expert coaching for accountancy, business studies, economics, and mathematics under dedicated subject teachers.</p>
+                <a href="course-detail.html?id=commerce" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cbse">
+              <div class="card-premium-program cbse-card">
+                <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <h3 class="card-program-title">Class 11–12 Humanities</h3>
+                <p class="card-program-desc">In-depth preparation for History, Political Science, Geography, Sociology, and Psychology with board writing strategies.</p>
+                <a href="course-detail.html?id=humanities" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: CUET/CLAT -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cuet">
+              <div class="card-premium-program cuet-card">
+                <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                <h3 class="card-program-title">CUET Preparation</h3>
+                <p class="card-program-desc">Target top central universities (DU, BHU, JNU) with intensive preparation for Domain, Language, and General Tests.</p>
+                <a href="course-detail.html?id=cuet" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cuet">
+              <div class="card-premium-program cuet-card">
+                <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                <h3 class="card-program-title">CLAT Preparation</h3>
+                <p class="card-program-desc">Comprehensive entrance training for top National Law Universities, focusing on legal aptitude and mock tests.</p>
+                <a href="course-detail.html?id=clat" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cuet">
+              <div class="card-premium-program cuet-card">
+                <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                <h3 class="card-program-title">Judiciary Foundation</h3>
+                <p class="card-program-desc">Early concept builder program for undergraduate law students looking to enter judicial service exams.</p>
+                <a href="course-detail.html?id=judiciary" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="cuet">
+              <div class="card-premium-program cuet-card">
+                <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                <h3 class="card-program-title">Mock Test Program</h3>
+                <p class="card-program-desc">Simulated entrance exam environment with full-length online tests, domain tracking, and detailed performance analysis.</p>
+                <a href="course-detail.html?id=mock-test" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: Distance Education -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="distance">
+              <div class="card-premium-program distance-card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 class="card-program-title">Graduation (BA, B.Com, BBA)</h3>
+                <p class="card-program-desc">Recognized open degrees from UGC & DEB approved universities. Learn at your own pace while working.</p>
+                <a href="course-detail.html?id=distance-ug" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="distance">
+              <div class="card-premium-program distance-card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 class="card-program-title">Post Graduation (MA, M.Com, MBA)</h3>
+                <p class="card-program-desc">UGC recognized postgraduate degrees to elevate your career and qualify for corporate roles.</p>
+                <a href="course-detail.html?id=distance-pg" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="distance">
+              <div class="card-premium-program distance-card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 class="card-program-title">Certificate & Diploma</h3>
+                <p class="card-program-desc">Short-term computer applications, library sciences, and business management diplomas.</p>
+                <a href="course-detail.html?id=distance-dip" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="distance">
+              <div class="card-premium-program distance-card">
+                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 class="card-program-title">ECCE & Pre-Primary Teacher</h3>
+                <p class="card-program-desc">Early Childhood Care & Education and nursery teacher training certificate programs from recognized boards.</p>
+                <a href="course-detail.html?id=ecce" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: Skill Courses -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="skill">
+              <div class="card-premium-program skill-card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="card-program-title">Digital Marketing</h3>
+                <p class="card-program-desc">Industry ready training covering SEO, social media, performance marketing, content, and ad systems.</p>
+                <a href="course-detail.html?id=digital-marketing" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="skill">
+              <div class="card-premium-program skill-card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="card-program-title">Computer / IT Skills</h3>
+                <p class="card-program-desc">Basic programming, web technologies, software operations, and fundamental computing courses.</p>
+                <a href="course-detail.html?id=computer-skills" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="skill">
+              <div class="card-premium-program skill-card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="card-program-title">Tally / Accounting</h3>
+                <p class="card-program-desc">Practical bookkeeping with Tally Prime software, GST computations, filing, and financial statements preparation.</p>
+                <a href="course-detail.html?id=tally" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="skill">
+              <div class="card-premium-program skill-card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="card-program-title">Electrician Training</h3>
+                <p class="card-program-desc">Certified practical training for home, commercial, and industrial electrical wiring and maintenance.</p>
+                <a href="course-detail.html?id=electrician" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="skill">
+              <div class="card-premium-program skill-card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="card-program-title">Healthcare / Paramedical</h3>
+                <p class="card-program-desc">Vocational training for medical lab technology, nursing support, and paramedical care services.</p>
+                <a href="course-detail.html?id=healthcare" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="skill">
+              <div class="card-premium-program skill-card">
+                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="card-program-title">Hospitality Management</h3>
+                <p class="card-program-desc">Front office training, hotel administration basics, and hospitality service certifications.</p>
+                <a href="course-detail.html?id=hospitality" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: Mnemonics Science -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="mnemonic">
+              <div class="card-premium-program mnemonic-card">
+                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3 class="card-program-title">Memory Course</h3>
+                <p class="card-program-desc">Scientific associations, link method, and locus method to memorize answers, long texts, dates, and names instantly.</p>
+                <a href="course-detail.html?id=memory-course" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="mnemonic">
+              <div class="card-premium-program mnemonic-card">
+                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3 class="card-program-title">Fast Learning</h3>
+                <p class="card-program-desc">Active recall, spaced repetition, and mind mapping techniques designed to make reading and homework faster.</p>
+                <a href="course-detail.html?id=fast-learning" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="mnemonic">
+              <div class="card-premium-program mnemonic-card">
+                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3 class="card-program-title">Concept Clarity</h3>
+                <p class="card-program-desc">Visual structures and brain diagrams that convert boring concepts into memorable graphics.</p>
+                <a href="course-detail.html?id=concept-clarity" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="mnemonic">
+              <div class="card-premium-program mnemonic-card">
+                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3 class="card-program-title">Special for Weak Students</h3>
+                <p class="card-program-desc">Tailored memory techniques to help struggling students regain confidence, improve exam scores, and erase test fear.</p>
+                <a href="course-detail.html?id=special-weak" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: AI Learning -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="ai">
+              <div class="card-premium-program ai-card">
+                <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3 class="card-program-title">AI Learning Program</h3>
+                <p class="card-program-desc">Introduction to Artificial Intelligence tools, prompt engineering, and core technology paradigms for students.</p>
+                <a href="course-detail.html?id=ai-learning" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="ai">
+              <div class="card-premium-program ai-card">
+                <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3 class="card-program-title">Smart Study System</h3>
+                <p class="card-program-desc">Using modern AI study planners and adaptive schedules to help students align their preparation.</p>
+                <a href="course-detail.html?id=smart-study" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="ai">
+              <div class="card-premium-program ai-card">
+                <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3 class="card-program-title">Personalized Learning</h3>
+                <p class="card-program-desc">Dynamic adaptive learning paths that adjust study load based on student strength and progress.</p>
+                <a href="course-detail.html?id=personalized-learning" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <!-- Category: Professional Courses -->
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="prof">
+              <div class="card-premium-program prof-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 class="card-program-title">LLB / BA LLB</h3>
+                <p class="card-program-desc">Admission guidance and counseling for professional integrated law programs under approved colleges.</p>
+                <a href="course-detail.html?id=law" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="prof">
+              <div class="card-premium-program prof-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 class="card-program-title">B.Ed / M.Ed</h3>
+                <p class="card-program-desc">Professional teacher education degree coaching and university alignment support.</p>
+                <a href="course-detail.html?id=teacher-training" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="prof">
+              <div class="card-premium-program prof-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 class="card-program-title">ECCE (Teacher Training)</h3>
+                <p class="card-program-desc">Early Childhood Care & Education certificate for pre-primary school teacher aspirants.</p>
+                <a href="course-detail.html?id=ecce-prof" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="prof">
+              <div class="card-premium-program prof-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 class="card-program-title">Paramedical Sciences</h3>
+                <p class="card-program-desc">Advanced diplomas and undergraduate counseling for lab technicians and nursing assistants.</p>
+                <a href="course-detail.html?id=paramedical-prof" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="prof">
+              <div class="card-premium-program prof-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 class="card-program-title">B.Pharma / D.Pharma</h3>
+                <p class="card-program-desc">Pharmacy admissions guidance, counseling, and exam support for retail or clinical tracks.</p>
+                <a href="course-detail.html?id=pharmacy" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 course-card-item" data-category="prof">
+              <div class="card-premium-program prof-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 class="card-program-title">BAMS / BHMS / BDS / BUMS</h3>
+                <p class="card-program-desc">Medical and dental counseling guidance for undergraduate entrance and college selections.</p>
+                <a href="course-detail.html?id=medical" class="btn btn-premium btn-navy-outline w-100 mt-auto">View Details</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Counselling Section -->
+      <section class="section-padding bg-slate border-top" id="counselling">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <span class="positioning-line" data-i18n="home.bookCounselling">Admissions Open</span>
+              <h2 class="heading-section mb-4"><span data-i18n="regularCourses.takeNextStep">Take the Next Step in Your Education</span></h2>
+              <p class="text-muted fs-5 mb-5" data-i18n="regularCourses.admissionGuidance">
+                Admission Guidance & Assistance for Various UGC Approved Universities Across India.
+              </p>
+              <div class="d-flex align-items-center gap-3">
+                <div class="fs-4 text-orange"><i class="fa-solid fa-phone-volume"></i></div>
+                <div>
+                  <span class="d-block text-muted text-sm" data-i18n="contact.callNow">Call Now</span>
+                  <a href="tel:+919315593990" class="text-decoration-none fw-bold fs-5 text-dark hover-orange">+91 9315593990</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-5 offset-xl-1">
+              <div class="form-card">
+                <h3 class="form-title" data-i18n="home.bookCounselling">Book Free Counselling</h3>
+                <p class="form-subtitle" data-i18n="regularCourses.fillForm">Fill out the form below to get expert counseling and admission support for your chosen program.</p>
+                
+                <form id="enquiryForm">
+                  <div class="mb-3">
+                    <label for="nameInput" class="form-label"><span data-i18n="contact.sendInquiry">Full Name</span> *</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your full name" required />
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Enter your email (optional)" />
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="phoneInput" class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="Enter 10-digit mobile number" required />
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label for="courseSelect" class="form-label">Course Interest *</label>
+                    <select class="form-select" id="courseSelect" required>
+                      <option value="" disabled selected>Select a course</option>
+                      <option value="nios">NIOS / BOSSE</option>
+                      <option value="cbse">CBSE Coaching</option>
+                      <option value="cuet">CUET / CLAT</option>
+                      <option value="distance">Distance Education</option>
+                      <option value="skill">Skill Courses</option>
+                      <option value="mnemonic">Mnemonics Science</option>
+                      <option value="ai">AI Learning</option>
+                      <option value="prof">Professional Courses</option>
+                    </select>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display" data-i18n="home.enquireNow">Get Callback Now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer-container"></footer>
+
+    <!-- Custom On-page Popup Dialog -->
+    <div class="alert-popup-overlay" id="successOverlay">
+      <div class="alert-popup">
+        <div class="mb-4">
+          <span class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle" style="width: 70px; height: 70px; font-size: 32px;">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+        </div>
+        <h3 class="font-display font-weight-800 text-navy mb-3" data-i18n="success.title">Inquiry Submitted!</h3>
+        <p class="text-muted mb-4" data-i18n="success.desc">
+          Thank you for your interest. Our academic counselors will get back to you shortly to guide you through the process.
+        </p>
+        <button class="btn btn-premium btn-navy-outline px-4 py-2 font-display" id="closeAlertBtn" data-i18n="success.backBtn">Close Window</button>
+      </div>
+    </div>
+
+    <!-- Floating Quick Actions -->
+    <a href="https://wa.me/919315593990" class="whatsapp-floating shadow-lg animate-pulse" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <a href="tel:+919315593990" class="phone-floating shadow-lg" aria-label="Call Now">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Bootstrap 5 Bundle JS (contains Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Global Custom JavaScript -->
+    <script src="js/component.js"></script>
+  <script src="js/main.js?v=2.0"></script>
+    
+    <script>
+      // Auto-set copyright year
+      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+      // Courses Page Specific category filtering logic
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.course-filter-btn');
+        const courseCards = document.querySelectorAll('.course-card-item');
+
+        function filterCategory(category) {
+          // Update active class on buttons
+          filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-category') === category) {
+              btn.classList.add('active');
+            } else {
+              btn.classList.remove('active');
+            }
+          });
+
+          // Show/Hide courses
+          courseCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            if (category === 'all' || cardCategory === category) {
+              card.style.display = 'block';
+              card.classList.add('animate-fade-in'); // Add standard fade class if wanted
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+
+        // Bind filter button click
+        filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const targetCat = button.getAttribute('data-category');
+            filterCategory(targetCat);
+          });
+        });
+
+        // Check for category query parameter in URL (e.g. ?category=cbse)
+        const urlParams = new URLSearchParams(window.location.search);
+        let categoryParam = urlParams.get('category');
+        if (categoryParam) {
+          categoryParam = categoryParam.toLowerCase();
+          // Map URL inputs to actual data categories if they match patterns
+          let finalCat = 'all';
+          if (categoryParam.includes('nios') || categoryParam.includes('bosse')) finalCat = 'nios';
+          else if (categoryParam.includes('cbse')) finalCat = 'cbse';
+          else if (categoryParam.includes('cuet') || categoryParam.includes('clat')) finalCat = 'cuet';
+          else if (categoryParam.includes('distance')) finalCat = 'distance';
+          else if (categoryParam.includes('skill')) finalCat = 'skill';
+          else if (categoryParam.includes('mnemonic')) finalCat = 'mnemonic';
+          else if (categoryParam.includes('ai')) finalCat = 'ai';
+          else if (categoryParam.includes('prof')) finalCat = 'prof';
+          
+          filterCategory(finalCat);
+        }
+      });
+    </script>
+  </body>
+</html>

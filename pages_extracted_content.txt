@@ -1,0 +1,60 @@
+
+=========================================
+KEYWORD: /cuet-coaching-delhi
+=========================================
+Matches found: 1
+
+--- Match 1 at Index 684721 ---
+x($D,{})}),c.jsx(Je,{path:"/terms",element:c.jsx(HD,{})}),c.jsx(Je,{path:"/refund-policy",element:c.jsx(WD,{})}),c.jsx(Je,{path:"/disclaimer",element:c.jsx(GD,{})}),c.jsx(Je,{path:"/admission-policy",element:c.jsx(qD,{})}),c.jsx(Je,{path:"/nios-coaching-delhi",element:c.jsx(YD,{})}),c.jsx(Je,{path:"/cuet-coaching-delhi",element:c.jsx(XD,{})}),c.jsx(Je,{path:"/distance-education-delhi",element:c.jsx(Ex,{})}),c.jsx(Je,{path:"*",element:c.jsx(bx,{})})]}),c.jsx(tI,{})]})})}const rI=x.createContext(),Tx="e-commerce-cart",sI=e=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",minimumFractionDigits:0}).format(e/100),oI=({children:e})=>{const[t,n]=x.useState(()=>{try{const p=localStorage.getItem(Tx);return p?JSON.parse(p):[]}catch{return[]}});x.useEffect(()=>{localStorage.setItem(Tx,JSON.stringify(t))},[t]);const s=x.useCallback((p,y,m,b)=>new Promise((S,C)=>{if(y.manage_inventory){const w=t.find(N=>N.variant.id===y.id);if((w?w.quantity:0)+m>b){const N=new Error(`Not enough stock for ${p.title} (${y.title}). Only ${b} left.`);C(N);return}}n(w=>w.find(N=>N.variant.id===y.id)?w.map(N=>N.variant.id===y.id?{...N,quantity:N.quantity+m}:N):[...w,{product:p,variant:y,quantity:m}]),S()}),[t]),i=x.useCallback(p=>{n(y=>y.filter(m=>m.variant.id!==p))},[]),a=x.useCallback((p,y)=>{n(m=>m.map(b=>b.variant.id===p?{...b,quantity:y}:b))},[]),u=x.useCallback(()=>{n([])},[]),d=x.useCallback(()=>{const p=t.reduce((y,m)=>{const b=m.variant.sale_price_in_cents??m.variant.price_in_cents??0;return y+b*m.quantity},0);return sI(p)},[t]),f=x.useMemo(()=>({cartItems:t,addToCart:s,removeFromCart:i,updateQuantity:a,clearCart:u,getCartTotal:d}),[t,s,i,a,u,d]);return c.jsx(rI.Provider,{value:f,children:e})};o2.createRoot(document.getElementById("root")).render(c.jsx(c.Fragment,{children:c.jsx(oI,{children:c.jsx(nI,{})})}));
+
+
+=========================================
+KEYWORD: /nios-coaching-delhi
+=========================================
+Matches found: 1
+
+--- Match 1 at Index 684660 ---
+:c.jsx(cD,{})}),c.jsx(Je,{path:"/privacy-policy",element:c.jsx($D,{})}),c.jsx(Je,{path:"/terms",element:c.jsx(HD,{})}),c.jsx(Je,{path:"/refund-policy",element:c.jsx(WD,{})}),c.jsx(Je,{path:"/disclaimer",element:c.jsx(GD,{})}),c.jsx(Je,{path:"/admission-policy",element:c.jsx(qD,{})}),c.jsx(Je,{path:"/nios-coaching-delhi",element:c.jsx(YD,{})}),c.jsx(Je,{path:"/cuet-coaching-delhi",element:c.jsx(XD,{})}),c.jsx(Je,{path:"/distance-education-delhi",element:c.jsx(Ex,{})}),c.jsx(Je,{path:"*",element:c.jsx(bx,{})})]}),c.jsx(tI,{})]})})}const rI=x.createContext(),Tx="e-commerce-cart",sI=e=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",minimumFractionDigits:0}).format(e/100),oI=({children:e})=>{const[t,n]=x.useState(()=>{try{const p=localStorage.getItem(Tx);return p?JSON.parse(p):[]}catch{return[]}});x.useEffect(()=>{localStorage.setItem(Tx,JSON.stringify(t))},[t]);const s=x.useCallback((p,y,m,b)=>new Promise((S,C)=>{if(y.manage_inventory){const w=t.find(N=>N.variant.id===y.id);if((w?w.quantity:0)+m>b){const N=new Error(`Not enough stock for ${p.title} (${y.title}). Only ${b} left.`);C(N);return}}n(w=>w.find(N=>N.variant.id===y.id)?w.map(N=>N.variant.id===y.id?{...N,quantity:N.quantity+m}:N):[...w,{product:p,variant:y,quantity:m}]),S()}),[t]),i=x.useCallback(p=>{n(y=>y.filter(m=>m.variant.id!==p))},[]),a=x.useCallback((p,y)=>{n(m=>m.map(b=>b.variant.id===p?{...b,quantity:y}:b))},[]),u=x.useCallback(()=>{n([])},[]),d=x.useCallback(()=>{const p=t.reduce((y,m)=>{const b=m.variant.sale_price_in_cents??m.variant.price_in_cents??0;return y+b*m.quantity},0);return sI(p)},[t]),f=x.useMemo(()=>({cartItems:t,addToCart:s,removeFromCart:i,updateQuantity:a,clearCart:u,getCartTotal:d}),[t,s,i,a,u,d]);return c.jsx(rI.Provider,{value:f,children:e})};o2.createRoot(document.getElementById("root")).render(c.jsx(c.Fragment,{children:c.jsx(oI,{children:c.jsx(nI,{})})}));
+
+
+=========================================
+KEYWORD: /distance-education-delhi
+=========================================
+Matches found: 1
+
+--- Match 1 at Index 684782 ---
+sx(Je,{path:"/refund-policy",element:c.jsx(WD,{})}),c.jsx(Je,{path:"/disclaimer",element:c.jsx(GD,{})}),c.jsx(Je,{path:"/admission-policy",element:c.jsx(qD,{})}),c.jsx(Je,{path:"/nios-coaching-delhi",element:c.jsx(YD,{})}),c.jsx(Je,{path:"/cuet-coaching-delhi",element:c.jsx(XD,{})}),c.jsx(Je,{path:"/distance-education-delhi",element:c.jsx(Ex,{})}),c.jsx(Je,{path:"*",element:c.jsx(bx,{})})]}),c.jsx(tI,{})]})})}const rI=x.createContext(),Tx="e-commerce-cart",sI=e=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",minimumFractionDigits:0}).format(e/100),oI=({children:e})=>{const[t,n]=x.useState(()=>{try{const p=localStorage.getItem(Tx);return p?JSON.parse(p):[]}catch{return[]}});x.useEffect(()=>{localStorage.setItem(Tx,JSON.stringify(t))},[t]);const s=x.useCallback((p,y,m,b)=>new Promise((S,C)=>{if(y.manage_inventory){const w=t.find(N=>N.variant.id===y.id);if((w?w.quantity:0)+m>b){const N=new Error(`Not enough stock for ${p.title} (${y.title}). Only ${b} left.`);C(N);return}}n(w=>w.find(N=>N.variant.id===y.id)?w.map(N=>N.variant.id===y.id?{...N,quantity:N.quantity+m}:N):[...w,{product:p,variant:y,quantity:m}]),S()}),[t]),i=x.useCallback(p=>{n(y=>y.filter(m=>m.variant.id!==p))},[]),a=x.useCallback((p,y)=>{n(m=>m.map(b=>b.variant.id===p?{...b,quantity:y}:b))},[]),u=x.useCallback(()=>{n([])},[]),d=x.useCallback(()=>{const p=t.reduce((y,m)=>{const b=m.variant.sale_price_in_cents??m.variant.price_in_cents??0;return y+b*m.quantity},0);return sI(p)},[t]),f=x.useMemo(()=>({cartItems:t,addToCart:s,removeFromCart:i,updateQuantity:a,clearCart:u,getCartTotal:d}),[t,s,i,a,u,d]);return c.jsx(rI.Provider,{value:f,children:e})};o2.createRoot(document.getElementById("root")).render(c.jsx(c.Fragment,{children:c.jsx(oI,{children:c.jsx(nI,{})})}));
+
+
+=========================================
+KEYWORD: blogsData
+=========================================
+Matches found: 0
+
+=========================================
+KEYWORD: blogPosts
+=========================================
+Matches found: 0
+
+=========================================
+KEYWORD: resultsData
+=========================================
+Matches found: 0
+
+=========================================
+KEYWORD: successStories
+=========================================
+Matches found: 0
+
+=========================================
+KEYWORD: resultsList
+=========================================
+Matches found: 0
+
+=========================================
+KEYWORD: testimonials
+=========================================
+Matches found: 1
+
+--- Match 1 at Index 638318 ---
+ue:"8,500+",label:"Placements"},{icon:Mo,value:"92.7%",label:"Student Satisfaction"}];return c.jsxs(c.Fragment,{children:[c.jsxs(at,{children:[c.jsx("title",{children:"Student Success Stories & Results | Topper Guru Krishna Nagar"}),c.jsx("meta",{name:"description",content:"Read success stories and testimonials from students who achieved their goals with Topper Guru. 95.3% success rate with proven results."})]}),c.jsx(gt,{}),c.jsxs("section",{className:"relative py-20 bg-gradient-primary text-primary-foreground overflow-hidden",children:[c.jsx("div",{className:"absolute inset-0 opacity-10",children:c.jsx("img",{src:"https://images.unsplash.com/photo-1634129536400-5c3cdd3ef953",alt:"Student success",className:"w-full h-full object-cover"})}),c.jsx("div",{className:"container-custom relative z-10",children:c.jsxs(be.div,{initial:{opacity:0,y:20},animate:{opacity:1,y:0},transition:{duration:.6},className:"max-w-3xl",children:[c.jsx("h1",{className:"heading-display mb-6",children:"Student Success Stories"}),c.jsx("p",{className:"text-xl opacity-90 leading-relaxed",children:"Real achievements from students who transformed their lives with quality education and dedicated guidance."})]})})]}),c.jsx("section",{className:"section-padding bg-background",children:c.jsxs("div",{className:"container-custom",children:[c.jsx("div",{className:"grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-16",children:n.map((s,i)=>c.jsxs(be.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5,delay:i*.1},className:"text-center",children:[c.jsx("div",{className:"inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary text-primary-foreground mb-4",children:c.jsx(s.icon,{className:"w-8 h-8"})}),c.jsx("h3",{className:"text-3xl md:text-4xl font-bold mb-2",children:s.value}),c.jsx("p",{className:"text-muted-foreground text-sm md:text-base",children:s.label})]},i))}),c.jsxs(be.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.5},className:"text-center mb-12",children:[c.jsx("h2",{className:"heading-section mb-4",children:"Success Stories"}),c.jsx("p",{className:"text-muted-foreground max-w-2xl mx-auto",children:"Meet some of our successful students who achieved their academic and car

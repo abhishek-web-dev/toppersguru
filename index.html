@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toppers Guru: Top Coaching Institute in Krishna Nagar, Delhi</title>
+  <meta name="description"
+    content="Toppers Guru is the best coaching institute in Krishna Nagar, Delhi offering NIOS, CBSE, CUET preparation, distance education, memory science, and skill courses." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Global Custom CSS -->
+  <link rel="stylesheet" href="css/style.css?v=2.0" />
+</head>
+
+<body>
+
+  <!-- Header / Navbar Section -->
+  <header id="header-container" data-active="home"></header>
+
+  <!-- Hero Portal Section -->
+  <section class="hero-premium-banner">
+    <!-- Ambient Radial Glow Circles -->
+    <div class="glow-circle glow-orange"></div>
+    <div class="glow-circle glow-yellow"></div>
+
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Left Content: Typography & Search -->
+        <div class="col-lg-7">
+          <span class="positioning-line" data-i18n="home.heroSubtitle">NIOS | CBSE | CUET | CLAT | Distance Education |
+            Skill Courses</span>
+          <h1 class="hero-title">
+            <span data-i18n="home.heroTitle1">Transform Your Future with</span>
+            <span class="text-gradient" data-i18n="home.heroTitleHighlight">Expert Coaching</span>
+            <span data-i18n="home.heroTitle2">& Skill Development</span>
+          </h1>
+          <p class="hero-desc" data-i18n="home.heroDesc">
+            Accelerate your career with expert-led preparation, memory science techniques, and job-ready skill courses.
+            Join 10,000+ successful students.
+          </p>
+
+          <!-- AI Course Search Engine Selector -->
+          <div class="hero-search-wrapper mb-5">
+            <i class="fa-solid fa-magnifying-glass ms-3"></i>
+            <input type="text" class="hero-search-input" id="heroSearchInput" data-i18n="home.searchPlaceholder"
+              placeholder="Search for NIOS, CBSE, CUET, Distance MBA, B.Com..." />
+            <button class="hero-search-btn" id="heroSearchBtn">
+              <span data-i18n="home.searchBtn">Find Programs</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Quick Features -->
+          <div class="hero-features-list d-flex flex-wrap gap-4 fw-bold">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-circle-check"></i>
+              <span data-i18n="home.expertFaculty">Expert Faculty</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-circle-check"></i>
+              <span data-i18n="home.studyMaterial">Study Material</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <i class="fa-solid fa-circle-check"></i>
+              <span data-i18n="home.placementSupport">Placement Support</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content: Counseling Booking Portal Card -->
+        <div class="col-lg-5 col-xl-4 offset-xl-1">
+          <div class="booking-portal-card">
+            <h3 class="font-display text-navy mb-2 fs-4 text-center" data-i18n="home.bookCounsellingTitle">Book Your
+              Free Counseling Session</h3>
+            <p class="text-muted text-sm text-center mb-4" data-i18n="home.bookCounsellingDesc">Our academic advisors will call you back within 24 hours.</p>
+
+            <form id="enquiryForm">
+              <div class="mb-3">
+                <label for="nameInput" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formName">Full Name *</label>
+                <input type="text" class="form-control" id="nameInput" data-i18n="home.formNamePlaceholder" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="emailInput" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formEmail">Email Address</label>
+                <input type="email" class="form-control" id="emailInput" data-i18n="home.formEmailPlaceholder" placeholder="Enter your email (optional)" />
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneInput" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formPhone">Phone Number *</label>
+                <input type="tel" class="form-control" id="phoneInput" data-i18n="home.formPhonePlaceholder" placeholder="Enter 10-digit mobile number"
+                  required />
+              </div>
+
+              <div class="mb-4">
+                <label for="courseSelect" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formCourse">Course Interest *</label>
+                <select class="form-select text-muted" id="courseSelect" required>
+                  <option value="" disabled selected data-i18n="home.formSelectCourse">Select Course *</option>
+                  <option value="nios" data-i18n="home.formCourseNios">NIOS Secondary / Sr. Secondary</option>
+                  <option value="cbse" data-i18n="home.formCourseCbse">CBSE School Coaching (9th-12th)</option>
+                  <option value="cuet" data-i18n="home.formCourseCuet">CUET / Competitive Entrance Prep</option>
+                  <option value="distance" data-i18n="home.formCourseDistance">Distance Education (UG, PG, Diploma)</option>
+                  <option value="skill" data-i18n="home.formCourseSkill">Skill & Vocational Courses</option>
+                  <option value="memory" data-i18n="home.formCourseMemory">Memory Science Training</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display">
+                <span data-i18n="home.enquireNow">Enquire Now</span>
+                <i class="fa-solid fa-arrow-right-to-bracket ms-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner Section (Vibrant Light Card design) -->
+  <section class="container px-3 px-md-0 position-relative">
+    <div class="stats-banner-row">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-sm-6 col-md-4 border-end border-light border-sm-none">
+          <div class="stat-item">
+            <div class="stat-icon-wrapper"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="stat-number">30+</h3>
+            <p class="stat-label" data-i18n="home.stats.years">Years Experience</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 border-end border-light border-sm-none">
+          <div class="stat-item">
+            <div class="stat-icon-wrapper"><i class="fa-solid fa-user-group"></i></div>
+            <h3 class="stat-number">10,000+</h3>
+            <p class="stat-label" data-i18n="home.stats.students">Students Taught</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="stat-item">
+            <div class="stat-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+            <h3 class="stat-number">450+</h3>
+            <p class="stat-label" data-i18n="home.stats.courses">Courses Offered</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accreditations & Boards Marquee (Inspired by 360Vidya) -->
+  <section class="logo-marquee-section">
+    <div class="container mb-3">
+      <h4 class="text-center font-display text-navy text-sm font-weight-700 uppercase tracking-wider mb-0"
+        data-i18n="home.accreditTitle">Trusted Board Preparations & University Admissions Partner</h4>
+    </div>
+    <div class="logo-marquee-container">
+      <div class="logo-marquee-content text-navy font-display font-weight-700 fs-5">
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-book-open text-orange"></i> <span>NIOS
+            BOARD</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-school text-orange"></i> <span>CBSE
+            BOARD</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-graduation-cap text-orange"></i> <span>UGC
+            APPROVED</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-university text-orange"></i> <span>DELHI
+            UNIVERSITY</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-certificate text-orange"></i> <span>ISO
+            CERTIFIED</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-award text-orange"></i> <span>BOSSE
+            BOARD</span></div>
+        <!-- Repeat for infinite animation -->
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-book-open text-orange"></i> <span>NIOS
+            BOARD</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-school text-orange"></i> <span>CBSE
+            BOARD</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-graduation-cap text-orange"></i> <span>UGC
+            APPROVED</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-university text-orange"></i> <span>DELHI
+            UNIVERSITY</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-certificate text-orange"></i> <span>ISO
+            CERTIFIED</span></div>
+        <div class="d-flex align-items-center gap-2"><i class="fa-solid fa-award text-orange"></i> <span>BOSSE
+            BOARD</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portal Courses Explorer Section (Inspired by College Vidya) -->
+  <section class="section-padding bg-white" id="portalCoursesSection">
+    <div class="container">
+
+      <div class="text-center mb-5 max-w-2xl mx-auto">
+        <span class="positioning-line text-center" data-i18n="home.pathway">Your Pathway to Success</span>
+        <h2 class="heading-section text-center" data-i18n="home.explorePrograms">Explore Our Programs</h2>
+        <p class="text-muted text-center">Compare details and find the right learning program matching your academic
+          goals.</p>
+      </div>
+
+      <!-- Tab Pill Filters -->
+      <div class="course-pill-tabs justify-content-center">
+        <button class="course-pill-btn active" data-category="all">All Programs</button>
+        <button class="course-pill-btn" data-category="nios">NIOS Open Schooling</button>
+        <button class="course-pill-btn" data-category="cbse">CBSE School Coaching</button>
+        <button class="course-pill-btn" data-category="entrance">CUET Entrance</button>
+        <button class="course-pill-btn" data-category="distance">Distance Degrees</button>
+        <button class="course-pill-btn" data-category="skill">Skill Courses</button>
+        <button class="course-pill-btn" data-category="memory">Memory Science</button>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1: NIOS 10th -->
+        <div class="col-md-6 col-lg-4" data-course-category="nios">
+          <div class="portal-course-card">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-school"></i></div>
+              <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.secondary">Secondary Board</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.nios10">NIOS Class 10th Support</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.nios10">Flexible open schooling tuition for Class 10
+              students. Covers syllabus planning, assignments filing, and exam counseling.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.nios10">Duration: 1 Year</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.1">Syllabus Mapping &
+                  Planning</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.2">TMA & Practical
+                  Guidance</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.3">Exam Form Submission
+                  Help</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=nios-10" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 2: NIOS 12th -->
+        <div class="col-md-6 col-lg-4" data-course-category="nios">
+          <div class="portal-course-card">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-graduation-cap"></i></div>
+              <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.senior">Senior Secondary</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.nios12">NIOS Class 12th Coaching</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.nios12">Comprehensive academic preparation for Sr.
+              Secondary NIOS streams (Arts, Commerce, Science) with expert counselors.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.nios12">Duration: 1 Year</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.1">Stream Matching
+                  (Sci/Com/Arts)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.2">Bilingual Study
+                  Guides</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.3">Admission Registration
+                  Filing</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=nios-12" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 3: CBSE 9-10 -->
+        <div class="col-md-6 col-lg-4" data-course-category="cbse">
+          <div class="portal-course-card orange-top">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.foundations">Foundations</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.cbse910">CBSE Class 9-10 Coaching</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.cbse910">Concept-strengthening coaching for Science,
+              Mathematics, English, and Social Studies. Weekly evaluations and board practice.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.cbse910">Duration: Full Year</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.1">Maths & Science
+                  Focus</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.2">Weekly Performance
+                  Tracker</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.3">Concept Clearing
+                  Tutorials</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=cbse-9-10" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 4: CBSE 11-12 -->
+        <div class="col-md-6 col-lg-4" data-course-category="cbse">
+          <div class="portal-course-card orange-top">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+              <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.academicRoi">Academic ROI</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.cbse1112">CBSE Class 11-12 Coaching</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.cbse1112">Stream-specific prep for Board exams. Regular
+              test series, memory mapping shortcuts, and board evaluation sessions.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.cbse1112">Duration: Full Year</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.1">Stream Prep
+                  (PCM/Com/Arts)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.2">Board Exam Mock
+                  Papers</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.3">Memory Mnemonics
+                  Shortcuts</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=cbse-11-12" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 5: CUET -->
+        <div class="col-md-6 col-lg-4" data-course-category="entrance">
+          <div class="portal-course-card yellow-top">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-award"></i></div>
+              <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.trending">Trending Prep</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.cuet">CUET Entrance Prep</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.cuet">Prepare for Common University Entrance Test.
+              Domain-specific tutorials, languages, and general mental ability mocks.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.cuet">Duration: 3-6 Months</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.1">Domain Subject Mock
+                  Exams</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.2">General Test
+                  Mentoring</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.3">University Admission
+                  Matching</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=cuet" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Distance UG -->
+        <div class="col-md-6 col-lg-4" data-course-category="distance">
+          <div class="portal-course-card">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-university"></i></div>
+              <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.ugc">UGC Approved</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.ug">Distance UG Guidance</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.ug">UGC-DEB approved Bachelor degrees (BA, B.Com, BBA).
+              Get university options comparisons, eligibility checks, and guides.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.ug">Duration: 3 Years</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.1">UGC-DEB Approved Degree
+                  Selection</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.2">Comparison of Fees &
+                  Approvals</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.3">Complete Admission
+                  Counseling</span></li>
+            </ul>
+
+            <a href="distance-education-delhi.html" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 7: Distance PG -->
+        <div class="col-md-6 col-lg-4" data-course-category="distance">
+          <div class="portal-course-card">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-user-graduate"></i></div>
+              <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.globalPg">Global PG</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.pg">Distance PG Guidance</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.pg">Master degrees admissions (MA, MBA, MCA). Compare
+              universities on approvals, e-learning libraries, and monthly EMI options.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.pg">Duration: 2 Years</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.1">Executive & General MBA
+                  Options</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.2">EMI Fee Payment
+                  Advice</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.3">E-Library & Study
+                  Resources</span></li>
+            </ul>
+
+            <a href="distance-education-delhi.html" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+              Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 8: Skill Courses -->
+        <div class="col-md-6 col-lg-4" data-course-category="skill">
+          <div class="portal-course-card orange-top">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
+              <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.placement">Placements Helper</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.skill">Vocational & IT Skills</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.skill">Job-oriented training in digital marketing,
+              computer applications, graphic design, and nursery teacher training certification.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.skill">Duration: 6-12 Months</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.1">Digital Marketing & IT
+                  Skills</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.2">Nursery Teacher
+                  Training (NTT)</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.3">Placements & CV
+                  Building support</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=computer-course" class="portal-card-btn" data-i18n="home.enquireNow">Compare
+              & Enquire</a>
+          </div>
+        </div>
+
+        <!-- Card 9: Memory Science -->
+        <div class="col-md-6 col-lg-4" data-course-category="memory">
+          <div class="portal-course-card yellow-top">
+            <div class="portal-card-header">
+              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+              <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.bhoolna">Bhoolna Bhool Jaoge</span>
+            </div>
+            <h3 class="portal-card-title" data-i18n="course.title.memory">Memory Science Training</h3>
+            <p class="portal-card-desc" data-i18n="course.desc.memory">Scientific mnemonics training to memorize
+              historical timelines, formulas, and long descriptions quickly. Learn forget-proof recall.</p>
+
+            <div class="portal-card-duration-badge">
+              <i class="fa-regular fa-clock"></i>
+              <span data-i18n="course.duration.memory">Duration: 3 Months</span>
+            </div>
+
+            <ul class="portal-card-features">
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.1">Bhoolna Bhool Jaoge
+                  recall system</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.2">Fast Reading &
+                  Revision tricks</span></li>
+              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.3">Science-backed
+                  mnemonics</span></li>
+            </ul>
+
+            <a href="course-detail.html?id=mnemonics-science" class="portal-card-btn"
+              data-i18n="home.enquireNow">Compare & Enquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Higher Education Section (Split layout with campus visual) -->
+  <section class="section-padding higher-ed-section border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Left side visual card -->
+        <div class="col-lg-5">
+          <div class="higher-ed-graphic-card">
+            <div class="graphic-dots"></div>
+            <div class="graphic-content">
+              <span class="graphic-badge" data-i18n="home.higherEd">Higher Education</span>
+              <h3 class="graphic-title" data-i18n="home.regularMode">Regular Mode Courses</h3>
+              <p class="graphic-desc" data-i18n="home.admissionGuidance">Admission Guidance & Assistance for Various UGC
+                Approved Universities Across India</p>
+              <div class="graphic-stats-row">
+                <div class="graphic-stat">
+                  <span class="stat-num">100%</span>
+                  <span class="stat-label" data-i18n="course.tag.ugc">UGC Approved</span>
+                </div>
+                <div class="graphic-stat">
+                  <span class="stat-num">10k+</span>
+                  <span class="stat-label" data-i18n="home.stats.students">Students Taught</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side details and tags -->
+        <div class="col-lg-7 ps-lg-5">
+          <span class="positioning-line" data-i18n="home.higherEd">Higher Education</span>
+          <a href="regular-courses.html" class="text-decoration-none">
+            <h2 class="heading-section hover-orange mb-3" style="cursor: pointer;">
+              <span data-i18n="home.regularMode">Regular Mode Courses</span>
+              <i class="fa-solid fa-circle-arrow-right ms-2 fs-4"></i>
+            </h2>
+          </a>
+          <p class="text-muted mb-5" data-i18n="home.admissionGuidance">Admission Guidance & Assistance for Various UGC
+            Approved Universities Across India</p>
+
+          <div class="row row-cols-2 row-cols-sm-3 g-3 mb-5">
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">BA</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">B.Com</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">BBA</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">MBA</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">MA</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">Yoga</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">BA LLB</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">B.Ed</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">LLB</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">LLM</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">B.Tech</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">B.Lib</a></div>
+          </div>
+
+          <div>
+            <a href="regular-courses.html" class="btn btn-premium btn-orange px-5 py-3"
+              data-i18n="home.viewAllRegular">View All Regular Courses</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Memory Science Highlight Section (Warm overlay card block) -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="memory-science-section">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6">
+            <span class="memory-science-badge" data-i18n="home.memoryScience">Memory Science Based Learning</span>
+            <h2 class="memory-science-title text-navy"><span data-i18n="home.memoryScience">Memory Science Based
+                Learning</span></h2>
+            <p class="memory-science-desc fw-semibold text-orange mb-3" data-i18n="home.memoryDesc1">Special coaching
+              for weak students with concept clarity and fast learning.</p>
+            <p class="memory-science-desc mb-5" data-i18n="home.memoryDesc2">
+              Memory Science techniques allow students to remember complex equations, histories, and answers easily.
+              Learn to memorize anything faster and forget nothing.
+            </p>
+            <a href="contact.html" class="btn btn-premium btn-orange text-white" data-i18n="home.enquireNow">Enquire
+              Now</a>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <div class="memory-science-image-card">
+              <img src="https://images.unsplash.com/photo-1634129536400-5c3cdd3ef953"
+                alt="Memory Science brain mapping learning focus" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Comparison Matrix Section -->
+  <section class="section-padding bg-white border-top">
+    <div class="container">
+      <div class="text-center mb-5 max-w-2xl mx-auto">
+        <span class="positioning-line text-center" data-i18n="home.compareTitle">Why Choose Toppers Guru?</span>
+        <h2 class="heading-section text-center" data-i18n="home.compareTitle">Why Choose Toppers Guru?</h2>
+        <p class="text-muted text-center" data-i18n="home.compareSubtitle">How we differ from traditional tuition
+          coaching centers</p>
+      </div>
+
+      <div class="comparison-matrix-wrapper">
+        <div class="table-responsive">
+          <table class="comparison-matrix-table">
+            <thead>
+              <tr>
+                <th style="width: 40%;" data-i18n="compare.features">Key Features</th>
+                <th style="width: 30%; background: var(--color-navy);" data-i18n="compare.toppersGuru">Toppers Guru
+                  Advantage</th>
+                <th style="width: 30%; background: var(--neutral-slate-300); color: var(--text-dark);"
+                  data-i18n="compare.traditional">Traditional Coaching</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="compare.feat1">Memory Science & Mnemonics</td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-check compare-check"></i>
+                    <span class="fw-semibold text-dark text-sm" data-i18n="compare.yesMnemonics">Bilingual
+                      Mnemonics</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-xmark compare-cross"></i>
+                    <span class="text-muted text-sm" data-i18n="compare.noMnemonics">Rote Memorization</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="compare.feat2">30+ Years Academic Legacy</td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-check compare-check"></i>
+                    <span class="fw-semibold text-dark text-sm" data-i18n="compare.yesLegacy">Since 1989</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-xmark compare-cross"></i>
+                    <span class="text-muted text-sm" data-i18n="compare.noLegacy">Temporary Tutors</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="compare.feat3">ISO 9001:2015 Certification</td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-check compare-check"></i>
+                    <span class="fw-semibold text-dark text-sm" data-i18n="compare.yesIso">Govt Recognised
+                      Society</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-xmark compare-cross"></i>
+                    <span class="text-muted text-sm" data-i18n="compare.noIso">Unregistered Tutors</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="compare.feat4">UGC-DEB University Guidance</td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-check compare-check"></i>
+                    <span class="fw-semibold text-dark text-sm" data-i18n="compare.yesUgc">Direct Course Matching</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-xmark compare-cross"></i>
+                    <span class="text-muted text-sm" data-i18n="compare.noUgc">No Career Counseling</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="compare.feat5">End-to-End Filing Support</td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-check compare-check"></i>
+                    <span class="fw-semibold text-dark text-sm" data-i18n="compare.yesFiling">Form, TMA & Exam
+                      Booking</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-xmark compare-cross"></i>
+                    <span class="text-muted text-sm" data-i18n="compare.noFiling">Self-applied only</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n="compare.feat6">Bilingual Material & Batches</td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-check compare-check"></i>
+                    <span class="fw-semibold text-dark text-sm" data-i18n="compare.yesBilingual">English & Hindi
+                      support</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="fa-solid fa-circle-xmark compare-cross"></i>
+                    <span class="text-muted text-sm" data-i18n="compare.noBilingual">Single language only</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fee Grid Section (Mc component - clean table matrix cards) -->
+  <section class="section-padding bg-slate border-top border-bottom">
+    <div class="container">
+
+      <div class="text-center mb-5 max-w-2xl mx-auto">
+        <span class="positioning-line text-center" data-i18n="home.affordableFee">Affordable Fee Structure</span>
+        <h2 class="heading-section text-center" data-i18n="home.affordableFee">Affordable Fee Structure for Every
+          Student</h2>
+        <p class="text-muted text-center">Transparent pricing with no hidden charges. Quality education accessible to
+          all.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Academic Classes -->
+        <div class="col-md-6 col-lg-4">
+          <div class="fee-card academic-fee h-100">
+            <div class="fee-card-title">
+              <div class="fee-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              Academic Classes
+            </div>
+            <div class="fee-list">
+              <div class="fee-row">
+                <span class="fee-subject">Nursery to Pre-Primary</span>
+                <span class="fee-price">₹800/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 1–3</span>
+                <span class="fee-price">₹1200/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 4–5</span>
+                <span class="fee-price">₹1500/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 6–7</span>
+                <span class="fee-price">₹1800/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 8</span>
+                <span class="fee-price">₹2000/month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CBSE Coaching -->
+        <div class="col-md-6 col-lg-4">
+          <div class="fee-card cbse-fee h-100">
+            <div class="fee-card-title">
+              <div class="fee-card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+              CBSE Coaching
+            </div>
+            <div class="fee-list">
+              <div class="fee-row">
+                <span class="fee-subject">Class 9</span>
+                <span class="fee-price">₹600/mo per subj</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 10</span>
+                <span class="fee-price">₹700/mo per subj</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 11</span>
+                <span class="fee-price">₹750/mo per subj</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 12</span>
+                <span class="fee-price">₹750/mo per subj</span>
+              </div>
+              <div class="fee-row highlight">
+                <span class="fee-subject">Class 11–12 Combo</span>
+                <span class="fee-price">₹1200 for 2 subj</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NIOS / BOSSE -->
+        <div class="col-md-6 col-lg-4">
+          <div class="fee-card nios-fee h-100">
+            <div class="fee-card-title">
+              <div class="fee-card-icon"><i class="fa-solid fa-school"></i></div>
+              NIOS / BOSSE
+            </div>
+            <div class="fee-list">
+              <div class="fee-row">
+                <span class="fee-subject">Class 10 NIOS</span>
+                <span class="fee-price">₹600/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 12 NIOS</span>
+                <span class="fee-price">₹700/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">BOSSE Class 10</span>
+                <span class="fee-price">₹600/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">BOSSE Class 12</span>
+                <span class="fee-price">₹700/month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+
+      <div class="text-center mb-5 max-w-2xl mx-auto">
+        <span class="positioning-line text-center" data-i18n="home.galleryPreview">Gallery Preview</span>
+        <h2 class="heading-section text-center" data-i18n="gallery.title">Our Journey, Success & Memories</h2>
+        <p class="text-muted text-center" data-i18n="home.galleryDesc">A glimpse into our vibrant learning environment
+          and student achievements.</p>
+      </div>
+
+      <div class="gallery-grid mb-5">
+        <!-- Image 1 -->
+        <div class="gallery-card">
+          <img
+            src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/dd7055d109a1f745e523428872d341d6.jpg"
+            alt="Faculty and students with Sanjeevni banner" />
+          <div class="gallery-overlay">
+            <div class="gallery-text">Faculty and students with Sanjeevni banner</div>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gallery-card">
+          <img
+            src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/93790249725634703177be3211e261f9.jpg"
+            alt="Happy students with peace signs" />
+          <div class="gallery-overlay">
+            <div class="gallery-text">Happy students with peace signs</div>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gallery-card">
+          <img
+            src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/33ba647619b8a1879a2c822d2dc7cdcc.jpg"
+            alt="Students with Indian flag decorations" />
+          <div class="gallery-overlay">
+            <div class="gallery-text">Students with Indian flag decorations</div>
+          </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gallery-card">
+          <img
+            src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/19d309bdd3ce45c562dc8b1037673aa1.jpg"
+            alt="Students studying at desk" />
+          <div class="gallery-overlay">
+            <div class="gallery-text">Students studying at desk</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="gallery.html" class="btn btn-premium btn-navy-outline px-5 py-3" data-i18n="home.viewFullGallery">View
+          Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counselling Inquiry Section (Separate block, styled beautifully) -->
+  <section class="section-padding bg-slate border-top" id="counselling">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="positioning-line" data-i18n="home.bookCounselling">Admissions Open</span>
+          <h2 class="heading-section mb-4"><span data-i18n="regularCourses.takeNextStep">Take the Next Step in Your
+              Education</span></h2>
+          <p class="text-muted fs-5 mb-4" data-i18n="regularCourses.admissionGuidance">
+            Admission Guidance & Assistance for Various UGC Approved Universities Across India.
+          </p>
+          <p class="text-muted mb-5">
+            Fill out the form to request a quick callback from our career counselors. We will review your academic goals
+            and match you with the ideal coaching program.
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="fs-4 text-orange"><i class="fa-solid fa-phone-volume"></i></div>
+            <div>
+              <span class="d-block text-muted text-sm" data-i18n="contact.callNow">Call Now</span>
+              <a href="tel:+919315593990" class="text-decoration-none fw-bold fs-5 text-dark hover-orange">+91
+                9315593990</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-5 offset-xl-1">
+          <div class="form-card">
+            <h3 class="form-title" data-i18n="home.bookCounselling">Book Free Counselling</h3>
+            <p class="form-subtitle" data-i18n="regularCourses.fillForm">Fill out the form below to get expert
+              counseling and admission support for your chosen program.</p>
+
+            <form id="enquiryForm">
+              <div class="mb-3">
+                <label for="nameInput" class="form-label"><span data-i18n="contact.sendInquiry">Full Name</span>
+                  *</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="emailInput" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email (optional)" />
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneInput" class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" id="phoneInput" placeholder="Enter 10-digit mobile number"
+                  required />
+              </div>
+
+              <div class="mb-4">
+                <label for="courseSelect" class="form-label">Course Interest *</label>
+                <select class="form-select" id="courseSelect" required>
+                  <option value="" disabled selected>Select a course</option>
+                  <option value="nios">NIOS Coaching</option>
+                  <option value="cbse">CBSE Coaching</option>
+                  <option value="cuet">CUET Preparation</option>
+                  <option value="distance">Distance Education</option>
+                  <option value="skill">Skill Courses</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display"
+                data-i18n="home.enquireNow">Get Callback Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section - Clean & Balanced light layout -->
+  <footer id="footer-container"></footer>
+
+  <!-- Custom On-page Popup Dialog -->
+  <div class="alert-popup-overlay" id="successOverlay">
+    <div class="alert-popup">
+      <div class="mb-4">
+        <span
+          class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle"
+          style="width: 70px; height: 70px; font-size: 32px;">
+          <i class="fa-solid fa-circle-check"></i>
+        </span>
+      </div>
+      <h3 class="font-display font-weight-800 text-navy mb-3" data-i18n="success.title">Inquiry Submitted!</h3>
+      <p class="text-muted mb-4" data-i18n="success.desc">
+        Thank you for your interest. Our academic counselors will get back to you shortly to guide you through the
+        process.
+      </p>
+      <button class="btn btn-premium btn-navy-outline px-4 py-2 font-display" id="closeAlertBtn"
+        data-i18n="success.backBtn">Close Window</button>
+    </div>
+  </div>
+
+  <!-- Floating Quick Actions -->
+  <a href="https://wa.me/919315593990" class="whatsapp-floating shadow-lg animate-pulse" target="_blank"
+    rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="tel:+919315593990" class="phone-floating shadow-lg" aria-label="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Bootstrap 5 Bundle JS (contains Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Global Custom JavaScript -->
+  <script src="js/component.js"></script>
+  <script src="js/main.js?v=2.0"></script>
+
+  <script>
+    // Auto-set copyright year
+    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
