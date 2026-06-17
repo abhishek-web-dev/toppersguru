@@ -22,7 +22,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Global Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=2.0" />
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
 </head>
 
 <body>
@@ -32,10 +32,6 @@
 
   <!-- Hero Portal Section -->
   <section class="hero-premium-banner">
-    <!-- Ambient Radial Glow Circles -->
-    <div class="glow-circle glow-orange"></div>
-    <div class="glow-circle glow-yellow"></div>
-
     <div class="container">
       <div class="row align-items-center gy-5">
 
@@ -81,49 +77,8 @@
           </div>
         </div>
 
-        <!-- Right Content: Counseling Booking Portal Card -->
+        <!-- Right Content: Empty space for background banner -->
         <div class="col-lg-5 col-xl-4 offset-xl-1">
-          <div class="booking-portal-card">
-            <h3 class="font-display text-navy mb-2 fs-4 text-center" data-i18n="home.bookCounsellingTitle">Book Your
-              Free Counseling Session</h3>
-            <p class="text-muted text-sm text-center mb-4" data-i18n="home.bookCounsellingDesc">Our academic advisors will call you back within 24 hours.</p>
-
-            <form id="enquiryForm">
-              <div class="mb-3">
-                <label for="nameInput" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formName">Full Name *</label>
-                <input type="text" class="form-control" id="nameInput" data-i18n="home.formNamePlaceholder" placeholder="Enter your full name" required />
-              </div>
-
-              <div class="mb-3">
-                <label for="emailInput" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formEmail">Email Address</label>
-                <input type="email" class="form-control" id="emailInput" data-i18n="home.formEmailPlaceholder" placeholder="Enter your email (optional)" />
-              </div>
-
-              <div class="mb-3">
-                <label for="phoneInput" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formPhone">Phone Number *</label>
-                <input type="tel" class="form-control" id="phoneInput" data-i18n="home.formPhonePlaceholder" placeholder="Enter 10-digit mobile number"
-                  required />
-              </div>
-
-              <div class="mb-4">
-                <label for="courseSelect" class="form-label fw-semibold text-navy text-sm" data-i18n="home.formCourse">Course Interest *</label>
-                <select class="form-select text-muted" id="courseSelect" required>
-                  <option value="" disabled selected data-i18n="home.formSelectCourse">Select Course *</option>
-                  <option value="nios" data-i18n="home.formCourseNios">NIOS Secondary / Sr. Secondary</option>
-                  <option value="cbse" data-i18n="home.formCourseCbse">CBSE School Coaching (9th-12th)</option>
-                  <option value="cuet" data-i18n="home.formCourseCuet">CUET / Competitive Entrance Prep</option>
-                  <option value="distance" data-i18n="home.formCourseDistance">Distance Education (UG, PG, Diploma)</option>
-                  <option value="skill" data-i18n="home.formCourseSkill">Skill & Vocational Courses</option>
-                  <option value="memory" data-i18n="home.formCourseMemory">Memory Science Training</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display">
-                <span data-i18n="home.enquireNow">Enquire Now</span>
-                <i class="fa-solid fa-arrow-right-to-bracket ms-2"></i>
-              </button>
-            </form>
-          </div>
         </div>
 
       </div>
@@ -133,26 +88,76 @@
   <!-- Stats Banner Section (Vibrant Light Card design) -->
   <section class="container px-3 px-md-0 position-relative">
     <div class="stats-banner-row">
-      <div class="row gy-4 justify-content-center">
+      <div class="row gy-5 justify-content-center">
+        <!-- Years Experience -->
         <div class="col-sm-6 col-md-4 border-end border-light border-sm-none">
-          <div class="stat-item">
-            <div class="stat-icon-wrapper"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h3 class="stat-number">30+</h3>
-            <p class="stat-label" data-i18n="home.stats.years">Years Experience</p>
+          <div class="stat-item-premium navy-theme">
+            <div class="stat-circle-container">
+              <svg viewBox="0 0 100 100" class="stat-svg">
+                <defs>
+                  <linearGradient id="grad-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0F214C" />
+                    <stop offset="100%" stop-color="#2196F3" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="40" class="stat-svg-bg"></circle>
+                <circle cx="50" cy="50" r="40" class="stat-svg-progress" stroke="url(#grad-navy)"
+                  stroke-dasharray="251.2" stroke-dashoffset="251.2" data-target-offset="25.1"></circle>
+              </svg>
+              <div class="stat-circle-inner">
+                <span class="stat-circle-number" data-target-val="30" data-suffix="+">0</span>
+              </div>
+            </div>
+            <p class="stat-circle-desc" data-i18n="home.stats.descYears">Academic excellence and 30+ years of trust
+              since 1989</p>
           </div>
         </div>
+
+        <!-- Students Taught -->
         <div class="col-sm-6 col-md-4 border-end border-light border-sm-none">
-          <div class="stat-item">
-            <div class="stat-icon-wrapper"><i class="fa-solid fa-user-group"></i></div>
-            <h3 class="stat-number">10,000+</h3>
-            <p class="stat-label" data-i18n="home.stats.students">Students Taught</p>
+          <div class="stat-item-premium orange-theme">
+            <div class="stat-circle-container">
+              <svg viewBox="0 0 100 100" class="stat-svg">
+                <defs>
+                  <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FF6E00" />
+                    <stop offset="100%" stop-color="#FFD25E" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="40" class="stat-svg-bg"></circle>
+                <circle cx="50" cy="50" r="40" class="stat-svg-progress" stroke="url(#grad-orange)"
+                  stroke-dasharray="251.2" stroke-dashoffset="251.2" data-target-offset="37.7"></circle>
+              </svg>
+              <div class="stat-circle-inner">
+                <span class="stat-circle-number" data-target-val="10" data-suffix="k+">0</span>
+              </div>
+            </div>
+            <p class="stat-circle-desc" data-i18n="home.stats.descStudents">Guiding over 10,000+ students to academic
+              success</p>
           </div>
         </div>
+
+        <!-- Courses Offered -->
         <div class="col-sm-6 col-md-4">
-          <div class="stat-item">
-            <div class="stat-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
-            <h3 class="stat-number">450+</h3>
-            <p class="stat-label" data-i18n="home.stats.courses">Courses Offered</p>
+          <div class="stat-item-premium green-theme">
+            <div class="stat-circle-container">
+              <svg viewBox="0 0 100 100" class="stat-svg">
+                <defs>
+                  <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#01A85A" />
+                    <stop offset="100%" stop-color="#00E676" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="40" class="stat-svg-bg"></circle>
+                <circle cx="50" cy="50" r="40" class="stat-svg-progress" stroke="url(#grad-green)"
+                  stroke-dasharray="251.2" stroke-dashoffset="251.2" data-target-offset="62.8"></circle>
+              </svg>
+              <div class="stat-circle-inner">
+                <span class="stat-circle-number" data-target-val="450" data-suffix="+">0</span>
+              </div>
+            </div>
+            <p class="stat-circle-desc" data-i18n="home.stats.descCourses">450+ active courses across multiple boards
+              and universities</p>
           </div>
         </div>
       </div>
@@ -196,6 +201,221 @@
     </div>
   </section>
 
+  <!-- Admissions & Inquiry Hub Section (New Section) -->
+  <section class="section-padding bg-light border-bottom position-relative" id="admissionsInquirySection">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Left Content: Image and Text Info -->
+        <div class="col-lg-6">
+          <div class="pe-lg-4">
+            <span class="positioning-line text-start" data-i18n="home.admissionPortalSub">Direct Admission
+              Guidance</span>
+            <h2 class="heading-section text-start mb-4" data-i18n="home.admissionPortalTitle">Get Admission Counseling
+              from Experts</h2>
+
+            <div class="admission-image-wrapper mb-4 position-relative">
+              <img src="Images/academic_counseling.png" alt="Academic Counseling at Toppers Guru"
+                class="img-fluid rounded-4 shadow-sm w-100" style="object-fit: cover; max-height: 360px;" />
+              <div
+                class="admission-floating-badge bg-orange text-white p-3 rounded-3 shadow-lg position-absolute bottom-0 end-0 m-3 d-flex align-items-center gap-2"
+                style="background-color: var(--color-orange) !important;">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span class="fw-bold">ISO 9001:2015 Certified</span>
+              </div>
+            </div>
+
+            <p class="text-muted mb-4">
+              Toppers Guru offers specialized academic coaching and admission assistance. Get direct counselling for
+              NIOS Board, CBSE Coaching, CUET, Distance Degrees, and NSDC skill programs. Connect with our experts
+              today.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fa-solid fa-circle-check text-orange" style="color: var(--color-orange);"></i>
+                  <span class="fw-bold text-navy" style="color: var(--color-navy);">Personalized Counselling</span>
+                </div>
+                <p class="text-sm text-muted mb-0">Customized learning paths to fit your career aspirations.</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fa-solid fa-circle-check text-orange" style="color: var(--color-orange);"></i>
+                  <span class="fw-bold text-navy" style="color: var(--color-navy);">UGC & Board Recognized</span>
+                </div>
+                <p class="text-sm text-muted mb-0">Admission guidance for top universities across India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content: Interactive Inquiry Form Card -->
+        <div class="col-lg-6">
+          <div class="form-card shadow-lg p-5 bg-white border border-light rounded-4">
+            <h3 class="form-title text-navy font-display font-weight-800 mb-2" style="color: var(--color-navy);"
+              data-i18n="home.applyOnline">Request a Call Back</h3>
+            <p class="form-subtitle text-muted mb-4">Fill out this quick form and our academic counselor will contact
+              you shortly.</p>
+
+            <form id="admissionsEnquiryForm">
+              <div class="mb-3">
+                <label for="admissionsNameInput" class="form-label fw-bold text-navy"
+                  style="color: var(--color-navy);">Full Name *</label>
+                <input type="text" class="form-control py-3" id="admissionsNameInput" placeholder="Enter your full name"
+                  required />
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="admissionsPhoneInput" class="form-label fw-bold text-navy"
+                    style="color: var(--color-navy);">Phone Number *</label>
+                  <input type="tel" class="form-control py-3" id="admissionsPhoneInput"
+                    placeholder="Enter 10-digit number" required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="admissionsEmailInput" class="form-label fw-bold text-navy"
+                    style="color: var(--color-navy);">Email Address</label>
+                  <input type="email" class="form-control py-3" id="admissionsEmailInput"
+                    placeholder="name@example.com (optional)" />
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="admissionsCourseSelect" class="form-label fw-bold text-navy"
+                  style="color: var(--color-navy);">Course/Program of Interest *</label>
+                <select class="form-select py-3" id="admissionsCourseSelect" required>
+                  <option value="" disabled selected>Select a program</option>
+                  <option value="nios">NIOS Open Schooling (10th/12th)</option>
+                  <option value="cbse">CBSE School Coaching (9th-12th)</option>
+                  <option value="cuet">CUET Entrance Exam Prep</option>
+                  <option value="distance">Distance UG/PG Degrees</option>
+                  <option value="skill">NSDC Skill & IT Courses</option>
+                  <option value="memory">Memory Science Training</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 font-display">
+                Send Admission Request <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Fee Grid Section (Mc component - clean table matrix cards) -->
+  <section class="section-padding fee-structure-section bg-slate border-top border-bottom">
+    <div class="container">
+
+      <div class="text-center mb-5 max-w-2xl mx-auto">
+        <span class="positioning-line text-center" data-i18n="home.affordableFee">Affordable Fee Structure</span>
+        <h2 class="heading-section text-center" data-i18n="home.affordableFee">Affordable Fee Structure for Every
+          Student</h2>
+        <p class="text-muted text-center">Transparent pricing with no hidden charges. Quality education accessible to
+          all.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Academic Classes -->
+        <div class="col-md-6 col-lg-4">
+          <div class="fee-card academic-fee h-100">
+            <div class="fee-card-title">
+              <div class="fee-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              Academic Classes
+            </div>
+            <div class="fee-list">
+              <div class="fee-row">
+                <span class="fee-subject">Nursery to Pre-Primary</span>
+                <span class="fee-price">₹800/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 1–3</span>
+                <span class="fee-price">₹1200/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 4–5</span>
+                <span class="fee-price">₹1500/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 6–7</span>
+                <span class="fee-price">₹1800/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 8</span>
+                <span class="fee-price">₹2000/month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CBSE Coaching -->
+        <div class="col-md-6 col-lg-4">
+          <div class="fee-card cbse-fee h-100">
+            <div class="fee-card-title">
+              <div class="fee-card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+              CBSE Coaching
+            </div>
+            <div class="fee-list">
+              <div class="fee-row">
+                <span class="fee-subject">Class 9</span>
+                <span class="fee-price">₹600/mo per subj</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 10</span>
+                <span class="fee-price">₹700/mo per subj</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 11</span>
+                <span class="fee-price">₹750/mo per subj</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 12</span>
+                <span class="fee-price">₹750/mo per subj</span>
+              </div>
+              <div class="fee-row highlight">
+                <span class="fee-subject">Class 11–12 Combo</span>
+                <span class="fee-price">₹1200 for 2 subj</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NIOS / BOSSE -->
+        <div class="col-md-6 col-lg-4">
+          <div class="fee-card nios-fee h-100">
+            <div class="fee-card-title">
+              <div class="fee-card-icon"><i class="fa-solid fa-school"></i></div>
+              NIOS / BOSSE
+            </div>
+            <div class="fee-list">
+              <div class="fee-row">
+                <span class="fee-subject">Class 10 NIOS</span>
+                <span class="fee-price">₹600/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">Class 12 NIOS</span>
+                <span class="fee-price">₹700/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">BOSSE Class 10</span>
+                <span class="fee-price">₹600/month</span>
+              </div>
+              <div class="fee-row">
+                <span class="fee-subject">BOSSE Class 12</span>
+                <span class="fee-price">₹700/month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Portal Courses Explorer Section (Inspired by College Vidya) -->
   <section class="section-padding bg-white" id="portalCoursesSection">
     <div class="container">
@@ -218,279 +438,291 @@
         <button class="course-pill-btn" data-category="memory">Memory Science</button>
       </div>
 
-      <div class="row g-4">
-        <!-- Card 1: NIOS 10th -->
-        <div class="col-md-6 col-lg-4" data-course-category="nios">
-          <div class="portal-course-card">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-school"></i></div>
-              <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.secondary">Secondary Board</span>
+      <!-- Slider Navigation Wrapper -->
+      <div class="programs-slider-wrapper position-relative">
+        <button class="slider-arrow-btn prev-btn" id="slidePrevBtn" aria-label="Previous Slide">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="programs-slider-track" id="programsScrollTrack">
+          <!-- Card 1: NIOS 10th -->
+          <div class="scroll-card-item" data-course-category="nios">
+            <div class="portal-course-card">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-school"></i></div>
+                <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.secondary">Secondary Board</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.nios10">NIOS Class 10th Support</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.nios10">Flexible open schooling tuition for Class 10
+                students. Covers syllabus planning, assignments filing, and exam counseling.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.nios10">Duration: 1 Year</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.1">Syllabus Mapping &
+                    Planning</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.2">TMA & Practical
+                    Guidance</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.3">Exam Form Submission
+                    Help</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=nios-10" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.nios10">NIOS Class 10th Support</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.nios10">Flexible open schooling tuition for Class 10
-              students. Covers syllabus planning, assignments filing, and exam counseling.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.nios10">Duration: 1 Year</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.1">Syllabus Mapping &
-                  Planning</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.2">TMA & Practical
-                  Guidance</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios10.3">Exam Form Submission
-                  Help</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=nios-10" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 2: NIOS 12th -->
-        <div class="col-md-6 col-lg-4" data-course-category="nios">
-          <div class="portal-course-card">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-graduation-cap"></i></div>
-              <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.senior">Senior Secondary</span>
+          <!-- Card 2: NIOS 12th -->
+          <div class="scroll-card-item" data-course-category="nios">
+            <div class="portal-course-card">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.senior">Senior Secondary</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.nios12">NIOS Class 12th Coaching</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.nios12">Comprehensive academic preparation for Sr.
+                Secondary NIOS streams (Arts, Commerce, Science) with expert counselors.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.nios12">Duration: 1 Year</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.1">Stream Matching
+                    (Sci/Com/Arts)</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.2">Bilingual Study
+                    Guides</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.3">Admission
+                    Registration
+                    Filing</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=nios-12" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.nios12">NIOS Class 12th Coaching</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.nios12">Comprehensive academic preparation for Sr.
-              Secondary NIOS streams (Arts, Commerce, Science) with expert counselors.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.nios12">Duration: 1 Year</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.1">Stream Matching
-                  (Sci/Com/Arts)</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.2">Bilingual Study
-                  Guides</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.nios12.3">Admission Registration
-                  Filing</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=nios-12" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 3: CBSE 9-10 -->
-        <div class="col-md-6 col-lg-4" data-course-category="cbse">
-          <div class="portal-course-card orange-top">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-chalkboard-user"></i></div>
-              <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.foundations">Foundations</span>
+          <!-- Card 3: CBSE 9-10 -->
+          <div class="scroll-card-item" data-course-category="cbse">
+            <div class="portal-course-card orange-top">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.foundations">Foundations</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.cbse910">CBSE Class 9-10 Coaching</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.cbse910">Concept-strengthening coaching for Science,
+                Mathematics, English, and Social Studies. Weekly evaluations and board practice.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.cbse910">Duration: Full Year</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.1">Maths & Science
+                    Focus</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.2">Weekly Performance
+                    Tracker</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.3">Concept Clearing
+                    Tutorials</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=cbse-9-10" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.cbse910">CBSE Class 9-10 Coaching</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.cbse910">Concept-strengthening coaching for Science,
-              Mathematics, English, and Social Studies. Weekly evaluations and board practice.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.cbse910">Duration: Full Year</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.1">Maths & Science
-                  Focus</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.2">Weekly Performance
-                  Tracker</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse910.3">Concept Clearing
-                  Tutorials</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=cbse-9-10" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 4: CBSE 11-12 -->
-        <div class="col-md-6 col-lg-4" data-course-category="cbse">
-          <div class="portal-course-card orange-top">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
-              <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.academicRoi">Academic ROI</span>
+          <!-- Card 4: CBSE 11-12 -->
+          <div class="scroll-card-item" data-course-category="cbse">
+            <div class="portal-course-card orange-top">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+                <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.academicRoi">Academic ROI</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.cbse1112">CBSE Class 11-12 Coaching</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.cbse1112">Stream-specific prep for Board exams. Regular
+                test series, memory mapping shortcuts, and board evaluation sessions.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.cbse1112">Duration: Full Year</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.1">Stream Prep
+                    (PCM/Com/Arts)</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.2">Board Exam Mock
+                    Papers</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.3">Memory Mnemonics
+                    Shortcuts</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=cbse-11-12" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.cbse1112">CBSE Class 11-12 Coaching</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.cbse1112">Stream-specific prep for Board exams. Regular
-              test series, memory mapping shortcuts, and board evaluation sessions.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.cbse1112">Duration: Full Year</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.1">Stream Prep
-                  (PCM/Com/Arts)</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.2">Board Exam Mock
-                  Papers</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cbse1112.3">Memory Mnemonics
-                  Shortcuts</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=cbse-11-12" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 5: CUET -->
-        <div class="col-md-6 col-lg-4" data-course-category="entrance">
-          <div class="portal-course-card yellow-top">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-award"></i></div>
-              <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.trending">Trending Prep</span>
+          <!-- Card 5: CUET -->
+          <div class="scroll-card-item" data-course-category="entrance">
+            <div class="portal-course-card yellow-top">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-award"></i></div>
+                <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.trending">Trending Prep</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.cuet">CUET Entrance Prep</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.cuet">Prepare for Common University Entrance Test.
+                Domain-specific tutorials, languages, and general mental ability mocks.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.cuet">Duration: 3-6 Months</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.1">Domain Subject Mock
+                    Exams</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.2">General Test
+                    Mentoring</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.3">University Admission
+                    Matching</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=cuet" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.cuet">CUET Entrance Prep</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.cuet">Prepare for Common University Entrance Test.
-              Domain-specific tutorials, languages, and general mental ability mocks.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.cuet">Duration: 3-6 Months</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.1">Domain Subject Mock
-                  Exams</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.2">General Test
-                  Mentoring</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.cuet.3">University Admission
-                  Matching</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=cuet" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 6: Distance UG -->
-        <div class="col-md-6 col-lg-4" data-course-category="distance">
-          <div class="portal-course-card">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-university"></i></div>
-              <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.ugc">UGC Approved</span>
+          <!-- Card 6: Distance UG -->
+          <div class="scroll-card-item" data-course-category="distance">
+            <div class="portal-course-card">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-university"></i></div>
+                <span class="portal-card-top-tag tag-trend" data-i18n="course.tag.ugc">UGC Approved</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.ug">Distance UG Guidance</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.ug">UGC-DEB approved Bachelor degrees (BA, B.Com, BBA).
+                Get university options comparisons, eligibility checks, and guides.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.ug">Duration: 3 Years</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.1">UGC-DEB Approved Degree
+                    Selection</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.2">Comparison of Fees &
+                    Approvals</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.3">Complete Admission
+                    Counseling</span></li>
+              </ul>
+
+              <a href="distance-education-delhi.html" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.ug">Distance UG Guidance</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.ug">UGC-DEB approved Bachelor degrees (BA, B.Com, BBA).
-              Get university options comparisons, eligibility checks, and guides.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.ug">Duration: 3 Years</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.1">UGC-DEB Approved Degree
-                  Selection</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.2">Comparison of Fees &
-                  Approvals</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.ug.3">Complete Admission
-                  Counseling</span></li>
-            </ul>
-
-            <a href="distance-education-delhi.html" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 7: Distance PG -->
-        <div class="col-md-6 col-lg-4" data-course-category="distance">
-          <div class="portal-course-card">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-user-graduate"></i></div>
-              <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.globalPg">Global PG</span>
+          <!-- Card 7: Distance PG -->
+          <div class="scroll-card-item" data-course-category="distance">
+            <div class="portal-course-card">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-user-graduate"></i></div>
+                <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.globalPg">Global PG</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.pg">Distance PG Guidance</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.pg">Master degrees admissions (MA, MBA, MCA). Compare
+                universities on approvals, e-learning libraries, and monthly EMI options.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.pg">Duration: 2 Years</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.1">Executive & General MBA
+                    Options</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.2">EMI Fee Payment
+                    Advice</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.3">E-Library & Study
+                    Resources</span></li>
+              </ul>
+
+              <a href="distance-education-delhi.html" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
+                Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.pg">Distance PG Guidance</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.pg">Master degrees admissions (MA, MBA, MCA). Compare
-              universities on approvals, e-learning libraries, and monthly EMI options.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.pg">Duration: 2 Years</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.1">Executive & General MBA
-                  Options</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.2">EMI Fee Payment
-                  Advice</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.pg.3">E-Library & Study
-                  Resources</span></li>
-            </ul>
-
-            <a href="distance-education-delhi.html" class="portal-card-btn" data-i18n="home.enquireNow">Compare &
-              Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 8: Skill Courses -->
-        <div class="col-md-6 col-lg-4" data-course-category="skill">
-          <div class="portal-course-card orange-top">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
-              <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.placement">Placements Helper</span>
+          <!-- Card 8: Skill Courses -->
+          <div class="scroll-card-item" data-course-category="skill">
+            <div class="portal-course-card orange-top">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
+                <span class="portal-card-top-tag tag-roi" data-i18n="course.tag.placement">Placements Helper</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.skill">Vocational & IT Skills</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.skill">Job-oriented training in digital marketing,
+                computer applications, graphic design, and nursery teacher training certification.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.skill">Duration: 6-12 Months</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.1">Digital Marketing &
+                    IT
+                    Skills</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.2">Nursery Teacher
+                    Training (NTT)</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.3">Placements & CV
+                    Building support</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=computer-course" class="portal-card-btn"
+                data-i18n="home.enquireNow">Compare
+                & Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.skill">Vocational & IT Skills</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.skill">Job-oriented training in digital marketing,
-              computer applications, graphic design, and nursery teacher training certification.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.skill">Duration: 6-12 Months</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.1">Digital Marketing & IT
-                  Skills</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.2">Nursery Teacher
-                  Training (NTT)</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.skill.3">Placements & CV
-                  Building support</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=computer-course" class="portal-card-btn" data-i18n="home.enquireNow">Compare
-              & Enquire</a>
           </div>
-        </div>
 
-        <!-- Card 9: Memory Science -->
-        <div class="col-md-6 col-lg-4" data-course-category="memory">
-          <div class="portal-course-card yellow-top">
-            <div class="portal-card-header">
-              <div class="portal-card-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-              <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.bhoolna">Bhoolna Bhool Jaoge</span>
+          <!-- Card 9: Memory Science -->
+          <div class="scroll-card-item" data-course-category="memory">
+            <div class="portal-course-card yellow-top">
+              <div class="portal-card-header">
+                <div class="portal-card-icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+                <span class="portal-card-top-tag tag-spec" data-i18n="course.tag.bhoolna">Bhoolna Bhool Jaoge</span>
+              </div>
+              <h3 class="portal-card-title" data-i18n="course.title.memory">Memory Science Training</h3>
+              <p class="portal-card-desc" data-i18n="course.desc.memory">Scientific mnemonics training to memorize
+                historical timelines, formulas, and long descriptions quickly. Learn forget-proof recall.</p>
+
+              <div class="portal-card-duration-badge">
+                <i class="fa-regular fa-clock"></i>
+                <span data-i18n="course.duration.memory">Duration: 3 Months</span>
+              </div>
+
+              <ul class="portal-card-features">
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.1">Bhoolna Bhool Jaoge
+                    recall system</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.2">Fast Reading &
+                    Revision tricks</span></li>
+                <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.3">Science-backed
+                    mnemonics</span></li>
+              </ul>
+
+              <a href="course-detail.html?id=mnemonics-science" class="portal-card-btn"
+                data-i18n="home.enquireNow">Compare & Enquire</a>
             </div>
-            <h3 class="portal-card-title" data-i18n="course.title.memory">Memory Science Training</h3>
-            <p class="portal-card-desc" data-i18n="course.desc.memory">Scientific mnemonics training to memorize
-              historical timelines, formulas, and long descriptions quickly. Learn forget-proof recall.</p>
-
-            <div class="portal-card-duration-badge">
-              <i class="fa-regular fa-clock"></i>
-              <span data-i18n="course.duration.memory">Duration: 3 Months</span>
-            </div>
-
-            <ul class="portal-card-features">
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.1">Bhoolna Bhool Jaoge
-                  recall system</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.2">Fast Reading &
-                  Revision tricks</span></li>
-              <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="course.feat.memory.3">Science-backed
-                  mnemonics</span></li>
-            </ul>
-
-            <a href="course-detail.html?id=mnemonics-science" class="portal-card-btn"
-              data-i18n="home.enquireNow">Compare & Enquire</a>
           </div>
+
+          <button class="slider-arrow-btn next-btn" id="slideNextBtn" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </div>
-
-    </div>
   </section>
 
   <!-- Higher Education Section (Split layout with campus visual) -->
@@ -501,8 +733,12 @@
         <!-- Left side visual card -->
         <div class="col-lg-5">
           <div class="higher-ed-graphic-card">
-            <div class="graphic-dots"></div>
-            <div class="graphic-content">
+            <div class="higher-ed-graphic-img-wrapper position-relative">
+              <img src="Images/academic_guidance_card.png" alt="UGC Approved Regular Mode Courses"
+                class="img-fluid w-100" />
+              <div class="graphic-dots"></div>
+            </div>
+            <div class="graphic-content-bottom">
               <span class="graphic-badge" data-i18n="home.higherEd">Higher Education</span>
               <h3 class="graphic-title" data-i18n="home.regularMode">Regular Mode Courses</h3>
               <p class="graphic-desc" data-i18n="home.admissionGuidance">Admission Guidance & Assistance for Various UGC
@@ -535,6 +771,8 @@
 
           <div class="row row-cols-2 row-cols-sm-3 g-3 mb-5">
             <div class="col"><a href="regular-courses.html" class="regular-course-tag">BA</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">BA (Programme)</a></div>
+            <div class="col"><a href="regular-courses.html" class="regular-course-tag">BA (Hons)</a></div>
             <div class="col"><a href="regular-courses.html" class="regular-course-tag">B.Com</a></div>
             <div class="col"><a href="regular-courses.html" class="regular-course-tag">BBA</a></div>
             <div class="col"><a href="regular-courses.html" class="regular-course-tag">MBA</a></div>
@@ -563,23 +801,61 @@
     <div class="container">
       <div class="memory-science-section">
         <div class="row align-items-center gy-5">
-          <div class="col-lg-6">
+          <div class="col-lg-7">
             <span class="memory-science-badge" data-i18n="home.memoryScience">Memory Science Based Learning</span>
-            <h2 class="memory-science-title text-navy"><span data-i18n="home.memoryScience">Memory Science Based
-                Learning</span></h2>
-            <p class="memory-science-desc fw-semibold text-orange mb-3" data-i18n="home.memoryDesc1">Special coaching
-              for weak students with concept clarity and fast learning.</p>
-            <p class="memory-science-desc mb-5" data-i18n="home.memoryDesc2">
-              Memory Science techniques allow students to remember complex equations, histories, and answers easily.
-              Learn to memorize anything faster and forget nothing.
+            <h2 class="memory-science-title text-navy" style="color: var(--color-navy);"><span
+                data-i18n="home.memoryScience">Memory Science Based Learning</span></h2>
+            <p class="memory-science-desc fw-bold text-orange mb-3" style="color: var(--color-orange); font-size: 18px;"
+              data-i18n="home.memoryDesc1">Special coaching for weak students with concept clarity and fast learning.
             </p>
+
+            <div
+              class="memory-science-hindi-subtitle my-3 fw-bold text-navy border-start border-3 border-orange ps-3 py-1"
+              style="font-size: 18px; color: var(--color-navy) !important; border-left: 3px solid var(--color-orange) !important;"
+              data-i18n="home.memoryHindi">कमजोर छात्रों के लिए विशेष प्रशिक्षण</div>
+
+            <div class="row row-cols-1 row-cols-sm-2 g-3 my-4">
+              <div class="col">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-circle-check text-navy mt-1"
+                    style="color: var(--color-navy); font-size: 16px;"></i>
+                  <span class="text-sm text-body fw-medium" data-i18n="home.memoryFeat1">Concept clarity through visual
+                    association</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-circle-check text-navy mt-1"
+                    style="color: var(--color-navy); font-size: 16px;"></i>
+                  <span class="text-sm text-body fw-medium" data-i18n="home.memoryFeat2">Fast learning techniques backed
+                    by cognitive science</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-circle-check text-navy mt-1"
+                    style="color: var(--color-navy); font-size: 16px;"></i>
+                  <span class="text-sm text-body fw-medium" data-i18n="home.memoryFeat3">Special focus and tailored
+                    paths for weak students</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex align-items-start gap-2">
+                  <i class="fa-solid fa-circle-check text-navy mt-1"
+                    style="color: var(--color-navy); font-size: 16px;"></i>
+                  <span class="text-sm text-body fw-medium" data-i18n="home.memoryFeat4">Memory-based learning methods
+                    for long-term retention</span>
+                </div>
+              </div>
+            </div>
+
             <a href="contact.html" class="btn btn-premium btn-orange text-white" data-i18n="home.enquireNow">Enquire
               Now</a>
           </div>
-          <div class="col-lg-6 text-center text-lg-end">
-            <div class="memory-science-image-card">
+          <div class="col-lg-5 text-center text-lg-end">
+            <div class="memory-science-image-card shadow-lg">
               <img src="https://images.unsplash.com/photo-1634129536400-5c3cdd3ef953"
-                alt="Memory Science brain mapping learning focus" class="img-fluid" />
+                alt="Memory Science brain mapping learning focus" class="img-fluid w-100" />
             </div>
           </div>
         </div>
@@ -711,115 +987,7 @@
     </div>
   </section>
 
-  <!-- Fee Grid Section (Mc component - clean table matrix cards) -->
-  <section class="section-padding bg-slate border-top border-bottom">
-    <div class="container">
 
-      <div class="text-center mb-5 max-w-2xl mx-auto">
-        <span class="positioning-line text-center" data-i18n="home.affordableFee">Affordable Fee Structure</span>
-        <h2 class="heading-section text-center" data-i18n="home.affordableFee">Affordable Fee Structure for Every
-          Student</h2>
-        <p class="text-muted text-center">Transparent pricing with no hidden charges. Quality education accessible to
-          all.</p>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-
-        <!-- Academic Classes -->
-        <div class="col-md-6 col-lg-4">
-          <div class="fee-card academic-fee h-100">
-            <div class="fee-card-title">
-              <div class="fee-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              Academic Classes
-            </div>
-            <div class="fee-list">
-              <div class="fee-row">
-                <span class="fee-subject">Nursery to Pre-Primary</span>
-                <span class="fee-price">₹800/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 1–3</span>
-                <span class="fee-price">₹1200/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 4–5</span>
-                <span class="fee-price">₹1500/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 6–7</span>
-                <span class="fee-price">₹1800/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 8</span>
-                <span class="fee-price">₹2000/month</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CBSE Coaching -->
-        <div class="col-md-6 col-lg-4">
-          <div class="fee-card cbse-fee h-100">
-            <div class="fee-card-title">
-              <div class="fee-card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-              CBSE Coaching
-            </div>
-            <div class="fee-list">
-              <div class="fee-row">
-                <span class="fee-subject">Class 9</span>
-                <span class="fee-price">₹600/mo per subj</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 10</span>
-                <span class="fee-price">₹700/mo per subj</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 11</span>
-                <span class="fee-price">₹750/mo per subj</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 12</span>
-                <span class="fee-price">₹750/mo per subj</span>
-              </div>
-              <div class="fee-row highlight">
-                <span class="fee-subject">Class 11–12 Combo</span>
-                <span class="fee-price">₹1200 for 2 subj</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- NIOS / BOSSE -->
-        <div class="col-md-6 col-lg-4">
-          <div class="fee-card nios-fee h-100">
-            <div class="fee-card-title">
-              <div class="fee-card-icon"><i class="fa-solid fa-school"></i></div>
-              NIOS / BOSSE
-            </div>
-            <div class="fee-list">
-              <div class="fee-row">
-                <span class="fee-subject">Class 10 NIOS</span>
-                <span class="fee-price">₹600/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">Class 12 NIOS</span>
-                <span class="fee-price">₹700/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">BOSSE Class 10</span>
-                <span class="fee-price">₹600/month</span>
-              </div>
-              <div class="fee-row">
-                <span class="fee-subject">BOSSE Class 12</span>
-                <span class="fee-price">₹700/month</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- Gallery Preview Section -->
   <section class="section-padding bg-white">

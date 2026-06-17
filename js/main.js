@@ -80,7 +80,15 @@ const translations = {
       memoryScience: "Memory Science Based Learning",
       memoryDesc1: "Special coaching for weak students with concept clarity and fast learning.",
       memoryDesc2: "Memory Science techniques allow students to remember complex equations, histories, and answers easily. Learn to memorize anything faster and forget nothing.",
+      memoryHindi: "कमजोर छात्रों के लिए विशेष प्रशिक्षण",
+      memoryFeat1: "Concept clarity through visual association",
+      memoryFeat2: "Fast learning techniques backed by cognitive science",
+      memoryFeat3: "Special focus and tailored paths for weak students",
+      memoryFeat4: "Memory-based learning methods for long-term retention",
       enquireNow: "Enquire Now",
+      admissionPortalSub: "Direct Admission Guidance",
+      admissionPortalTitle: "Get Admission Counseling from Experts",
+      applyOnline: "Request a Call Back",
       galleryPreview: "Gallery Preview",
       galleryDesc: "A glimpse into our vibrant learning environment and student achievements.",
       viewFullGallery: "View Full Gallery",
@@ -385,7 +393,15 @@ const translations = {
       memoryScience: "मेमोरी साइंस आधारित शिक्षा",
       memoryDesc1: "कॉन्सेप्ट क्लैरिटी और फास्ट लर्निंग के साथ कमजोर छात्रों के लिए विशेष कोचिंग।",
       memoryDesc2: "मेमोरी साइंस तकनीक छात्रों को जटिल समीकरणों, इतिहास और उत्तरों को आसानी से याद रखने की अनुमति देती है। किसी भी चीज़ को तेज़ी से याद करना सीखें और कुछ भी न भूलें।",
+      memoryHindi: "कमजोर छात्रों के लिए विशेष प्रशिक्षण",
+      memoryFeat1: "दृश्य संघ (visual association) के माध्यम से अवधारणा स्पष्टता",
+      memoryFeat2: "संज्ञानात्मक विज्ञान (cognitive science) द्वारा समर्थित तीव्र सीखने की तकनीकें",
+      memoryFeat3: "कमजोर छात्रों के लिए विशेष ध्यान और अनुकूलित मार्ग",
+      memoryFeat4: "दीर्घकालिक प्रतिधारण (retention) के लिए स्मृति-आधारित शिक्षण विधियां",
       enquireNow: "अभी पूछताछ करें",
+      admissionPortalSub: "सीधा प्रवेश मार्गदर्शन",
+      admissionPortalTitle: "विशेषज्ञों से प्रवेश परामर्श प्राप्त करें",
+      applyOnline: "कॉल बैक का अनुरोध करें",
       galleryPreview: "गैलरी पूर्वावलोकन",
       galleryDesc: "हमारे जीवंत सीखने के माहौल और छात्रों की उपलब्धियों की एक झलक।",
       viewFullGallery: "पूरी गैलरी देखें",
@@ -744,9 +760,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Enquiry / Counselling Form Handling (Simplified Mailto + On-Page Success Overlay)
-  const leadForm = document.getElementById('enquiryForm');
-  if (leadForm) {
-    const phoneInput = leadForm.querySelector('input[type="tel"]');
+  const setupEnquiryForm = (formElement) => {
+    if (!formElement) return;
+    const phoneInput = formElement.querySelector('input[type="tel"]');
     if (phoneInput) {
       phoneInput.addEventListener('input', (e) => {
         let value = e.target.value;
@@ -761,13 +777,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    leadForm.addEventListener('submit', (e) => {
+    formElement.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      const name = leadForm.querySelector('#nameInput')?.value.trim();
-      const phone = leadForm.querySelector('#phoneInput')?.value.trim();
-      const email = leadForm.querySelector('#emailInput')?.value.trim() || 'N/A';
-      const course = leadForm.querySelector('#courseSelect')?.value;
+      const name = formElement.querySelector('input[type="text"]')?.value.trim();
+      const phone = formElement.querySelector('input[type="tel"]')?.value.trim();
+      const email = formElement.querySelector('input[type="email"]')?.value.trim() || 'N/A';
+      const course = formElement.querySelector('select')?.value;
       
       if (!name || !phone || !course) {
         alert(currentLang === 'en' ? 'Please fill in all required fields marked with *' : 'कृपया * से चिह्नित सभी आवश्यक फ़ील्ड भरें');
@@ -785,7 +801,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const mailtoUrl = `mailto:info@toppersguru.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
       // Show spinner state
-      const submitBtn = leadForm.querySelector('button[type="submit"]');
+      const submitBtn = formElement.querySelector('button[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = true;
         const originalHtml = submitBtn.innerHTML;
@@ -793,7 +809,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(() => {
           // Reset Form
-          leadForm.reset();
+          formElement.reset();
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalHtml;
           
@@ -805,7 +821,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800);
       }
     });
-  }
+  };
+
+  setupEnquiryForm(document.getElementById('enquiryForm'));
+  setupEnquiryForm(document.getElementById('admissionsEnquiryForm'));
 
   // Bind close buttons for modal
   const closeAlertBtn = document.getElementById('closeAlertBtn');
@@ -852,17 +871,103 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.getElementById('slidePrevBtn');
   const nextBtn = document.getElementById('slideNextBtn');
   if (scrollTrack && prevBtn && nextBtn) {
-    const getCardWidth = () => {
-      const firstCard = scrollTrack.querySelector('.scroll-card-item:not([style*="display: none"])');
-      return firstCard ? firstCard.offsetWidth + 24 : scrollTrack.offsetWidth / 3;
+    let activeIndex = 0;
+    let autoSlideInterval = null;
+    let isScrolling = false;
+
+    const getVisibleCards = () => {
+      return Array.from(scrollTrack.querySelectorAll('.scroll-card-item')).filter(card => card.style.display !== 'none');
     };
+
+    const getVisibleCount = () => {
+      if (window.innerWidth > 991) return 3;
+      if (window.innerWidth > 767) return 2;
+      return 1;
+    };
+
+    const scrollToActiveIndex = (behavior = 'smooth') => {
+      const visibleCards = getVisibleCards();
+      if (visibleCards.length === 0) return;
+      
+      const visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, visibleCards.length - visibleCount);
+      
+      if (activeIndex > maxIndex) activeIndex = maxIndex;
+      if (activeIndex < 0) activeIndex = 0;
+      
+      const targetCard = visibleCards[activeIndex];
+      const targetScroll = targetCard.offsetLeft - scrollTrack.offsetLeft;
+      
+      isScrolling = true;
+      scrollTrack.scrollTo({ left: targetScroll, behavior });
+    };
+
+    // Calculate current active index based on scroll position
+    const updateActiveIndexFromScroll = () => {
+      if (isScrolling) return; // Ignore scroll events triggered by programmatic scrolling
+      
+      const visibleCards = getVisibleCards();
+      if (visibleCards.length === 0) return;
+      
+      const scrollLeft = scrollTrack.scrollLeft;
+      const trackLeft = scrollTrack.offsetLeft;
+      
+      let closestIndex = 0;
+      let minDiff = Infinity;
+      
+      visibleCards.forEach((card, index) => {
+        const diff = Math.abs((card.offsetLeft - trackLeft) - scrollLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIndex = index;
+        }
+      });
+      
+      activeIndex = closestIndex;
+    };
+
+    // Listen to scroll to update activeIndex on manual swipes/scrolls
+    scrollTrack.addEventListener('scroll', () => {
+      updateActiveIndexFromScroll();
+    });
+
+    scrollTrack.addEventListener('scrollend', () => {
+      isScrolling = false;
+    });
     
+    // Fallback for browsers that don't support scrollend yet
+    let scrollTimeout;
+    scrollTrack.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isScrolling = false;
+      }, 150);
+    });
+
     prevBtn.addEventListener('click', () => {
-      scrollTrack.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+      const visibleCards = getVisibleCards();
+      const visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, visibleCards.length - visibleCount);
+      
+      if (activeIndex <= 0) {
+        activeIndex = maxIndex; // Wrap around to end
+      } else {
+        activeIndex--;
+      }
+      scrollToActiveIndex();
     });
     
     nextBtn.addEventListener('click', () => {
-      scrollTrack.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+      const visibleCards = getVisibleCards();
+      const visibleCount = getVisibleCount();
+      const maxIndex = Math.max(0, visibleCards.length - visibleCount);
+      
+      if (activeIndex >= maxIndex) {
+        activeIndex = 0; // Wrap around to start
+      } else {
+        activeIndex++;
+      }
+      scrollToActiveIndex();
     });
 
     const updateArrowVisibility = () => {
@@ -885,26 +990,25 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     updateArrowVisibility();
-    window.addEventListener('resize', updateArrowVisibility);
-    
-    // Auto-slide functionality (Every 3 seconds)
-    let autoSlideInterval = null;
+    window.addEventListener('resize', () => {
+      updateArrowVisibility();
+      scrollToActiveIndex('instant'); // Instantly re-align layout on resize
+    });
     
     const startAutoSlide = () => {
       if (autoSlideInterval) clearInterval(autoSlideInterval);
       autoSlideInterval = setInterval(() => {
-        const totalWidth = scrollTrack.scrollWidth;
-        const visibleWidth = scrollTrack.offsetWidth;
-        const maxScroll = totalWidth - visibleWidth;
-        const cardWidth = getCardWidth();
-        const currentScroll = scrollTrack.scrollLeft;
+        const visibleCards = getVisibleCards();
+        const visibleCount = getVisibleCount();
+        const maxIndex = Math.max(0, visibleCards.length - visibleCount);
         
-        if (maxScroll > 10) {
-          if (currentScroll >= maxScroll - 15) {
-            scrollTrack.scrollTo({ left: 0, behavior: 'smooth' });
+        if (maxIndex > 0) {
+          if (activeIndex >= maxIndex) {
+            activeIndex = 0;
           } else {
-            scrollTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            activeIndex++;
           }
+          scrollToActiveIndex();
         }
       }, 3000);
     };
@@ -919,9 +1023,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start auto slide initially
     startAutoSlide();
     
-    // Pause auto slide on hover to improve usability
+    // Pause auto slide on hover/touch interactions to improve usability
     scrollTrack.addEventListener('mouseenter', stopAutoSlide);
     scrollTrack.addEventListener('mouseleave', startAutoSlide);
+    scrollTrack.addEventListener('touchstart', stopAutoSlide, { passive: true });
+    scrollTrack.addEventListener('touchend', startAutoSlide, { passive: true });
+    
     prevBtn.addEventListener('mouseenter', stopAutoSlide);
     prevBtn.addEventListener('mouseleave', startAutoSlide);
     nextBtn.addEventListener('mouseenter', stopAutoSlide);
@@ -941,7 +1048,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tabButtons.length > 0) {
       tabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          scrollTrack.scrollLeft = 0;
+          activeIndex = 0;
+          scrollToActiveIndex('instant');
           updateArrowVisibility();
           stopAutoSlide();
           startAutoSlide();
