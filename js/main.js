@@ -1140,4 +1140,142 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.15 });
     observer.observe(statsBannerRow);
   }
+
+  // 5. Accreditations Certificates Slider Scroll Logic
+  const certsTrack = document.getElementById('certsScrollTrack');
+  const certPrevBtn = document.getElementById('certPrevBtn');
+  const certNextBtn = document.getElementById('certNextBtn');
+  const certsDotsTrack = document.getElementById('certsDotsTrack');
+
+  if (certsTrack && certPrevBtn && certNextBtn && certsDotsTrack) {
+    const certSlides = certsTrack.querySelectorAll('.certificate-slide');
+    const totalSlides = certSlides.length;
+
+    const getVisibleSlidesCount = () => {
+      if (window.innerWidth > 992) return 4;
+      if (window.innerWidth > 768) return 2;
+      return 1;
+    };
+
+    // Build dots dynamically
+    const updateDots = () => {
+      certsDotsTrack.innerHTML = '';
+      const visibleCount = getVisibleSlidesCount();
+      const numDots = Math.max(1, totalSlides - visibleCount + 1);
+      
+      const currentScroll = certsTrack.scrollLeft;
+      const slideWidth = certSlides[0].offsetWidth;
+      const activeDotIndex = Math.round(currentScroll / slideWidth);
+
+      for (let i = 0; i < numDots; i++) {
+        const dot = document.createElement('div');
+        dot.className = `certificate-dot ${i === activeDotIndex ? 'active' : ''}`;
+        dot.addEventListener('click', () => {
+          certsTrack.scrollTo({
+            left: i * slideWidth,
+            behavior: 'smooth'
+          });
+        });
+        certsDotsTrack.appendChild(dot);
+      }
+    };
+
+    // Handle button clicks
+    certPrevBtn.addEventListener('click', () => {
+      const slideWidth = certSlides[0].offsetWidth;
+      certsTrack.scrollBy({ left: -slideWidth * 2, behavior: 'smooth' });
+    });
+
+    certNextBtn.addEventListener('click', () => {
+      const slideWidth = certSlides[0].offsetWidth;
+      certsTrack.scrollBy({ left: slideWidth * 2, behavior: 'smooth' });
+    });
+
+    // Update dots on scroll
+    let scrollDebounce;
+    certsTrack.addEventListener('scroll', () => {
+      clearTimeout(scrollDebounce);
+      scrollDebounce = setTimeout(updateDots, 100);
+    });
+
+    // Initialize dots on load and resize
+    updateDots();
+    window.addEventListener('resize', updateDots);
+  }
+});
+
+// 6. Global Accreditations Certificate Lightbox Modal Controller
+const certImagesList = [
+  "Images/certificate_01.png",
+  "Images/certificate_02.png",
+  "Images/certificate_03.png",
+  "Images/certificate_04.png",
+  "Images/certificate_05.png",
+  "Images/certificate_06.png",
+  "Images/certificate_07.png",
+  "Images/certificate_08.png",
+  "Images/certificate_09.png",
+  "Images/certificate_10.png",
+  "Images/certificate_11.png"
+];
+
+let activeCertIndex = 0;
+
+function openCertLightbox(index) {
+  activeCertIndex = index;
+  const lightbox = document.getElementById('certLightbox');
+  const lightboxImg = document.getElementById('lightboxActiveImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  
+  if (lightbox && lightboxImg && lightboxCaption) {
+    lightboxImg.src = certImagesList[activeCertIndex];
+    lightboxCaption.textContent = `Accreditation Certificate ${activeCertIndex + 1} of 11`;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Lock background scroll
+  }
+}
+
+function closeCertLightbox(event) {
+  const lightbox = document.getElementById('certLightbox');
+  if (lightbox) {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = ''; // Restore background scroll
+  }
+}
+
+function toggleCertLightboxClose(event) {
+  if (event) event.stopPropagation();
+  closeCertLightbox();
+}
+
+function navigateLightbox(direction, event) {
+  if (event) event.stopPropagation();
+  
+  activeCertIndex += direction;
+  if (activeCertIndex >= certImagesList.length) {
+    activeCertIndex = 0; // Wrap to start
+  } else if (activeCertIndex < 0) {
+    activeCertIndex = certImagesList.length - 1; // Wrap to end
+  }
+  
+  const lightboxImg = document.getElementById('lightboxActiveImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  if (lightboxImg && lightboxCaption) {
+    lightboxImg.src = certImagesList[activeCertIndex];
+    lightboxCaption.textContent = `Accreditation Certificate ${activeCertIndex + 1} of 11`;
+  }
+}
+
+// Bind keyboard escape and arrow keys to lightbox
+document.addEventListener('keydown', (e) => {
+  const lightbox = document.getElementById('certLightbox');
+  if (lightbox && lightbox.classList.contains('active')) {
+    if (e.key === 'Escape') {
+      closeCertLightbox();
+    } else if (e.key === 'ArrowRight') {
+      navigateLightbox(1);
+    } else if (e.key === 'ArrowLeft') {
+      navigateLightbox(-1);
+    }
+  }
 });
