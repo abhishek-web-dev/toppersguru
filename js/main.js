@@ -1225,11 +1225,9 @@ function openCertLightbox(index) {
   activeCertIndex = index;
   const lightbox = document.getElementById('certLightbox');
   const lightboxImg = document.getElementById('lightboxActiveImg');
-  const lightboxCaption = document.getElementById('lightboxCaption');
   
-  if (lightbox && lightboxImg && lightboxCaption) {
+  if (lightbox && lightboxImg) {
     lightboxImg.src = certImagesList[activeCertIndex];
-    lightboxCaption.textContent = `Accreditation Certificate ${activeCertIndex + 1} of 11`;
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden'; // Lock background scroll
   }
@@ -1259,10 +1257,8 @@ function navigateLightbox(direction, event) {
   }
   
   const lightboxImg = document.getElementById('lightboxActiveImg');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  if (lightboxImg && lightboxCaption) {
+  if (lightboxImg) {
     lightboxImg.src = certImagesList[activeCertIndex];
-    lightboxCaption.textContent = `Accreditation Certificate ${activeCertIndex + 1} of 11`;
   }
 }
 
