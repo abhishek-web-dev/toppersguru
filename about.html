@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Global Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=2.0" />
+    <link rel="stylesheet" href="css/style.css?v=10.0" />
   </head>
   <body>
 
@@ -27,76 +27,50 @@
     <!-- Main Content -->
     <main class="bg-gradient-soft">
       
-      <!-- Page Hero Section -->
-      <section class="section-padding pt-5 mt-5 border-b text-center">
-        <div class="container pt-5">
-          <div class="max-w-4xl mx-auto">
-            <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-primary bg-opacity-10 text-orange font-bold text-sm mb-4 border border-orange border-opacity-20 tracking-wider" data-i18n="about.established">
-              ESTABLISHED: 1989
-            </div>
-            <h1 class="hero-title text-navy mb-4">
-              <span data-i18n="about.title1">Building future through</span>
-              <span class="text-gradient" data-i18n="about.titleHighlight">quality & Affordable education</span>
-            </h1>
-            <p class="hero-desc" data-i18n="about.desc">
-              Running under Sanjeevni Edu & Welfare Society (Govt. Recognised), Toppers Guru has stood as a beacon of academic excellence and skill development in Krishna Nagar, Delhi.
-            </p>
-          </div>
-        </div>
-      </section>
+      <!-- ========== HERO SECTION ========== -->
+      <section class="about-hero-premium section-padding pt-5 mt-5 overflow-hidden position-relative">
+        <!-- Ambient glow blobs -->
+        <div class="about-glow-blob blob-1"></div>
+        <div class="about-glow-blob blob-2"></div>
 
-      <!-- Stats Grid Banner (Clean premium row) -->
-      <section class="container position-relative z-1 mb-5">
-        <div class="stats-banner-row shadow-lg" style="margin-top: -30px;">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-6 col-md-3 border-end border-light border-sm-none">
-              <div class="stat-item">
-                <div class="stat-icon-wrapper"><i class="fa-solid fa-medal"></i></div>
-                <h3 class="stat-number">30+</h3>
-                <p class="stat-label">Years of Excellence</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 border-end border-light border-sm-none">
-              <div class="stat-item">
-                <div class="stat-icon-wrapper"><i class="fa-solid fa-users"></i></div>
-                <h3 class="stat-number">10,247+</h3>
-                <p class="stat-label">Students Taught</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-3 border-end border-light border-sm-none">
-              <div class="stat-item">
-                <div class="stat-icon-wrapper"><i class="fa-solid fa-trophy"></i></div>
-                <h3 class="stat-number">500+</h3>
-                <p class="stat-label">Top Rankers</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="stat-item">
-                <div class="stat-icon-wrapper"><i class="fa-solid fa-square-check"></i></div>
-                <h3 class="stat-number">95.3%</h3>
-                <p class="stat-label">Success Rate</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Roots Section (Split layout with premium elements) -->
-      <section class="section-padding bg-white">
-        <div class="container">
+        <div class="container pt-5 position-relative z-index-2">
           <div class="row align-items-center gy-5">
+            <!-- Left: Typography -->
             <div class="col-lg-6">
-              <span class="positioning-line" data-i18n="about.ourRoots">Our Roots</span>
-              <h2 class="heading-section mb-4" data-i18n="about.est1989">Established in 1989</h2>
-              <div class="text-muted fs-5 mb-4">
-                <p>Toppers Guru began its journey with a profound yet simple vision in a modest classroom in Krishna Nagar. The dream was to democratize high-quality education and provide unwavering support to students who needed extra attention.</p>
-                <p class="mb-0">What started as a dedicated tuition center for board exams slowly built a foundation of immense trust among parents and students alike. Our commitment to affordable, premium education has remained unchanged since day one.</p>
+              <div class="about-hero-badge animate-fade-in-up">
+                <i class="fa-solid fa-award me-2"></i>ESTABLISHED IN 1989
+              </div>
+              <h1 class="hero-title mb-4 animate-fade-in-up delay-100">
+                <span data-i18n="about.title1">Building futures through</span><br>
+                <span class="text-gradient-animated" data-i18n="about.titleHighlight">Quality &amp; Affordable Education</span>
+              </h1>
+              <p class="hero-desc mb-5 animate-fade-in-up delay-200" data-i18n="about.desc">
+                Running under Sanjeevni Edu &amp; Welfare Society (Govt. Recognised), Toppers Guru has stood as a beacon of academic excellence and skill development in Krishna Nagar, Delhi for over three decades.
+              </p>
+              <div class="d-flex flex-wrap gap-3 animate-fade-in-up delay-300">
+                <a href="courses.html" class="btn btn-premium btn-orange text-white px-4 py-3 font-display">
+                  Explore Our Programs <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                </a>
+                <a href="contact.html" class="btn btn-navy-outline px-4 py-3 font-display">
+                  Contact Us
+                </a>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="position-relative ps-lg-4">
-                <div class="higher-ed-visual-card shadow-lg">
-                  <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Toppers Guru institute timeline" class="w-full h-auto rounded-3xl" style="height: 380px; object-fit: cover;" />
+
+            <!-- Right: Image Showcase -->
+            <div class="col-lg-6 animate-fade-in-up delay-200">
+              <div class="about-hero-image-wrap">
+                <div class="about-hero-image-frame">
+                  <img src="Images/about_hero_student.png" alt="Toppers Guru Students" loading="eager" />
+                </div>
+                <!-- Floating stat pills -->
+                <div class="about-floating-pill pill-top-right">
+                  <i class="fa-solid fa-trophy text-orange"></i>
+                  <span><strong>500+</strong> Top Rankers</span>
+                </div>
+                <div class="about-floating-pill pill-bottom-left">
+                  <i class="fa-solid fa-users text-navy"></i>
+                  <span><strong>10,000+</strong> Students</span>
                 </div>
               </div>
             </div>
@@ -104,114 +78,259 @@
         </div>
       </section>
 
-      <!-- Timeline Evolution Section -->
-      <section class="section-padding bg-slate border-top border-bottom">
-        <div class="container">
-          <div class="text-center mb-5 max-w-2xl mx-auto">
-            <span class="positioning-line text-center" data-i18n="about.evolution">Evolution</span>
-            <h2 class="heading-section text-center" data-i18n="about.growthJourney">Our Growth Journey</h2>
-          </div>
-
-          <div class="timeline-wrapper">
-            <!-- Item 1 -->
-            <div class="timeline-item">
-              <div class="timeline-badge"></div>
-              <span class="timeline-year">1989 - 2000</span>
-              <div class="timeline-card">
-                <h3 class="timeline-card-title">The Foundation</h3>
-                <p class="timeline-card-desc text-muted">Started as a premier coaching center for CBSE board exams, building trust in Krishna Nagar.</p>
+      <!-- ========== STATS BANNER ========== -->
+      <section class="container position-relative z-1" style="margin-top: -40px; margin-bottom: 20px;">
+        <div class="about-stats-banner shadow-lg">
+          <div class="row gy-0 gx-0 justify-content-center">
+            <div class="col-6 col-md-3">
+              <div class="about-stat-item border-end-md">
+                <div class="about-stat-icon"><i class="fa-solid fa-medal"></i></div>
+                <h3 class="about-stat-number">30+</h3>
+                <p class="about-stat-label">Years of Excellence</p>
               </div>
             </div>
-            <!-- Item 2 -->
-            <div class="timeline-item">
-              <div class="timeline-badge"></div>
-              <span class="timeline-year">2001 - 2015</span>
-              <div class="timeline-card">
-                <h3 class="timeline-card-title">Expanding Horizons</h3>
-                <p class="timeline-card-desc text-muted">Introduced NIOS/BOSSE support and distance education programs for working professionals.</p>
+            <div class="col-6 col-md-3">
+              <div class="about-stat-item border-end-md">
+                <div class="about-stat-icon"><i class="fa-solid fa-users"></i></div>
+                <h3 class="about-stat-number">10,247+</h3>
+                <p class="about-stat-label">Students Taught</p>
               </div>
             </div>
-            <!-- Item 3 -->
-            <div class="timeline-item">
-              <div class="timeline-badge"></div>
-              <span class="timeline-year">2016 - Present</span>
-              <div class="timeline-card">
-                <h3 class="timeline-card-title">Modern Era</h3>
-                <p class="timeline-card-desc text-muted">Integrated Skill India courses, CUET prep, and Memory Science techniques for holistic development.</p>
+            <div class="col-6 col-md-3">
+              <div class="about-stat-item border-end-md">
+                <div class="about-stat-icon"><i class="fa-solid fa-trophy"></i></div>
+                <h3 class="about-stat-number">500+</h3>
+                <p class="about-stat-label">Top Rankers</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="about-stat-item">
+                <div class="about-stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3 class="about-stat-number">95.3%</h3>
+                <p class="about-stat-label">Success Rate</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Mission & Vision side-by-side cards -->
+      <!-- ========== ROOTS SECTION ========== -->
       <section class="section-padding bg-white">
         <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="card-premium-program nios-card text-left">
-                <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
-                <h3 class="card-program-title" data-i18n="about.mission">Our Mission</h3>
-                <p class="card-program-desc text-muted">To empower learners of all age groups and academic levels with customized study plans, vocational training, and flexible programs. We aim to break financial barriers and make premium certifications accessible to every section of society.</p>
+          <div class="row align-items-center gy-5">
+            <!-- Left: Visual -->
+            <div class="col-lg-6 order-lg-1 order-2">
+              <div class="about-roots-visual-wrap">
+                <img src="Images/about_roots_student1.png" alt="Toppers Guru history" loading="lazy" />
+                <div class="roots-accent-badge">
+                  <i class="fa-solid fa-book-open-reader text-orange me-2"></i>
+                  Since 1989 — Krishna Nagar, Delhi
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="card-premium-program cbse-card text-left">
-                <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
-                <h3 class="card-program-title" data-i18n="about.vision">Our Vision</h3>
-                <p class="card-program-desc text-muted">To become India's leading unified learning platform that bridges regular education, distance learning, and computer-based competitive preparations, enabling students to achieve career growth with the tagline "Bhoolna Bhool Jaoge".</p>
+            <!-- Right: Copy -->
+            <div class="col-lg-6 order-lg-2 order-1">
+              <span class="section-subtitle-badge mb-3" data-i18n="about.ourRoots">OUR ROOTS</span>
+              <h2 class="section-title-premium text-navy mt-2 mb-4" data-i18n="about.est1989">Established in 1989</h2>
+              <div class="section-divider-animated mb-4" style="margin-left:0;margin-right:auto;"></div>
+              <p class="text-muted mb-4" style="font-size:15.5px;line-height:1.7;">
+                Toppers Guru began its journey with a profound yet simple vision in a modest classroom in Krishna Nagar. The dream was to democratize high-quality education and provide unwavering support to students who needed extra attention.
+              </p>
+              <p class="text-muted mb-5" style="font-size:15.5px;line-height:1.7;">
+                What started as a dedicated tuition center for board exams slowly built a foundation of immense trust among parents and students alike. Our commitment to affordable, premium education has remained unchanged since day one.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="about-trust-pill">
+                  <i class="fa-solid fa-shield-halved text-orange"></i> Govt. Recognised Society
+                </div>
+                <div class="about-trust-pill">
+                  <i class="fa-solid fa-star text-yellow"></i> ISO 21001:2018 Certified
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Student Trust & Chanakya Quotes Section -->
-      <section class="section-padding bg-slate border-top border-bottom">
+      <!-- ========== GROWTH TIMELINE ========== -->
+      <section class="section-padding bg-light-soft border-top border-bottom position-relative overflow-hidden">
+        <div class="decor-bubble bubble-1"></div>
+        <div class="decor-bubble bubble-2"></div>
+        <div class="container position-relative z-index-2">
+          <div class="section-header text-center mb-5">
+            <span class="section-subtitle-badge" data-i18n="about.evolution">EVOLUTION</span>
+            <h2 class="section-title-premium text-navy mt-2 mb-3" data-i18n="about.growthJourney">Our Growth Journey</h2>
+            <div class="section-divider-animated"></div>
+          </div>
+
+          <div class="about-timeline">
+            <!-- Milestone 1 -->
+            <div class="about-timeline-item">
+              <div class="about-timeline-left">
+                <span class="about-timeline-year">1989 – 2000</span>
+              </div>
+              <div class="about-timeline-center">
+                <div class="about-timeline-dot theme-orange">
+                  <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="about-timeline-line"></div>
+              </div>
+              <div class="about-timeline-right">
+                <div class="about-timeline-card">
+                  <h3 class="about-timeline-title">The Foundation</h3>
+                  <p class="about-timeline-desc text-muted">Started as a premier coaching center for CBSE board exams, building deep trust in Krishna Nagar. Personal attention and affordable fees became our hallmark.</p>
+                  <span class="about-timeline-tag tag-orange">CBSE Coaching</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="about-timeline-item">
+              <div class="about-timeline-left">
+                <span class="about-timeline-year">2001 – 2015</span>
+              </div>
+              <div class="about-timeline-center">
+                <div class="about-timeline-dot theme-navy">
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <div class="about-timeline-line"></div>
+              </div>
+              <div class="about-timeline-right">
+                <div class="about-timeline-card">
+                  <h3 class="about-timeline-title">Expanding Horizons</h3>
+                  <p class="about-timeline-desc text-muted">Introduced NIOS/BOSSE support and distance education programs for working professionals, enabling thousands to earn recognised qualifications.</p>
+                  <span class="about-timeline-tag tag-navy">NIOS · Distance Ed</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="about-timeline-item last">
+              <div class="about-timeline-left">
+                <span class="about-timeline-year">2016 – Present</span>
+              </div>
+              <div class="about-timeline-center">
+                <div class="about-timeline-dot theme-red">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+              </div>
+              <div class="about-timeline-right">
+                <div class="about-timeline-card">
+                  <h3 class="about-timeline-title">Modern Era</h3>
+                  <p class="about-timeline-desc text-muted">Integrated Skill India NSDC courses, CUET prep with CBT mock testing, AI learning tools, and Memory Science techniques for holistic student development.</p>
+                  <span class="about-timeline-tag tag-red">CUET · Skill India · AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MISSION & VISION ========== -->
+      <section class="section-padding bg-white">
         <div class="container">
+          <div class="section-header text-center mb-5">
+            <span class="section-subtitle-badge">PURPOSE & DIRECTION</span>
+            <h2 class="section-title-premium text-navy mt-2 mb-3">Our Mission &amp; Vision</h2>
+            <div class="section-divider-animated"></div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="about-mv-card theme-orange h-100">
+                <div class="about-mv-icon">
+                  <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <h3 class="about-mv-title" data-i18n="about.mission">Our Mission</h3>
+                <p class="about-mv-desc text-muted">To empower learners of all age groups and academic levels with customized study plans, vocational training, and flexible programs. We aim to break financial barriers and make premium certifications accessible to every section of society.</p>
+                <ul class="about-mv-points list-unstyled mt-4">
+                  <li><i class="fa-solid fa-circle-check text-orange"></i> Affordable premium education for all</li>
+                  <li><i class="fa-solid fa-circle-check text-orange"></i> Personalised academic counselling</li>
+                  <li><i class="fa-solid fa-circle-check text-orange"></i> Breaking financial access barriers</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="about-mv-card theme-navy h-100">
+                <div class="about-mv-icon">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+                <h3 class="about-mv-title" data-i18n="about.vision">Our Vision</h3>
+                <p class="about-mv-desc text-muted">To become India's leading unified learning platform that bridges regular education, distance learning, and computer-based competitive preparations, enabling students to achieve career growth with the tagline <em>"Bhoolna Bhool Jaoge"</em>.</p>
+                <ul class="about-mv-points list-unstyled mt-4">
+                  <li><i class="fa-solid fa-circle-check text-navy"></i> India's #1 unified learning platform</li>
+                  <li><i class="fa-solid fa-circle-check text-navy"></i> Memory Science-backed teaching</li>
+                  <li><i class="fa-solid fa-circle-check text-navy"></i> Career growth for every student</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== STUDENT TRUST + CHANAKYA ========== -->
+      <section class="section-padding bg-light-soft border-top border-bottom position-relative overflow-hidden">
+        <div class="decor-bubble bubble-1"></div>
+        <div class="container position-relative z-index-2">
           <div class="row align-items-center gy-5">
+            <!-- Left: Copy + Quote carousel -->
             <div class="col-lg-6">
-              <span class="positioning-line" data-i18n="about.ourPride">Our Pride</span>
-              <h2 class="heading-section mb-4" data-i18n="about.studentTrust">Student Trust</h2>
-              <p class="text-muted fs-5 mb-5">
-                Over 10,000 students have walked through our doors and stepped out as confident, capable individuals ready to conquer their goals. Our success is measured not just in marks, but in the trust parents place in us generation after generation.
+              <span class="section-subtitle-badge mb-3" data-i18n="about.ourPride">OUR PRIDE</span>
+              <h2 class="section-title-premium text-navy mt-2 mb-4" data-i18n="about.studentTrust">Student Trust</h2>
+              <div class="section-divider-animated mb-4" style="margin-left:0;margin-right:auto;"></div>
+              <p class="text-muted mb-5" style="font-size:15.5px;line-height:1.7;">
+                Over 10,000 students have walked through our doors and stepped out as confident, capable individuals. Our success is measured not just in marks, but in the trust parents place in us generation after generation.
               </p>
-              
-              <!-- Chanakya Quotes Carousel -->
-              <div class="card-premium-program mnemonic-card" style="padding: 30px;">
-                <h4 class="font-display text-navy mb-3" data-i18n="about.chanakyaWisdom"><i class="fa-solid fa-quote-left text-orange me-2"></i>Chanakya Wisdom for Success</h4>
-                <div id="chanakyaQuotesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+              <!-- Chanakya Wisdom -->
+              <div class="about-chanakya-card">
+                <div class="chanakya-header">
+                  <img src="Images/chanakya_wisdom.png" alt="Chanakya" class="chanakya-avatar" />
+                  <div>
+                    <h4 class="chanakya-name font-display text-navy mb-0">Chanakya Wisdom</h4>
+                    <p class="chanakya-sub text-muted mb-0">Ancient wisdom for modern success</p>
+                  </div>
+                </div>
+                <div id="chanakyaQuotesCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="4000">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <p class="fs-5 italic mb-0 text-dark">"Education is the best friend."</p>
+                      <p class="chanakya-quote">"Education is the best friend. An educated person is respected everywhere."</p>
                     </div>
                     <div class="carousel-item">
-                      <p class="fs-5 italic mb-0 text-dark">"Knowledge is power when applied."</p>
+                      <p class="chanakya-quote">"Knowledge is power when applied with discipline and purpose."</p>
                     </div>
                     <div class="carousel-item">
-                      <p class="fs-5 italic mb-0 text-dark">"Success comes with discipline."</p>
+                      <p class="chanakya-quote">"Success comes to those who work tirelessly and never quit."</p>
                     </div>
                     <div class="carousel-item">
-                      <p class="fs-5 italic mb-0 text-dark">"Think before every action."</p>
+                      <p class="chanakya-quote">"Think before every action; a wise man rules through thought."</p>
                     </div>
                     <div class="carousel-item">
-                      <p class="fs-5 italic mb-0 text-dark">"Excellence is a habit, not an act."</p>
+                      <p class="chanakya-quote">"Excellence is not an act but a habit built every single day."</p>
                     </div>
                     <div class="carousel-item">
-                      <p class="fs-5 italic mb-0 text-dark">"Invest in yourself through education."</p>
+                      <p class="chanakya-quote">"Invest in yourself through education — it is the greatest wealth."</p>
                     </div>
+                  </div>
+                  <!-- Carousel indicators as dots -->
+                  <div class="chanakya-dots d-flex gap-2 mt-3">
+                    <button type="button" data-bs-target="#chanakyaQuotesCarousel" data-bs-slide-to="0" class="chanakya-dot active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#chanakyaQuotesCarousel" data-bs-slide-to="1" class="chanakya-dot"></button>
+                    <button type="button" data-bs-target="#chanakyaQuotesCarousel" data-bs-slide-to="2" class="chanakya-dot"></button>
+                    <button type="button" data-bs-target="#chanakyaQuotesCarousel" data-bs-slide-to="3" class="chanakya-dot"></button>
+                    <button type="button" data-bs-target="#chanakyaQuotesCarousel" data-bs-slide-to="4" class="chanakya-dot"></button>
+                    <button type="button" data-bs-target="#chanakyaQuotesCarousel" data-bs-slide-to="5" class="chanakya-dot"></button>
                   </div>
                 </div>
               </div>
             </div>
-            
+
+            <!-- Right: Masonry photos -->
             <div class="col-lg-6">
               <div class="row g-3">
                 <div class="col-6">
-                  <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="Happy Students" class="rounded-3xl shadow-md w-100 object-fit-cover" style="height: 220px;" />
+                  <img src="Images/about_roots_student1.png" alt="Happy Students" class="about-trust-photo" />
                 </div>
-                <div class="col-6">
-                  <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Graduation" class="rounded-3xl shadow-md w-100 object-fit-cover mt-4" style="height: 220px;" />
+                <div class="col-6 mt-4">
+                  <img src="Images/about_roots_student2.png" alt="Graduation Ceremony" class="about-trust-photo" />
                 </div>
               </div>
             </div>
@@ -219,102 +338,140 @@
         </div>
       </section>
 
-      <!-- Team Members Section -->
+      <!-- ========== TEAM LEADERSHIP GRID ========== -->
       <section class="section-padding bg-white">
         <div class="container">
-          <div class="text-center mb-5 max-w-2xl mx-auto">
-            <span class="positioning-line text-center" data-i18n="about.mindsBehind">The Minds Behind The Success</span>
-            <h2 class="heading-section text-center" data-i18n="about.meetLeadership">Meet Our Leadership & Faculty</h2>
+          <div class="section-header text-center mb-5">
+            <span class="section-subtitle-badge" data-i18n="about.mindsBehind">THE MINDS BEHIND THE SUCCESS</span>
+            <h2 class="section-title-premium text-navy mt-2 mb-3" data-i18n="about.meetLeadership">Meet Our Leadership &amp; Faculty</h2>
+            <div class="section-divider-animated"></div>
+            <p class="section-desc-premium text-muted max-w-2xl mx-auto mt-3">Our dedicated team of educators, counselors, and mentors bring decades of combined experience to every student's learning journey.</p>
           </div>
 
           <div class="row g-4 justify-content-center">
+
             <!-- Pooja Kumar -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/af67f9bbc7d97407a456a7b49d8811a5.jpg" alt="Pooja Kumar" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/Pooja.png" alt="Pooja Kumar - Founder & CEO" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Visionary founder with 30+ years of dedication to educational excellence in Delhi NCR.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">Pooja Kumar</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Founder & CEO</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">Pooja Kumar</h4>
+                  <p class="team-role text-orange">Founder &amp; CEO</p>
                 </div>
               </div>
             </div>
-            
+
             <!-- S.K. Prabhakar -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/2a800c0cb68237cdcaacbf4c26680d69.jpg" alt="S.K. Prabhakar" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/S.K. Prabhakar.png" alt="S.K. Prabhakar - Managing Director" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Managing the institute's operations and strategic growth for over two decades.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">S.K. Prabhakar</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Managing Director</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">S.K. Prabhakar</h4>
+                  <p class="team-role text-orange">Managing Director</p>
                 </div>
               </div>
             </div>
-            
+
             <!-- Divaker Jha -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/19fa5066511e16b44b9e09e8cbc2152d.jpg" alt="Divaker Jha" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/Divaker.png" alt="Divaker Jha - Marketing Head" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Driving outreach and communications to connect more students with quality education.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">Divaker Jha</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Marketing Head</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">Divaker Jha</h4>
+                  <p class="team-role text-orange">Marketing Head</p>
                 </div>
               </div>
             </div>
 
             <!-- Monika Sharma -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/f595123818699b295a3b89033d0524ed.jpg" alt="Monika Sharma" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/Monika.png" alt="Monika Sharma - Lead Counsellor" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Guiding hundreds of students annually through academic pathways and career counselling.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">Monika Sharma</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Lead Counsellor</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">Monika Sharma</h4>
+                  <p class="team-role text-orange">Lead Counsellor</p>
                 </div>
               </div>
             </div>
 
             <!-- Kaushal Sharma -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/aa23783b994af815ccaa9a347cbedfb1.jpg" alt="Kaushal Sharma" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/Kaushal.png" alt="Kaushal Sharma - Senior Faculty" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Senior subject expert delivering deep conceptual clarity across board and competitive exams.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">Kaushal Sharma</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Senior Faculty</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">Kaushal Sharma</h4>
+                  <p class="team-role text-orange">Senior Faculty</p>
                 </div>
               </div>
             </div>
 
             <!-- Lalit Chopra -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/962f68c3351d9b78bab906d0cac04fac.jpg" alt="Lalit Chopra" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/Lalit.png" alt="Lalit Chopra - Faculty" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Passionate educator known for making complex subjects simple and engaging for students.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">Lalit Chopra</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Faculty</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">Lalit Chopra</h4>
+                  <p class="team-role text-orange">Faculty</p>
                 </div>
               </div>
             </div>
 
             <!-- Suhani -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="card-premium-program h-100 p-0 overflow-hidden text-center group">
-                <div style="height: 250px; overflow: hidden;">
-                  <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/8bfa79752a5257717e011138ebf85537.jpg" alt="Suhani" class="w-100 h-100 object-fit-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="about-team-card">
+                <div class="about-team-image-wrap">
+                  <img src="Images/Suhani.png" alt="Suhani - Counsellor" loading="lazy" />
+                  <div class="about-team-overlay">
+                    <div class="team-overlay-inner">
+                      <p class="team-bio-text">Dedicated counsellor providing personalised guidance and support to every student.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="p-4">
-                  <h4 class="text-lg font-bold text-navy mb-1">Suhani</h4>
-                  <p class="text-orange text-sm font-semibold mb-0">Counsellor</p>
+                <div class="about-team-info">
+                  <h4 class="team-name text-navy">Suhani</h4>
+                  <p class="team-role text-orange">Counsellor</p>
                 </div>
               </div>
             </div>
@@ -358,7 +515,7 @@
     
     <!-- Global Custom JavaScript -->
     <script src="js/component.js"></script>
-  <script src="js/main.js?v=2.0"></script>
+    <script src="js/main.js?v=10.0"></script>
     
     <script>
       // Auto-set copyright year
