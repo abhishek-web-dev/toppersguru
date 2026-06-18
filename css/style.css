@@ -6637,6 +6637,7 @@ body.lang-hi [data-lang-hi] {
   /* Customize these padding values to resize the height of the courses banner */
   padding-top: 160px !important;
   padding-bottom: 120px !important;
+  height: 630px;
 }
 
 /* Responsive height adjustment for mobile & tablet */
@@ -6646,4 +6647,95 @@ body.lang-hi [data-lang-hi] {
     padding-bottom: 90px !important;
     background-position: right top !important;
   }
+}
+
+/* ==========================================================================
+   Page Animations & Heading Enhancements (Premium Micro-interactions)
+   ========================================================================== */
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shineGradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 100ms !important; }
+.delay-200 { animation-delay: 200ms !important; }
+.delay-300 { animation-delay: 300ms !important; }
+
+/* Premium Section Header */
+.section-header {
+  position: relative;
+  z-index: 10;
+}
+
+.section-subtitle-badge {
+  display: inline-block !important;
+  font-family: var(--font-display) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: var(--color-orange) !important;
+  background: rgba(255, 110, 0, 0.08) !important;
+  border: 1px solid rgba(255, 110, 0, 0.15) !important;
+  padding: 6px 16px !important;
+  border-radius: 30px !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+}
+
+.section-title-premium {
+  font-family: var(--font-display) !important;
+  font-size: 38px !important;
+  font-weight: 900 !important;
+  color: var(--color-navy) !important;
+  letter-spacing: -0.5px !important;
+}
+
+/* Animated Title Gradient */
+.text-gradient-animated {
+  background: linear-gradient(120deg, var(--color-navy) 0%, var(--color-orange) 50%, var(--color-navy) 100%) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shineGradient 6s linear infinite !important;
+}
+
+/* Expanding Interactive Divider */
+.section-divider-animated {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-navy), var(--color-orange), var(--color-yellow)) !important;
+  background-size: 200% auto !important;
+  border-radius: 2px !important;
+  margin: 0 auto 20px !important;
+  animation: shineGradient 4s linear infinite !important;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.section-header:hover .section-divider-animated {
+  width: 140px;
+}
+
+.section-desc-premium {
+  font-size: 15.5px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
 }
