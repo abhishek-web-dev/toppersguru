@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Global Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=2.0" />
+    <link rel="stylesheet" href="css/style.css?v=8.0" />
   </head>
   <body>
 
@@ -25,73 +25,97 @@
     <header id="header-container" data-active=""></header>
 
     <!-- Main Content -->
-    <main class="bg-gradient-soft">
+    <main class="bg-gradient-soft position-relative">
       
-      <!-- Page Hero Section -->
-      <section class="section-padding pt-5 mt-5">
-        <div class="container pt-5">
+      <!-- Page Hero Section (Custom Premium CSS Glow background, no banner image) -->
+      <section class="cuet-hero-premium section-padding pt-5 mt-5 overflow-hidden position-relative">
+        <!-- Floating Ambient Glow Elements -->
+        <div class="cuet-glow-ambient glow-1"></div>
+        <div class="cuet-glow-ambient glow-2"></div>
+        
+        <div class="container pt-5 position-relative z-index-2">
           <div class="row align-items-center gy-5">
             <!-- Left Info Block -->
             <div class="col-lg-7">
-              <span class="positioning-line">Coaching | Skill Courses | Career Growth Platform</span>
-              <h1 class="hero-title text-navy mb-4">Expert CUET Preparation in Delhi</h1>
-              <p class="hero-desc mb-5">
-                Target top central universities. Our specialized CUET coaching covers Domain Subjects, Languages, and the General Test with high-quality mock series.
+              <span class="section-subtitle-badge mb-3 animate-fade-in-up">CUET ENTRANCE PREPARATION</span>
+              
+              <h1 class="hero-title text-navy mb-4 animate-fade-in-up delay-100">
+                Expert <span class="text-gradient-animated">CUET Coaching</span> in Delhi
+              </h1>
+              
+              <p class="hero-desc mb-5 animate-fade-in-up delay-200">
+                Target top central universities including Delhi University (DU), BHU, JNU, and more. Our specialized coaching covers domain subjects, languages, and general tests, featuring computer-based mock test series modeled on the real NTA interface.
               </p>
 
-              <div class="row g-4 mb-4">
+              <!-- Premium Feature Grid checklist -->
+              <div class="row g-4 mb-4 animate-fade-in-up delay-300">
                 <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="hero-badge-icon shrink-0"><i class="fa-solid fa-circle-check text-orange"></i></div>
-                    <span class="fw-bold text-navy">Computer-Based Mock Tests</span>
+                  <div class="cuet-badge-card d-flex align-items-center gap-3">
+                    <div class="badge-icon-wrap bg-orange-soft"><i class="fa-solid fa-laptop-code text-orange"></i></div>
+                    <div>
+                      <h4 class="badge-card-title text-navy">CBT Mock Tests</h4>
+                      <p class="badge-card-text text-muted mb-0">1:1 NTA replica software</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="hero-badge-icon shrink-0"><i class="fa-solid fa-circle-check text-orange"></i></div>
-                    <span class="fw-bold text-navy">Section-Wise Analysis</span>
+                  <div class="cuet-badge-card d-flex align-items-center gap-3">
+                    <div class="badge-icon-wrap bg-navy-soft"><i class="fa-solid fa-chart-line text-navy"></i></div>
+                    <div>
+                      <h4 class="badge-card-title text-navy">Sectional Analytics</h4>
+                      <p class="badge-card-text text-muted mb-0">Performance diagnostics</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="hero-badge-icon shrink-0"><i class="fa-solid fa-circle-check text-orange"></i></div>
-                    <span class="fw-bold text-navy">Experienced Domain Experts</span>
+                  <div class="cuet-badge-card d-flex align-items-center gap-3">
+                    <div class="badge-icon-wrap bg-red-soft"><i class="fa-solid fa-user-tie text-red"></i></div>
+                    <div>
+                      <h4 class="badge-card-title text-navy">Domain Mentors</h4>
+                      <p class="badge-card-text text-muted mb-0">DU & BHU alumni specialists</p>
+                    </div>
                   </div>
                 </div>
                 <div class="col-sm-6">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="hero-badge-icon shrink-0"><i class="fa-solid fa-circle-check text-orange"></i></div>
-                    <span class="fw-bold text-navy">University Counseling Support</span>
+                  <div class="cuet-badge-card d-flex align-items-center gap-3">
+                    <div class="badge-icon-wrap bg-yellow-soft"><i class="fa-solid fa-compass text-yellow"></i></div>
+                    <div>
+                      <h4 class="badge-card-title text-navy">Counselling Care</h4>
+                      <p class="badge-card-text text-muted mb-0">College lock assistance</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Right Form Block -->
-            <div class="col-lg-5 col-xl-4 offset-xl-1">
-              <div class="form-card">
-                <h3 class="form-title">Book CUET Demo Class</h3>
-                <p class="form-subtitle">Fill in the details to book a demo counseling session with our entrance specialists.</p>
+            <!-- Right Form Block (Glassmorphic Premium Form Card) -->
+            <div class="col-lg-5 col-xl-4 offset-xl-1 animate-fade-in-up delay-200">
+              <div class="form-card-premium shadow-lg">
+                <div class="form-card-header text-center mb-4">
+                  <div class="form-header-badge">LIVE BATCHES 2026</div>
+                  <h3 class="form-title text-navy mt-2 mb-1">Book CUET Demo</h3>
+                  <p class="form-subtitle text-muted mb-0">Fill your details to secure an interactive demo session.</p>
+                </div>
                 
                 <form id="enquiryForm">
-                  <div class="mb-3">
-                    <label for="nameInput" class="form-label">Full Name *</label>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your full name" required />
+                  <div class="form-input-group mb-3">
+                    <span class="input-icon"><i class="fa-regular fa-user"></i></span>
+                    <input type="text" class="form-control-premium" id="nameInput" placeholder="Full Name *" required />
                   </div>
                   
-                  <div class="mb-3">
-                    <label for="emailInput" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="Enter your email (optional)" />
+                  <div class="form-input-group mb-3">
+                    <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+                    <input type="email" class="form-control-premium" id="emailInput" placeholder="Email Address" />
                   </div>
                   
-                  <div class="mb-3">
-                    <label for="phoneInput" class="form-label">Phone Number *</label>
-                    <input type="tel" class="form-control" id="phoneInput" placeholder="Enter 10-digit mobile number" required />
+                  <div class="form-input-group mb-3">
+                    <span class="input-icon"><i class="fa-solid fa-phone-volume"></i></span>
+                    <input type="tel" class="form-control-premium" id="phoneInput" placeholder="Phone Number *" required pattern="[0-9]{10}" />
                   </div>
                   
-                  <div class="mb-4">
-                    <label for="courseSelect" class="form-label">Course Interest *</label>
-                    <select class="form-select" id="courseSelect" required>
+                  <div class="form-input-group mb-4">
+                    <span class="input-icon"><i class="fa-solid fa-book-open"></i></span>
+                    <select class="form-select-premium" id="courseSelect" required>
                       <option value="cuet" selected>CUET Preparation</option>
                       <option value="nios">NIOS Coaching</option>
                       <option value="cbse">CBSE Coaching</option>
@@ -100,7 +124,9 @@
                     </select>
                   </div>
                   
-                  <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display" data-i18n="home.enquireNow">Submit Request</button>
+                  <button type="submit" class="btn btn-premium btn-orange text-white w-100 py-3 mt-2 font-display" data-i18n="home.enquireNow">
+                    Submit Request <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                  </button>
                 </form>
               </div>
             </div>
@@ -109,36 +135,55 @@
       </section>
 
       <!-- Section Features -->
-      <section class="section-padding bg-white border-top border-bottom">
+      <section class="section-padding bg-white border-top border-bottom position-relative">
         <div class="container">
-          <div class="text-center mb-5 max-w-2xl mx-auto">
-            <h2 class="heading-section text-center">Crack CUET with Confidence</h2>
-            <p class="text-muted text-center">Our customized sections are modeled directly around NTA guidelines.</p>
+          <div class="text-center mb-5 max-w-2xl mx-auto section-header">
+            <span class="section-subtitle-badge mb-2">CRACK CUET WITH CONFIDENCE</span>
+            <h2 class="section-title-premium text-navy mt-2 mb-3">Modelled on NTA guidelines</h2>
+            <div class="section-divider-animated"></div>
+            <p class="section-desc-premium text-muted">Our custom coaching modules prepare you systematically for all three sections of the Common University Entrance Test.</p>
           </div>
 
           <div class="row g-4">
-            
+            <!-- Feature Card 1: General Test Prep -->
             <div class="col-md-4">
-              <div class="card-premium-program nios-card">
+              <div class="cuet-feature-card-premium theme-navy">
                 <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
                 <h3 class="card-program-title">General Test Prep</h3>
-                <p class="card-program-desc text-muted mb-0">Master Quantitative Aptitude, Logical Reasoning, and Current Affairs with our targeted shortcuts and speed tricks.</p>
+                <p class="card-program-desc text-muted">Master Quantitative Aptitude, Logical Reasoning, and Current Affairs with our targeted shortcuts and speed tricks.</p>
+                <ul class="card-feature-list list-unstyled mb-0 mt-3">
+                  <li><i class="fa-solid fa-circle-check text-navy"></i> Quantitative Aptitude Shortcuts</li>
+                  <li><i class="fa-solid fa-circle-check text-navy"></i> Logical & Analytical Reasoning</li>
+                  <li><i class="fa-solid fa-circle-check text-navy"></i> Daily GK & Current Affairs</li>
+                </ul>
               </div>
             </div>
 
+            <!-- Feature Card 2: Language Mastery -->
             <div class="col-md-4">
-              <div class="card-premium-program cbse-card">
+              <div class="cuet-feature-card-premium theme-orange">
                 <div class="card-icon"><i class="fa-solid fa-language"></i></div>
                 <h3 class="card-program-title">Language Mastery</h3>
-                <p class="card-program-desc text-muted mb-0">Improve reading comprehension and vocabulary specifically aligned with the NTA CUET language pattern.</p>
+                <p class="card-program-desc text-muted">Improve reading comprehension and vocabulary specifically aligned with the NTA CUET language pattern.</p>
+                <ul class="card-feature-list list-unstyled mb-0 mt-3">
+                  <li><i class="fa-solid fa-circle-check text-orange"></i> Reading Comprehension Focus</li>
+                  <li><i class="fa-solid fa-circle-check text-orange"></i> Vocabulary & Verbal Ability</li>
+                  <li><i class="fa-solid fa-circle-check text-orange"></i> Grammar & Sentence Restructuring</li>
+                </ul>
               </div>
             </div>
 
+            <!-- Feature Card 3: Domain Subjects -->
             <div class="col-md-4">
-              <div class="card-premium-program cuet-card">
+              <div class="cuet-feature-card-premium theme-red">
                 <div class="card-icon"><i class="fa-solid fa-book-bookmark"></i></div>
                 <h3 class="card-program-title">Domain Subjects</h3>
-                <p class="card-program-desc text-muted mb-0">In-depth NCERT coverage for Commerce, Science, and Humanities domains taught by subject-matter experts.</p>
+                <p class="card-program-desc text-muted">In-depth NCERT coverage for Commerce, Science, and Humanities domains taught by subject-matter experts.</p>
+                <ul class="card-feature-list list-unstyled mb-0 mt-3">
+                  <li><i class="fa-solid fa-circle-check text-red"></i> NCERT Mapping (Commerce/Sci/Arts)</li>
+                  <li><i class="fa-solid fa-circle-check text-red"></i> Unit-Wise Practice Worksheets</li>
+                  <li><i class="fa-solid fa-circle-check text-red"></i> Mock Testing & Question Auditing</li>
+                </ul>
               </div>
             </div>
 
@@ -146,19 +191,39 @@
         </div>
       </section>
 
-      <!-- Student success profile -->
-      <section class="section-padding bg-slate border-bottom">
-        <div class="container max-w-4xl text-center">
-          <h2 class="heading-section mb-5 text-center">Student Success Profile</h2>
+      <!-- Student success profile (Testimonial Spotlight) -->
+      <section class="section-padding bg-light-soft border-bottom position-relative overflow-hidden">
+        <!-- Ambient subtle decorations -->
+        <div class="decor-bubble bubble-1"></div>
+        <div class="decor-bubble bubble-2"></div>
+        
+        <div class="container max-w-4xl text-center position-relative z-index-2">
+          <span class="section-subtitle-badge mb-2">TESTIMONIAL SPOTLIGHT</span>
+          <h2 class="section-title-premium text-navy mb-5">Inspiring Success Stories</h2>
           
-          <div class="card shadow-sm border rounded-4 bg-white text-start p-5 flex-md-row align-items-center gap-4">
-            <div class="w-20 h-20 rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold fs-2 shrink-0">SM</div>
-            <div>
-              <div class="text-warning mb-2">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <div class="testimonial-spotlight-card shadow-lg bg-white text-start p-5 d-flex flex-column flex-md-row align-items-center gap-4 position-relative rounded-4">
+            <div class="quote-mark-icon"><i class="fa-solid fa-quote-left"></i></div>
+            
+            <div class="student-avatar-wrap shrink-0 position-relative">
+              <div class="student-avatar bg-navy text-white d-flex align-items-center justify-content-center fw-bold fs-2">SM</div>
+              <span class="verified-student-badge"><i class="fa-solid fa-circle-check"></i></span>
+            </div>
+            
+            <div class="flex-grow-1">
+              <div class="testimonial-stars mb-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-              <p class="fs-5 italic text-muted mb-3">"The computer-based mock tests at Toppers Guru exactly replicated the real NTA exam interface. I felt zero panic on exam day and secured a seat in North Campus DU!"</p>
-              <h4 class="font-display text-navy mb-0 fs-6">- Sanya Mathur, CUET 99%ile Alumna</h4>
+              <p class="testimonial-text fs-5 italic text-muted mb-3">
+                "The computer-based mock tests at Toppers Guru exactly replicated the real NTA exam interface. I felt zero panic on exam day and secured a seat in North Campus DU!"
+              </p>
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top">
+                <h4 class="student-name font-display text-navy mb-0 fs-6">Sanya Mathur</h4>
+                <span class="student-achievement-badge">CUET 99%ile Alumna</span>
+              </div>
             </div>
           </div>
         </div>
@@ -199,7 +264,7 @@
     
     <!-- Global Custom JavaScript -->
     <script src="js/component.js"></script>
-  <script src="js/main.js?v=2.0"></script>
+    <script src="js/main.js?v=8.0"></script>
     
     <script>
       // Auto-set copyright year
