@@ -114,7 +114,7 @@ h6,
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 40px 0;
 }
 
 @media (max-width: 768px) {
@@ -6638,7 +6638,8 @@ body.lang-hi [data-lang-hi] {
   display: flex !important;
   align-items: center !important;
   height: 630px !important;
-  padding-top: 80px !important; /* Offset safe area for fixed transparent header */
+  padding-top: 80px !important;
+  /* Offset safe area for fixed transparent header */
   padding-bottom: 0 !important;
 }
 
@@ -6661,6 +6662,7 @@ body.lang-hi [data-lang-hi] {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -6668,9 +6670,17 @@ body.lang-hi [data-lang-hi] {
 }
 
 @keyframes shineGradient {
-  0% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 /* Animation Classes */
@@ -6679,9 +6689,17 @@ body.lang-hi [data-lang-hi] {
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.delay-100 { animation-delay: 100ms !important; }
-.delay-200 { animation-delay: 200ms !important; }
-.delay-300 { animation-delay: 300ms !important; }
+.delay-100 {
+  animation-delay: 100ms !important;
+}
+
+.delay-200 {
+  animation-delay: 200ms !important;
+}
+
+.delay-300 {
+  animation-delay: 300ms !important;
+}
 
 /* Premium Section Header */
 .section-header {
