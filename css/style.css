@@ -6504,3 +6504,11 @@ body.lang-hi [data-lang-hi] {
   background: #fafbfc !important;
 }
 
+/* --- Courses Page Specific Hero Banner --- */
+.courses-hero-premium-banner {
+  background: #081533 url('../Images/courses_banner.jpeg') no-repeat center right !important;
+  background-image:
+    linear-gradient(rgba(8, 21, 51, 0.65), rgba(8, 21, 51, 0.65)),
+    url('../Images/courses_banner.jpeg') !important;
+}
+
