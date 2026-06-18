@@ -638,9 +638,11 @@ h6,
 .stat-item-premium.navy-theme .stat-svg-bg {
   stroke: rgba(15, 33, 76, 0.08);
 }
+
 .stat-item-premium.navy-theme .stat-circle-container::before {
   background: rgba(15, 33, 76, 0.04);
 }
+
 .stat-item-premium.navy-theme:hover .stat-circle-container::before {
   background: rgba(15, 33, 76, 0.08);
 }
@@ -649,9 +651,11 @@ h6,
 .stat-item-premium.orange-theme .stat-svg-bg {
   stroke: rgba(255, 110, 0, 0.08);
 }
+
 .stat-item-premium.orange-theme .stat-circle-container::before {
   background: rgba(255, 110, 0, 0.04);
 }
+
 .stat-item-premium.orange-theme:hover .stat-circle-container::before {
   background: rgba(255, 110, 0, 0.08);
 }
@@ -660,9 +664,11 @@ h6,
 .stat-item-premium.red-theme .stat-svg-bg {
   stroke: rgba(194, 27, 47, 0.08);
 }
+
 .stat-item-premium.red-theme .stat-circle-container::before {
   background: rgba(194, 27, 47, 0.04);
 }
+
 .stat-item-premium.red-theme:hover .stat-circle-container::before {
   background: rgba(194, 27, 47, 0.08);
 }
@@ -1186,6 +1192,7 @@ h6,
 .fee-card.academic-fee .fee-card-title {
   background: linear-gradient(135deg, var(--color-navy) 0%, #2a5298 100%);
 }
+
 .fee-card.academic-fee:hover .fee-card-icon {
   color: #2a5298 !important;
 }
@@ -1193,6 +1200,7 @@ h6,
 .fee-card.cbse-fee .fee-card-title {
   background: linear-gradient(135deg, var(--color-orange) 0%, #ff7e5f 100%);
 }
+
 .fee-card.cbse-fee:hover .fee-card-icon {
   color: var(--color-orange) !important;
 }
@@ -1200,6 +1208,7 @@ h6,
 .fee-card.nios-fee .fee-card-title {
   background: linear-gradient(135deg, var(--color-red) 0%, #ff5252 100%);
 }
+
 .fee-card.nios-fee:hover .fee-card-icon {
   color: var(--color-red) !important;
 }
@@ -1240,7 +1249,8 @@ h6,
 }
 
 .fee-subject::before {
-  content: '\f058'; /* Font Awesome circle-check */
+  content: '\f058';
+  /* Font Awesome circle-check */
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
   font-size: 13.5px;
@@ -1339,7 +1349,8 @@ h6,
 }
 
 .fee-row.highlight .fee-subject::before {
-  content: '\f0a5'; /* Font Awesome star */
+  content: '\f0a5';
+  /* Font Awesome star */
   color: var(--color-orange) !important;
 }
 
@@ -1477,6 +1488,7 @@ h6,
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 200px);
   }
+
   .gallery-preview-item.featured {
     grid-column: span 1;
     grid-row: span 1;
@@ -2764,19 +2776,24 @@ body.lang-hi [data-lang-hi] {
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Hide standard scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none;
+  /* Hide standard scrollbar in Firefox */
+  -ms-overflow-style: none;
+  /* Hide scrollbar in IE/Edge */
   padding: 16px 5px 32px 5px;
 }
 
 .programs-slider-track::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome/Safari */
+  display: none;
+  /* Hide scrollbar in Chrome/Safari */
 }
 
 .scroll-card-item {
-  flex: 0 0 calc(33.333% - 16px); /* 3 cards visible on desktop */
+  flex: 0 0 calc(33.333% - 16px);
+  /* 3 cards visible on desktop */
   max-width: calc(33.333% - 16px);
-  min-width: 280px; /* safety for small viewports */
+  min-width: 280px;
+  /* safety for small viewports */
   scroll-snap-align: start;
   transition: transform 0.4s ease, opacity 0.4s ease;
   box-sizing: border-box;
@@ -2784,14 +2801,16 @@ body.lang-hi [data-lang-hi] {
 
 @media (max-width: 991px) {
   .scroll-card-item {
-    flex: 0 0 calc(50% - 12px); /* 2 cards visible on tablet */
+    flex: 0 0 calc(50% - 12px);
+    /* 2 cards visible on tablet */
     max-width: calc(50% - 12px);
   }
 }
 
 @media (max-width: 767px) {
   .scroll-card-item {
-    flex: 0 0 100%; /* 1 card visible on mobile */
+    flex: 0 0 100%;
+    /* 1 card visible on mobile */
     max-width: 100%;
   }
 }
@@ -2849,6 +2868,7 @@ body.lang-hi [data-lang-hi] {
   .programs-slider-wrapper .slider-arrow-btn.prev-btn {
     left: -10px;
   }
+
   .programs-slider-wrapper .slider-arrow-btn.next-btn {
     right: -10px;
   }
@@ -2858,6 +2878,7 @@ body.lang-hi [data-lang-hi] {
   .programs-slider-wrapper .slider-arrow-btn.prev-btn {
     left: -5px;
   }
+
   .programs-slider-wrapper .slider-arrow-btn.next-btn {
     right: -5px;
   }
@@ -5051,13 +5072,16 @@ body.lang-hi [data-lang-hi] {
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Hide standard scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none;
+  /* Hide standard scrollbar in Firefox */
+  -ms-overflow-style: none;
+  /* Hide scrollbar in IE/Edge */
   will-change: scroll-position;
 }
 
 .certificate-track::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome/Safari */
+  display: none;
+  /* Hide scrollbar in Chrome/Safari */
 }
 
 .certificate-slide {
@@ -5363,15 +5387,15 @@ body.lang-hi [data-lang-hi] {
     width: 44px;
     height: 44px;
   }
-  
+
   .lightbox-nav-btn.prev-btn {
     left: 20%;
   }
-  
+
   .lightbox-nav-btn.next-btn {
     right: 20%;
   }
-  
+
   .lightbox-nav-btn:hover {
     transform: scale(1.1);
   }
@@ -5512,7 +5536,7 @@ body.lang-hi [data-lang-hi] {
   .premium-comparison-table {
     min-width: 800px;
   }
-  
+
   .premium-comparison-table thead th,
   .premium-comparison-table td {
     padding: 20px 15px;
@@ -5599,8 +5623,13 @@ body.lang-hi [data-lang-hi] {
 }
 
 @keyframes float-badge {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10px); }
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
 }
 
 .iso-icon {
@@ -5772,9 +5801,11 @@ body.lang-hi [data-lang-hi] {
   .admission-iso-badge {
     right: 20px;
   }
+
   .form-trust-header {
     padding: 20px;
   }
+
   .form-content-area {
     padding: 30px;
   }
@@ -5784,6 +5815,7 @@ body.lang-hi [data-lang-hi] {
   .admission-checklist {
     grid-template-columns: 1fr;
   }
+
   .admission-iso-badge {
     position: relative;
     bottom: auto;
@@ -5791,6 +5823,7 @@ body.lang-hi [data-lang-hi] {
     margin-top: 20px;
     width: max-content;
   }
+
   .form-trust-header {
     flex-wrap: wrap;
     gap: 20px;
@@ -5980,13 +6013,17 @@ body.lang-hi [data-lang-hi] {
   background-size: cover;
   background-position: center;
   padding: 140px 0 100px;
-  margin-top: 76px; /* Header offset */
-  box-shadow: inset 0 -10px 30px rgba(0,0,0,0.1);
+  margin-top: 76px;
+  /* Header offset */
+  box-shadow: inset 0 -10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .courses-hero-banner .hero-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(135deg, rgba(15, 33, 76, 0.92) 0%, rgba(15, 33, 76, 0.75) 100%);
   z-index: 0;
 }
@@ -6007,7 +6044,7 @@ body.lang-hi [data-lang-hi] {
   font-size: 14.5px;
   color: var(--text-muted);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
   white-space: nowrap;
 }
 
@@ -6051,7 +6088,9 @@ body.lang-hi [data-lang-hi] {
 .card-premium-program::before {
   content: \"\";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 6px;
   background: var(--neutral-slate-200);
   transition: var(--transition-premium);
@@ -6059,14 +6098,37 @@ body.lang-hi [data-lang-hi] {
 }
 
 /* Tag colors per category (existing classes) */
-.card-premium-program.nios-card::before { background: var(--color-navy); }
-.card-premium-program.cbse-card::before { background: var(--color-orange); }
-.card-premium-program.cuet-card::before { background: var(--color-yellow); }
-.card-premium-program.distance-card::before { background: #2E6F95; }
-.card-premium-program.skill-card::before { background: var(--color-red); }
-.card-premium-program.mnemonic-card::before { background: #8E44AD; }
-.card-premium-program.ai-card::before { background: #16A085; }
-.card-premium-program.prof-card::before { background: #D35400; }
+.card-premium-program.nios-card::before {
+  background: var(--color-navy);
+}
+
+.card-premium-program.cbse-card::before {
+  background: var(--color-orange);
+}
+
+.card-premium-program.cuet-card::before {
+  background: var(--color-yellow);
+}
+
+.card-premium-program.distance-card::before {
+  background: #2E6F95;
+}
+
+.card-premium-program.skill-card::before {
+  background: var(--color-red);
+}
+
+.card-premium-program.mnemonic-card::before {
+  background: #8E44AD;
+}
+
+.card-premium-program.ai-card::before {
+  background: #16A085;
+}
+
+.card-premium-program.prof-card::before {
+  background: #D35400;
+}
 
 .card-icon {
   width: 68px;
@@ -6192,7 +6254,7 @@ body.lang-hi [data-lang-hi] {
   font-size: 14px !important;
   color: var(--text-muted) !important;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.02) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
 }
 
 .course-filter-btn:hover {
@@ -6253,14 +6315,45 @@ body.lang-hi [data-lang-hi] {
 }
 
 /* Custom background for icons based on existing category classes */
-.card-premium-program.nios-card .card-icon { background: rgba(15, 33, 76, 0.08) !important; color: var(--color-navy) !important; }
-.card-premium-program.cbse-card .card-icon { background: rgba(255, 110, 0, 0.1) !important; color: var(--color-orange) !important; }
-.card-premium-program.cuet-card .card-icon { background: rgba(255, 183, 0, 0.15) !important; color: #D49D00 !important; }
-.card-premium-program.distance-card .card-icon { background: rgba(46, 111, 149, 0.1) !important; color: #2E6F95 !important; }
-.card-premium-program.skill-card .card-icon { background: rgba(194, 27, 47, 0.08) !important; color: var(--color-red) !important; }
-.card-premium-program.mnemonic-card .card-icon { background: rgba(142, 68, 173, 0.08) !important; color: #8E44AD !important; }
-.card-premium-program.ai-card .card-icon { background: rgba(22, 160, 133, 0.08) !important; color: #16A085 !important; }
-.card-premium-program.prof-card .card-icon { background: rgba(211, 84, 0, 0.1) !important; color: #D35400 !important; }
+.card-premium-program.nios-card .card-icon {
+  background: rgba(15, 33, 76, 0.08) !important;
+  color: var(--color-navy) !important;
+}
+
+.card-premium-program.cbse-card .card-icon {
+  background: rgba(255, 110, 0, 0.1) !important;
+  color: var(--color-orange) !important;
+}
+
+.card-premium-program.cuet-card .card-icon {
+  background: rgba(255, 183, 0, 0.15) !important;
+  color: #D49D00 !important;
+}
+
+.card-premium-program.distance-card .card-icon {
+  background: rgba(46, 111, 149, 0.1) !important;
+  color: #2E6F95 !important;
+}
+
+.card-premium-program.skill-card .card-icon {
+  background: rgba(194, 27, 47, 0.08) !important;
+  color: var(--color-red) !important;
+}
+
+.card-premium-program.mnemonic-card .card-icon {
+  background: rgba(142, 68, 173, 0.08) !important;
+  color: #8E44AD !important;
+}
+
+.card-premium-program.ai-card .card-icon {
+  background: rgba(22, 160, 133, 0.08) !important;
+  color: #16A085 !important;
+}
+
+.card-premium-program.prof-card .card-icon {
+  background: rgba(211, 84, 0, 0.1) !important;
+  color: #D35400 !important;
+}
 
 /* Typography */
 .card-premium-program .card-program-title {
@@ -6375,14 +6468,45 @@ body.lang-hi [data-lang-hi] {
 }
 
 /* Category Specific Tags Background/Text Tints (No Green!) */
-.course-category-tag.tag-nios { background: rgba(15, 33, 76, 0.06) !important; color: var(--color-navy) !important; }
-.course-category-tag.tag-cbse { background: rgba(255, 110, 0, 0.08) !important; color: var(--color-orange) !important; }
-.course-category-tag.tag-cuet { background: rgba(255, 183, 0, 0.1) !important; color: #d49d00 !important; }
-.course-category-tag.tag-distance { background: rgba(46, 111, 149, 0.08) !important; color: #2e6f95 !important; }
-.course-category-tag.tag-skill { background: rgba(194, 27, 47, 0.06) !important; color: var(--color-red) !important; }
-.course-category-tag.tag-mnemonic { background: rgba(142, 68, 173, 0.06) !important; color: #8e44ad !important; }
-.course-category-tag.tag-ai { background: rgba(22, 160, 133, 0.08) !important; color: #16a085 !important; }
-.course-category-tag.tag-prof { background: rgba(211, 84, 0, 0.08) !important; color: #d35400 !important; }
+.course-category-tag.tag-nios {
+  background: rgba(15, 33, 76, 0.06) !important;
+  color: var(--color-navy) !important;
+}
+
+.course-category-tag.tag-cbse {
+  background: rgba(255, 110, 0, 0.08) !important;
+  color: var(--color-orange) !important;
+}
+
+.course-category-tag.tag-cuet {
+  background: rgba(255, 183, 0, 0.1) !important;
+  color: #d49d00 !important;
+}
+
+.course-category-tag.tag-distance {
+  background: rgba(46, 111, 149, 0.08) !important;
+  color: #2e6f95 !important;
+}
+
+.course-category-tag.tag-skill {
+  background: rgba(194, 27, 47, 0.06) !important;
+  color: var(--color-red) !important;
+}
+
+.course-category-tag.tag-mnemonic {
+  background: rgba(142, 68, 173, 0.06) !important;
+  color: #8e44ad !important;
+}
+
+.course-category-tag.tag-ai {
+  background: rgba(22, 160, 133, 0.08) !important;
+  color: #16a085 !important;
+}
+
+.course-category-tag.tag-prof {
+  background: rgba(211, 84, 0, 0.08) !important;
+  color: #d35400 !important;
+}
 
 .course-card-title {
   font-size: 17.5px !important;
@@ -6497,8 +6621,6 @@ body.lang-hi [data-lang-hi] {
 .course-price-badge {
   padding: 8px 14px !important;
   border-radius: 8px !important;
-  border: 1px solid rgba(15, 33, 76, 0.12) !important;
-  font-size: 13px !important;
   font-weight: 800 !important;
   color: var(--color-navy) !important;
   background: #fafbfc !important;
@@ -6506,10 +6628,12 @@ body.lang-hi [data-lang-hi] {
 
 /* --- Courses Page Specific Hero Banner --- */
 .courses-hero-premium-banner {
-  background: #081533 url('../Images/courses_banner.jpeg') no-repeat center right !important;
+  background: #081533 url('../Images/courses_banner.jpeg') no-repeat right top !important;
   background-image:
     linear-gradient(rgba(8, 21, 51, 0.65), rgba(8, 21, 51, 0.65)),
     url('../Images/courses_banner.jpeg') !important;
+  background-position: right top !important;
+  background-size: cover !important;
   /* Customize these padding values to resize the height of the courses banner */
   padding-top: 160px !important;
   padding-bottom: 120px !important;
@@ -6520,6 +6644,6 @@ body.lang-hi [data-lang-hi] {
   .courses-hero-premium-banner {
     padding-top: 120px !important;
     padding-bottom: 90px !important;
+    background-position: right top !important;
   }
 }
-
