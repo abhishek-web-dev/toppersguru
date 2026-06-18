@@ -6759,3 +6759,173 @@ body.lang-hi [data-lang-hi] {
   color: var(--text-muted) !important;
   line-height: 1.6 !important;
 }
+
+/* --- Regular Courses Page Specific Hero Banner --- */
+.regular-courses-hero-premium-banner {
+  background: #081533 url('../Images/regular_courses_banner.png') no-repeat right top !important;
+  background-image:
+    linear-gradient(rgba(8, 21, 51, 0.65), rgba(8, 21, 51, 0.65)),
+    url('../Images/regular_courses_banner.png') !important;
+  background-position: right top !important;
+  background-size: cover !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 500px !important;
+  padding-top: 80px !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .regular-courses-hero-premium-banner {
+    padding-top: 120px !important;
+    padding-bottom: 90px !important;
+    background-position: right top !important;
+  }
+}
+
+/* --- Premium Regular Course Cards --- */
+.regular-course-card-premium {
+  background: white;
+  border: 1px solid rgba(15, 33, 76, 0.06);
+  border-radius: 18px;
+  padding: 35px 26px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(15, 33, 76, 0.02);
+  z-index: 1;
+}
+
+/* Custom interactive gradient border on hover */
+.regular-course-card-premium::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, transparent, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+  transition: background 0.4s ease;
+}
+
+.regular-course-card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 33, 76, 0.08);
+}
+
+.regular-course-card-premium.theme-navy:hover::after {
+  background: linear-gradient(135deg, var(--color-navy), #2a5298) !important;
+}
+.regular-course-card-premium.theme-orange:hover::after {
+  background: linear-gradient(135deg, var(--color-orange), #ff7e5f) !important;
+}
+.regular-course-card-premium.theme-red:hover::after {
+  background: linear-gradient(135deg, var(--color-red), #ff5252) !important;
+}
+.regular-course-card-premium.theme-yellow:hover::after {
+  background: linear-gradient(135deg, #d49d00, #ffb700) !important;
+}
+
+.regular-course-card-premium .card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 24px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: white !important;
+}
+
+.regular-course-card-premium.theme-navy .card-icon {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #2a5298 100%) !important;
+  box-shadow: 0 6px 15px rgba(15, 33, 76, 0.15) !important;
+}
+
+.regular-course-card-premium.theme-orange .card-icon {
+  background: linear-gradient(135deg, var(--color-orange) 0%, #ff7e5f 100%) !important;
+  box-shadow: 0 6px 15px rgba(255, 110, 0, 0.15) !important;
+}
+
+.regular-course-card-premium.theme-red .card-icon {
+  background: linear-gradient(135deg, var(--color-red) 0%, #ff5252 100%) !important;
+  box-shadow: 0 6px 15px rgba(194, 27, 47, 0.15) !important;
+}
+
+.regular-course-card-premium.theme-yellow .card-icon {
+  background: linear-gradient(135deg, #d49d00 0%, #ffb700 100%) !important;
+  box-shadow: 0 6px 15px rgba(212, 157, 0, 0.15) !important;
+}
+
+.regular-course-card-premium:hover .card-icon {
+  transform: scale(1.1) rotate(5deg) !important;
+}
+
+.regular-course-card-premium .card-program-title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--color-navy) !important;
+  margin-bottom: 10px !important;
+}
+
+.regular-course-card-premium .card-program-desc {
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.5 !important;
+  margin-bottom: 24px !important;
+  flex-grow: 1 !important;
+}
+
+.regular-course-card-premium .btn-card-enroll {
+  padding: 12px 20px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  background: transparent !important;
+  border: 2px solid var(--color-navy) !important;
+  color: var(--color-navy) !important;
+  margin-top: auto !important;
+  display: block !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+
+.regular-course-card-premium.theme-navy:hover .btn-card-enroll {
+  background: var(--color-navy) !important;
+  border-color: var(--color-navy) !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(15, 33, 76, 0.2) !important;
+}
+
+.regular-course-card-premium.theme-orange:hover .btn-card-enroll {
+  background: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(255, 110, 0, 0.2) !important;
+}
+
+.regular-course-card-premium.theme-red:hover .btn-card-enroll {
+  background: var(--color-red) !important;
+  border-color: var(--color-red) !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(194, 27, 47, 0.2) !important;
+}
+
+.regular-course-card-premium.theme-yellow:hover .btn-card-enroll {
+  background: #d49d00 !important;
+  border-color: #d49d00 !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(212, 157, 0, 0.2) !important;
+}
