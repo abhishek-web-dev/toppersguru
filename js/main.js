@@ -124,7 +124,7 @@ const translations = {
     courses: {
       comprehensive: "Comprehensive Programs",
       findPerfect: "Find Your Perfect Course",
-      findDesc: "From foundational school education to advanced competitive preparation and skill development.",
+      findDesc: "From foundational school education to advanced competitive preparation and skill development. Explore our comprehensive selection of UGC-approved programs, CBSE coaching, and memory science training designed to unlock your full potential and shape a brighter career.",
       selectCategory: "Select a Category",
       selectDesc: "Choose an area of study to view available courses.",
       coursesCount: "Courses",
@@ -437,7 +437,7 @@ const translations = {
     courses: {
       comprehensive: "व्यापक कार्यक्रम",
       findPerfect: "अपना आदर्श कोर्स खोजें",
-      findDesc: "बुनियादी स्कूली शिक्षा से लेकर उन्नत प्रतियोगी तैयारी और कौशल विकास तक।",
+      findDesc: "बुनियादी स्कूली शिक्षा से लेकर उन्नत प्रतियोगी तैयारी और कौशल विकास तक। अपने सपनों को साकार करने और एक बेहतर करियर बनाने के लिए हमारे यूजीसी-अनुमोदित कार्यक्रमों, सीबीएसई कोचिंग और मेमोरी साइंस प्रशिक्षण के व्यापक चयन को देखें।",
       selectCategory: "एक श्रेणी चुनें",
       selectDesc: "उपलब्ध कोर्स देखने के लिए अध्ययन का क्षेत्र चुनें।",
       coursesCount: "कोर्स",

@@ -6634,10 +6634,12 @@ body.lang-hi [data-lang-hi] {
     url('../Images/courses_banner.jpeg') !important;
   background-position: right top !important;
   background-size: cover !important;
-  /* Customize these padding values to resize the height of the courses banner */
-  padding-top: 160px !important;
-  padding-bottom: 120px !important;
-  height: 630px;
+  /* Use flexbox to center content vertically inside the 630px height */
+  display: flex !important;
+  align-items: center !important;
+  height: 630px !important;
+  padding-top: 80px !important; /* Offset safe area for fixed transparent header */
+  padding-bottom: 0 !important;
 }
 
 /* Responsive height adjustment for mobile & tablet */
