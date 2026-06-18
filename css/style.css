@@ -5971,3 +5971,536 @@ body.lang-hi [data-lang-hi] {
   }
 }
 
+/* ==========================================================================
+   Courses Page Visual Redesign (Content Locked)
+   ========================================================================== */
+
+.courses-hero-banner {
+  background-image: url(\"../Images/courses_banner.jpeg\");
+  background-size: cover;
+  background-position: center;
+  padding: 140px 0 100px;
+  margin-top: 76px; /* Header offset */
+  box-shadow: inset 0 -10px 30px rgba(0,0,0,0.1);
+}
+
+.courses-hero-banner .hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 33, 76, 0.92) 0%, rgba(15, 33, 76, 0.75) 100%);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .courses-hero-banner {
+    padding: 100px 0 80px;
+  }
+}
+
+/* Premium Filter Buttons */
+.course-filter-btn {
+  background: white;
+  border: 1px solid var(--neutral-slate-200);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  white-space: nowrap;
+}
+
+.course-filter-btn:hover {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+  background: rgba(15, 33, 76, 0.03);
+  transform: translateY(-2px);
+}
+
+.course-filter-btn.active {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: white;
+  box-shadow: 0 8px 20px rgba(15, 33, 76, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Premium Course Cards (Visual Enhancement) */
+.card-premium-program {
+  background: white;
+  border: 1px solid var(--neutral-slate-200);
+  border-radius: 20px;
+  padding: 40px 30px 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-premium-program:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(15, 33, 76, 0.12);
+  border-color: rgba(255, 110, 0, 0.3);
+}
+
+.card-premium-program::before {
+  content: \"\";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: var(--neutral-slate-200);
+  transition: var(--transition-premium);
+  z-index: 2;
+}
+
+/* Tag colors per category (existing classes) */
+.card-premium-program.nios-card::before { background: var(--color-navy); }
+.card-premium-program.cbse-card::before { background: var(--color-orange); }
+.card-premium-program.cuet-card::before { background: var(--color-yellow); }
+.card-premium-program.distance-card::before { background: #2E6F95; }
+.card-premium-program.skill-card::before { background: var(--color-red); }
+.card-premium-program.mnemonic-card::before { background: #8E44AD; }
+.card-premium-program.ai-card::before { background: #16A085; }
+.card-premium-program.prof-card::before { background: #D35400; }
+
+.card-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-premium-program:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.card-program-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.card-program-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+/* Enhance existing buttons in cards */
+.card-premium-program .btn {
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 14.5px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  background: var(--neutral-slate-50);
+  border: 1px solid var(--neutral-slate-200);
+  color: var(--color-navy);
+}
+
+.card-premium-program:hover .btn {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 110, 0, 0.25);
+}
+
+/* Enhance existing Fee badge if present */
+.card-premium-program .badge {
+  background: rgba(15, 33, 76, 0.05) !important;
+  color: var(--color-navy) !important;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 12px 18px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(15, 33, 76, 0.1);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+
+/* ==========================================================================
+   Courses Page Visual Redesign (Content Locked) - Coachly Style Reference
+   ========================================================================== */
+
+/* --- Hero Banner Redesign --- */
+.courses-hero-banner {
+  background-image: url(\"../Images/courses_banner.jpeg\") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 120px 0 100px !important;
+  margin-top: 76px !important;
+  position: relative !important;
+}
+
+.courses-hero-banner .hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(135deg, rgba(15, 33, 76, 0.94) 0%, rgba(15, 33, 76, 0.82) 100%) !important;
+  z-index: 0 !important;
+}
+
+.courses-hero-banner .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.courses-hero-banner .hero-title {
+  font-size: 48px !important;
+  font-weight: 900 !important;
+  color: white !important;
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.5px !important;
+}
+
+.courses-hero-banner .hero-desc {
+  font-size: 18px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+}
+
+/* --- Filter Tabs Redesign --- */
+#filtersContainer {
+  gap: 12px !important;
+}
+
+.course-filter-btn {
+  background: white !important;
+  border: 1px solid var(--neutral-slate-200) !important;
+  padding: 8px 24px !important;
+  border-radius: 30px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02) !important;
+}
+
+.course-filter-btn:hover {
+  border-color: rgba(255, 110, 0, 0.5) !important;
+  color: var(--color-orange) !important;
+  background: rgba(255, 110, 0, 0.04) !important;
+  transform: translateY(-2px) !important;
+}
+
+.course-filter-btn.active {
+  background: var(--color-navy) !important;
+  border-color: var(--color-navy) !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(15, 33, 76, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* --- Course Card Redesign (Reference Style) --- */
+.card-premium-program {
+  background: white !important;
+  border: 1px solid var(--neutral-slate-200) !important;
+  border-radius: 16px !important;
+  padding: 35px 30px !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03) !important;
+  position: relative !important;
+}
+
+.card-premium-program:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(15, 33, 76, 0.1) !important;
+  border-color: rgba(255, 110, 0, 0.25) !important;
+}
+
+/* Remove old top colored bar to match the clean reference style */
+.card-premium-program::before {
+  display: none !important;
+}
+
+/* Redesign Icon Box to look like a premium badge above the title */
+.card-premium-program .card-icon {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 24px !important;
+  margin-bottom: 20px !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card-premium-program:hover .card-icon {
+  transform: scale(1.1) rotate(5deg) !important;
+}
+
+/* Custom background for icons based on existing category classes */
+.card-premium-program.nios-card .card-icon { background: rgba(15, 33, 76, 0.08) !important; color: var(--color-navy) !important; }
+.card-premium-program.cbse-card .card-icon { background: rgba(255, 110, 0, 0.1) !important; color: var(--color-orange) !important; }
+.card-premium-program.cuet-card .card-icon { background: rgba(255, 183, 0, 0.15) !important; color: #D49D00 !important; }
+.card-premium-program.distance-card .card-icon { background: rgba(46, 111, 149, 0.1) !important; color: #2E6F95 !important; }
+.card-premium-program.skill-card .card-icon { background: rgba(194, 27, 47, 0.08) !important; color: var(--color-red) !important; }
+.card-premium-program.mnemonic-card .card-icon { background: rgba(142, 68, 173, 0.08) !important; color: #8E44AD !important; }
+.card-premium-program.ai-card .card-icon { background: rgba(22, 160, 133, 0.08) !important; color: #16A085 !important; }
+.card-premium-program.prof-card .card-icon { background: rgba(211, 84, 0, 0.1) !important; color: #D35400 !important; }
+
+/* Typography */
+.card-premium-program .card-program-title {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: var(--color-navy) !important;
+  margin-bottom: 15px !important;
+  line-height: 1.4 !important;
+}
+
+.card-premium-program .card-program-desc {
+  font-size: 14.5px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 25px !important;
+  flex-grow: 1 !important;
+}
+
+/* Enhance existing Fee badge */
+.card-premium-program .badge {
+  background: var(--neutral-slate-50) !important;
+  color: var(--color-navy) !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  padding: 10px 15px !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--neutral-slate-200) !important;
+  display: block !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+/* Bottom Button Redesign (Reference Style) */
+.card-premium-program .btn {
+  padding: 12px 20px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  width: 100% !important;
+  transition: all 0.3s ease !important;
+  background: transparent !important;
+  border: 2px solid var(--color-navy) !important;
+  color: var(--color-navy) !important;
+  margin-top: auto !important;
+}
+
+.card-premium-program:hover .btn {
+  background: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(255, 110, 0, 0.2) !important;
+}
+
+/* --- Redesigned Premium Course Cards (Coachly-Style Reference) --- */
+.premium-course-card {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(15, 33, 76, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(15, 33, 76, 0.03) !important;
+  overflow: hidden !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  position: relative !important;
+}
+
+.premium-course-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(15, 33, 76, 0.12) !important;
+  border-color: rgba(255, 110, 0, 0.2) !important;
+}
+
+.course-card-image-wrap {
+  width: 100% !important;
+  aspect-ratio: 16 / 10.5 !important;
+  overflow: hidden !important;
+  background: #f8fafc !important;
+  border-bottom: 1px solid rgba(15, 33, 76, 0.05) !important;
+}
+
+.course-card-image-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.premium-course-card:hover .course-card-image-wrap img {
+  transform: scale(1.06) !important;
+}
+
+.course-card-body {
+  padding: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.course-category-tag {
+  display: inline-block !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  padding: 5px 12px !important;
+  border-radius: 30px !important;
+  margin-bottom: 14px !important;
+  width: fit-content !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Category Specific Tags Background/Text Tints (No Green!) */
+.course-category-tag.tag-nios { background: rgba(15, 33, 76, 0.06) !important; color: var(--color-navy) !important; }
+.course-category-tag.tag-cbse { background: rgba(255, 110, 0, 0.08) !important; color: var(--color-orange) !important; }
+.course-category-tag.tag-cuet { background: rgba(255, 183, 0, 0.1) !important; color: #d49d00 !important; }
+.course-category-tag.tag-distance { background: rgba(46, 111, 149, 0.08) !important; color: #2e6f95 !important; }
+.course-category-tag.tag-skill { background: rgba(194, 27, 47, 0.06) !important; color: var(--color-red) !important; }
+.course-category-tag.tag-mnemonic { background: rgba(142, 68, 173, 0.06) !important; color: #8e44ad !important; }
+.course-category-tag.tag-ai { background: rgba(22, 160, 133, 0.08) !important; color: #16a085 !important; }
+.course-category-tag.tag-prof { background: rgba(211, 84, 0, 0.08) !important; color: #d35400 !important; }
+
+.course-card-title {
+  font-size: 17.5px !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 12px !important;
+}
+
+.course-card-title a {
+  color: var(--color-navy) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.course-card-title a:hover {
+  color: var(--color-orange) !important;
+}
+
+.course-meta-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 14px !important;
+  flex-wrap: wrap !important;
+}
+
+.course-meta-info span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.course-meta-info i {
+  color: var(--color-orange) !important;
+  font-size: 13px !important;
+}
+
+.course-rating-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 18px !important;
+}
+
+.course-rating-row .stars {
+  color: #ffb700 !important;
+  font-size: 11px !important;
+  display: flex !important;
+  gap: 2px !important;
+}
+
+.course-rating-row .reviews-count {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+}
+
+.card-divider {
+  margin: 0 0 18px 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(15, 33, 76, 0.06) !important;
+  opacity: 1 !important;
+}
+
+.course-card-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: auto !important;
+  gap: 10px !important;
+}
+
+.btn-join-class {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 18px !important;
+  border-radius: 30px !important;
+  background: rgba(15, 33, 76, 0.05) !important;
+  color: var(--color-navy) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-join-class .arrow-circle {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: var(--color-navy) !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.premium-course-card:hover .btn-join-class {
+  background: var(--color-orange) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 110, 0, 0.25) !important;
+}
+
+.premium-course-card:hover .btn-join-class .arrow-circle {
+  background: #ffffff !important;
+  color: var(--color-orange) !important;
+}
+
+.course-price-badge {
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(15, 33, 76, 0.12) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: var(--color-navy) !important;
+  background: #fafbfc !important;
+}
+
