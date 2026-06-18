@@ -8165,76 +8165,134 @@ body.lang-hi [data-lang-hi] {
   color: #0f214c;
 }
 
-/* --- Chanakya Standalone Card --- */
+/* --- Chanakya Standalone Card — v10.2 Premium --- */
 .chanakya-standalone-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
-  background: white;
-  border-radius: 24px;
-  border: 1px solid rgba(15,33,76,0.06);
-  box-shadow: 0 8px 32px rgba(15,33,76,0.05);
+  background: linear-gradient(135deg, #fff8f2 0%, #ffffff 40%, #f0f4ff 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(255,110,0,0.12);
+  box-shadow: 0 16px 60px rgba(15,33,76,0.08), 0 2px 8px rgba(255,110,0,0.06);
   overflow: hidden;
-  min-height: 280px;
+  min-height: 360px;
+  position: relative;
 }
+/* Big decorative quote icon in background */
+.chanakya-standalone-card::before {
+  content: "\f10d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 48px;
+  top: 30px;
+  font-size: 120px;
+  color: rgba(255,110,0,0.05);
+  pointer-events: none;
+  line-height: 1;
+  z-index: 0;
+}
+/* Left image panel */
 .chanakya-standalone-image {
   flex-shrink: 0;
-  width: 220px;
-  min-height: 280px;
-  border-right: 1px solid rgba(15,33,76,0.06);
+  width: 300px;
+  min-height: 360px;
+  background: linear-gradient(180deg, #fff3e8 0%, #ffe0be 100%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: #fdf7f2;
   overflow: hidden;
+  position: relative;
+}
+/* Subtle glow behind the Chanakya image */
+.chanakya-standalone-image::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,110,0,0.18) 0%, transparent 70%);
+  pointer-events: none;
 }
 .chanakya-standalone-image img {
   width: 100%;
-  max-height: 300px;
+  max-height: 380px;
   object-fit: contain;
-  object-position: bottom;
+  object-position: bottom center;
   display: block;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.5s ease;
 }
+.chanakya-standalone-card:hover .chanakya-standalone-image img {
+  transform: scale(1.04) translateY(-6px);
+}
+/* Right content panel */
 .chanakya-standalone-content {
   flex: 1;
-  padding: 44px 48px;
+  padding: 52px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 .chanakya-standalone-title {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 900;
   color: var(--color-orange);
-  line-height: 1.25;
-  margin-bottom: 0;
+  line-height: 1.2;
+  margin-bottom: 8px;
 }
 .chanakya-standalone-title span {
-  color: var(--color-orange);
+  color: var(--color-navy);
 }
+/* Sub-label under title */
+.chanakya-standalone-subtitle {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(15,33,76,0.35);
+  margin-bottom: 28px;
+  display: block;
+}
+/* The quote text — now dark and readable */
 .chanakya-standalone-quote {
   font-family: var(--font-body);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 19px;
+  font-weight: 500;
   font-style: italic;
-  color: #c8ccd6;
-  line-height: 1.6;
+  color: #2a3550;
+  line-height: 1.7;
   margin: 0;
-  min-height: 60px;
+  min-height: 64px;
+  padding-left: 20px;
+  border-left: 3px solid var(--color-orange);
+  transition: color 0.4s ease;
+}
+@media (max-width: 991px) {
+  .chanakya-standalone-image { width: 220px; }
+  .chanakya-standalone-content { padding: 36px 36px; }
+  .chanakya-standalone-title { font-size: 26px; }
 }
 @media (max-width: 767px) {
   .chanakya-standalone-card {
     flex-direction: column;
+    min-height: auto;
   }
   .chanakya-standalone-image {
     width: 100%;
-    min-height: 180px;
-    border-right: none;
-    border-bottom: 1px solid rgba(15,33,76,0.06);
+    min-height: 220px;
   }
   .chanakya-standalone-image img {
-    max-height: 180px;
+    max-height: 220px;
   }
   .chanakya-standalone-content {
-    padding: 28px 24px;
+    padding: 30px 24px;
   }
   .chanakya-standalone-title {
     font-size: 22px;
@@ -8242,6 +8300,7 @@ body.lang-hi [data-lang-hi] {
   .chanakya-standalone-quote {
     font-size: 16px;
   }
+  .chanakya-standalone-card::before { display: none; }
 }
 
 /* --- About Team Cards — screenshot style overrides --- */
