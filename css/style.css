@@ -8134,3 +8134,184 @@ body.lang-hi [data-lang-hi] {
 /* Yellow accent color utility */
 .text-yellow { color: var(--color-yellow) !important; }
 .text-red    { color: var(--color-red) !important; }
+
+/* ============================================================
+   ABOUT PAGE — v10.1 ADDITIONS
+   ============================================================ */
+
+/* --- About Hero: full dark banner (matches navbar) --- */
+.about-hero-premium-banner {
+  background: #081533 url('../Images/hero_banner.jpeg') no-repeat center right !important;
+  background-image:
+    linear-gradient(rgba(8, 21, 51, 0.68), rgba(8, 21, 51, 0.68)),
+    url('../Images/hero_banner.jpeg') !important;
+  background-size: cover !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 600px !important;
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+}
+@media (max-width: 991px) {
+  .about-hero-premium-banner {
+    min-height: auto !important;
+    padding-top: 130px !important;
+    padding-bottom: 80px !important;
+  }
+}
+/* Override floating pill colors — keep white on dark bg */
+.about-hero-premium-banner .about-floating-pill {
+  background: rgba(255,255,255,0.95);
+  color: #0f214c;
+}
+
+/* --- Chanakya Standalone Card --- */
+.chanakya-standalone-card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid rgba(15,33,76,0.06);
+  box-shadow: 0 8px 32px rgba(15,33,76,0.05);
+  overflow: hidden;
+  min-height: 280px;
+}
+.chanakya-standalone-image {
+  flex-shrink: 0;
+  width: 220px;
+  min-height: 280px;
+  border-right: 1px solid rgba(15,33,76,0.06);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #fdf7f2;
+  overflow: hidden;
+}
+.chanakya-standalone-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+}
+.chanakya-standalone-content {
+  flex: 1;
+  padding: 44px 48px;
+}
+.chanakya-standalone-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-orange);
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+.chanakya-standalone-title span {
+  color: var(--color-orange);
+}
+.chanakya-standalone-quote {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: #c8ccd6;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 60px;
+}
+@media (max-width: 767px) {
+  .chanakya-standalone-card {
+    flex-direction: column;
+  }
+  .chanakya-standalone-image {
+    width: 100%;
+    min-height: 180px;
+    border-right: none;
+    border-bottom: 1px solid rgba(15,33,76,0.06);
+  }
+  .chanakya-standalone-image img {
+    max-height: 180px;
+  }
+  .chanakya-standalone-content {
+    padding: 28px 24px;
+  }
+  .chanakya-standalone-title {
+    font-size: 22px;
+  }
+  .chanakya-standalone-quote {
+    font-size: 16px;
+  }
+}
+
+/* --- About Team Cards — screenshot style overrides --- */
+.about-team-card {
+  background: white !important;
+  border: none !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(15,33,76,0.07) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+.about-team-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 18px 44px rgba(15,33,76,0.12) !important;
+}
+.about-team-image-wrap {
+  height: 300px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: #f4f5f8;
+}
+.about-team-image-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  transition: transform 0.5s ease !important;
+  display: block !important;
+}
+.about-team-card:hover .about-team-image-wrap img {
+  transform: scale(1.06) !important;
+}
+.about-team-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(8,21,51,0.88) 0%, rgba(8,21,51,0.35) 55%, transparent 100%) !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: 18px !important;
+  opacity: 0 !important;
+  transition: opacity 0.35s ease !important;
+}
+.about-team-card:hover .about-team-overlay {
+  opacity: 1 !important;
+}
+.team-bio-text {
+  color: rgba(255,255,255,0.9) !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+.about-team-info {
+  padding: 16px 18px 18px !important;
+  background: white !important;
+  border-top: none !important;
+}
+.team-name {
+  font-family: var(--font-display) !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: var(--color-navy) !important;
+  margin-bottom: 4px !important;
+  line-height: 1.2 !important;
+}
+.team-role {
+  font-family: var(--font-body) !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  color: var(--text-muted) !important;
+  margin: 0 !important;
+}
