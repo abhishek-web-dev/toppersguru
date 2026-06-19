@@ -187,7 +187,16 @@ const translations = {
       callNow: "Call Now",
       followUs: "Follow Us",
       sendInquiry: "Send an Inquiry",
-      fillForm: "Please fill out the form below and we will get back to you shortly."
+      fillForm: "Please fill out the form below and we will get back to you shortly.",
+      guidelinesSub: "Frequently Asked Questions",
+      guidelinesTitle: "Admission Guidelines & FAQ",
+      guidelinesDesc: "Key information for candidates seeking admission and guidance at Toppers Guru.",
+      faq1Title: "What documents are required?",
+      faq1Desc: "You need to submit copies of previous mark sheets, Aadhaar Card / ID proof, and passport-size photographs during verification.",
+      faq2Title: "How are batches allocated?",
+      faq2Desc: "Batch timings are decided by management based on seat availability. While preferences are considered, final allocations are binding.",
+      faq3Title: "What is the admission criteria?",
+      faq3Desc: "Admissions are processed on a first-come, first-served basis. Seat confirmation occurs after document verification and registration fee payment."
     },
     gallery: {
       ourMemories: "Our Memories",
@@ -500,7 +509,16 @@ const translations = {
       callNow: "अभी कॉल करें",
       followUs: "हमें फॉलो करें",
       sendInquiry: "पूछताछ भेजें",
-      fillForm: "कृपया नीचे दिया गया फॉर्म भरें और हम जल्द ही आपसे संपर्क करेंगे।"
+      fillForm: "कृपया नीचे दिया गया फॉर्म भरें और हम जल्द ही आपसे संपर्क करेंगे।",
+      guidelinesSub: "अक्सर पूछे जाने वाले प्रश्न",
+      guidelinesTitle: "प्रवेश दिशानिर्देश और सामान्य प्रश्न",
+      guidelinesDesc: "टॉपर्स गुरु में प्रवेश और मार्गदर्शन चाहने वाले उम्मीदवारों के लिए महत्वपूर्ण जानकारी।",
+      faq1Title: "कौन से दस्तावेज़ आवश्यक हैं?",
+      faq1Desc: "सत्यापन के दौरान आपको पिछली अंकतालिकाओं, आधार कार्ड / पहचान पत्र, और पासपोर्ट आकार के फोटो की प्रतियां जमा करनी होंगी।",
+      faq2Title: "बैच का आवंटन कैसे किया जाता है?",
+      faq2Desc: "सीटों की उपलब्धता के आधार पर प्रबंधन द्वारा बैच के समय का निर्णय लिया जाता है। हालांकि प्राथमिकताओं पर विचार किया जाता है, अंतिम आवंटन बाध्यकारी हैं।",
+      faq3Title: "प्रवेश मानदंड क्या है?",
+      faq3Desc: "प्रवेश 'पहले आओ, पहले पाओ' के आधार पर संसाधित किए जाते हैं। दस्तावेज़ सत्यापन और पंजीकरण शुल्क भुगतान के बाद सीट की पुष्टि होती है।"
     },
     gallery: {
       ourMemories: "हमारी यादें",

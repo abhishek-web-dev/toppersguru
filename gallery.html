@@ -28,25 +28,34 @@
     <main class="bg-gradient-soft">
       
       <!-- Page Hero Section -->
-      <section class="section-padding pt-5 mt-5 text-center">
-        <div class="container pt-5">
+      <section class="hero-premium-banner gallery-hero-premium-banner text-center">
+        <div class="container">
           <div class="max-w-4xl mx-auto">
-            <span class="positioning-line text-center" data-i18n="gallery.ourMemories">Our Memories</span>
-            <h1 class="hero-title text-navy mb-4" data-i18n="gallery.title">Our Journey, Success & Memories</h1>
-            <p class="hero-desc mb-0" data-i18n="gallery.desc">Explore the moments that define Toppers Guru.</p>
+            <span class="positioning-line text-center animate-fade-in-up" data-i18n="gallery.ourMemories">Our Memories</span>
+            <h1 class="hero-title animate-fade-in-up delay-100" data-i18n="gallery.title">Our Journey, Success & Memories</h1>
+            <p class="hero-desc animate-fade-in-up delay-200 mb-0" data-i18n="gallery.desc">Explore the moments that define Toppers Guru.</p>
           </div>
         </div>
       </section>
 
-      <!-- Masonry Image Grid -->
-      <section class="section-padding bg-white border-top border-bottom">
+      <!-- Category Filter Tabs -->
+      <div class="container pt-5">
+        <div class="gallery-filter-bar animate-fade-in-up delay-300">
+          <button class="gallery-filter-btn active" data-category="all">All Photos</button>
+          <button class="gallery-filter-btn" data-category="campus">Campus & Classroom</button>
+          <button class="gallery-filter-btn" data-category="events">Events & Seminars</button>
+          <button class="gallery-filter-btn" data-category="success">Success Celebrations</button>
+        </div>
+      </div>
+
+      <!-- Masonry-like Image Grid -->
+      <section class="section-padding pt-4 bg-white border-top border-bottom">
         <div class="container">
           <div class="row g-4" id="galleryGrid">
             
-            <!-- Image Cards generated from Vi array -->
             <!-- 1 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="0">
+              <div class="gallery-card cursor-pointer" data-index="0" data-category="success">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/dd7055d109a1f745e523428872d341d6.jpg" alt="Faculty and students with Sanjeevni banner" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Faculty and students with Sanjeevni banner</div>
@@ -55,7 +64,7 @@
             </div>
             <!-- 2 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="1">
+              <div class="gallery-card cursor-pointer" data-index="1" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/93790249725634703177be3211e261f9.jpg" alt="Happy students with peace signs" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Happy students with peace signs</div>
@@ -64,7 +73,7 @@
             </div>
             <!-- 3 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="2">
+              <div class="gallery-card cursor-pointer" data-index="2" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/33ba647619b8a1879a2c822d2dc7cdcc.jpg" alt="Students with Indian flag decorations" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students with Indian flag decorations</div>
@@ -73,7 +82,7 @@
             </div>
             <!-- 4 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="3">
+              <div class="gallery-card cursor-pointer" data-index="3" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/19d309bdd3ce45c562dc8b1037673aa1.jpg" alt="Students studying at desk" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students studying at desk</div>
@@ -82,7 +91,7 @@
             </div>
             <!-- 5 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="4">
+              <div class="gallery-card cursor-pointer" data-index="4" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/b73c864af2b5f179fe02de92e5328f44.jpg" alt="Students with hands raised" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students with hands raised</div>
@@ -91,7 +100,7 @@
             </div>
             <!-- 6 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="5">
+              <div class="gallery-card cursor-pointer" data-index="5" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/8aafea05e951128177eb702805296966.jpg" alt="Students in casual pose with orange banner" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students in casual pose with orange banner</div>
@@ -100,7 +109,7 @@
             </div>
             <!-- 7 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="6">
+              <div class="gallery-card cursor-pointer" data-index="6" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/656bfb2c7726ed2f07d0ac18746acdd3.jpg" alt="Large group of students and staff" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Large group of students and staff</div>
@@ -109,7 +118,7 @@
             </div>
             <!-- 8 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="7">
+              <div class="gallery-card cursor-pointer" data-index="7" data-category="success">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/88b2c105a597e8acd82a75c3015086f4.jpg" alt="Three students with gold trophy" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Three students with gold trophy</div>
@@ -118,7 +127,7 @@
             </div>
             <!-- 9 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="8">
+              <div class="gallery-card cursor-pointer" data-index="8" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/919a5ad8d89982157f73bb24290139cf.jpg" alt="Group of students and faculty in classroom" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Group of students and faculty in classroom</div>
@@ -127,7 +136,7 @@
             </div>
             <!-- 10 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="9">
+              <div class="gallery-card cursor-pointer" data-index="9" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/8dd10ce3b6fcf52d1f26d38fc2d13d21.jpg" alt="Students in classroom with orange curtains" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students in classroom with orange curtains</div>
@@ -136,7 +145,7 @@
             </div>
             <!-- 11 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="10">
+              <div class="gallery-card cursor-pointer" data-index="10" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/10e454bd5d91e45d5130763928b281b6.jpg" alt="Students studying with teacher" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students studying with teacher</div>
@@ -145,7 +154,7 @@
             </div>
             <!-- 12 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="11">
+              <div class="gallery-card cursor-pointer" data-index="11" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9c17d587595a47af9bbf9522e3dcd2bc.jpg" alt="Students on stage at Satmola event" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students on stage at Satmola event</div>
@@ -154,7 +163,7 @@
             </div>
             <!-- 13 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="12">
+              <div class="gallery-card cursor-pointer" data-index="12" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/9c0bc91eee9d8f76729f30d26bc240ee.jpg" alt="Men in traditional dress at outdoor event" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Men in traditional dress at outdoor event</div>
@@ -163,7 +172,7 @@
             </div>
             <!-- 14 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="13">
+              <div class="gallery-card cursor-pointer" data-index="13" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/5155bec0515b5070f3ec20db67ef86e2.jpg" alt="Group of students and staff in classroom" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Group of students and staff in classroom</div>
@@ -172,7 +181,7 @@
             </div>
             <!-- 15 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="14">
+              <div class="gallery-card cursor-pointer" data-index="14" data-category="success">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/0425b3fef9826a1bdd45cb68b3ba4012.jpg" alt="Man receiving award on stage" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Man receiving award on stage</div>
@@ -181,7 +190,7 @@
             </div>
             <!-- 16 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="15">
+              <div class="gallery-card cursor-pointer" data-index="15" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/762fba8d9b726226402a03ebaafa3fce.jpg" alt="Toppers Guru Event" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Toppers Guru Event</div>
@@ -190,7 +199,7 @@
             </div>
             <!-- 17 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="16">
+              <div class="gallery-card cursor-pointer" data-index="16" data-category="success">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/d22a41d090068587fb995bfe5053cd45.jpg" alt="Student Success Celebration" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Student Success Celebration</div>
@@ -199,7 +208,7 @@
             </div>
             <!-- 18 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="17">
+              <div class="gallery-card cursor-pointer" data-index="17" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/74f949a6607a6eadfd770f6071b44d8e.jpg" alt="Classroom Session" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Classroom Session</div>
@@ -208,7 +217,7 @@
             </div>
             <!-- 19 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="18">
+              <div class="gallery-card cursor-pointer" data-index="18" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/6857e08b356b24ad16360005fd2cd425.jpg" alt="Institute Environment" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Institute Environment</div>
@@ -217,7 +226,7 @@
             </div>
             <!-- 20 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="19">
+              <div class="gallery-card cursor-pointer" data-index="19" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/6c0eac23e84c3aaa2342a6caa65298a3.jpg" alt="Faculty Interaction" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Faculty Interaction</div>
@@ -226,7 +235,7 @@
             </div>
             <!-- 21 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="20">
+              <div class="gallery-card cursor-pointer" data-index="20" data-category="success">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/5569e39fa9c767dbdcc7cbb10289321a.jpg" alt="Award Ceremony" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Award Ceremony</div>
@@ -235,7 +244,7 @@
             </div>
             <!-- 22 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="21">
+              <div class="gallery-card cursor-pointer" data-index="21" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/61ea273cada852d09e25b79885c38484.jpg" alt="Group Photo" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Group Photo</div>
@@ -244,7 +253,7 @@
             </div>
             <!-- 23 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="22">
+              <div class="gallery-card cursor-pointer" data-index="22" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/054ddb9eabaa612753f746243d9bd562.jpg" alt="Seminar" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Seminar</div>
@@ -253,7 +262,7 @@
             </div>
             <!-- 24 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="23">
+              <div class="gallery-card cursor-pointer" data-index="23" data-category="campus">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/11183e307ad9fc39c1ae86a788fc1db3.jpg" alt="Student Activities" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Student Activities</div>
@@ -262,7 +271,7 @@
             </div>
             <!-- 25 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
-              <div class="gallery-card cursor-pointer" data-index="24">
+              <div class="gallery-card cursor-pointer" data-index="24" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/1b2f5db38799e570bb447227713ce069.jpg" alt="Toppers Guru Memories" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Toppers Guru Memories</div>
@@ -319,69 +328,102 @@
     
     <!-- Global Custom JavaScript -->
     <script src="js/component.js"></script>
-  <script src="js/main.js?v=2.0"></script>
+    <script src="js/main.js?v=2.0"></script>
     
     <script>
       // Auto-set copyright year
       document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
-      // Lightbox functionality directly wired
+      // Lightbox & Filter functionality directly wired
       document.addEventListener('DOMContentLoaded', () => {
-        const imagesList = [
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/dd7055d109a1f745e523428872d341d6.jpg",alt:"Faculty and students with Sanjeevni banner"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/93790249725634703177be3211e261f9.jpg",alt:"Happy students with peace signs"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/33ba647619b8a1879a2c822d2dc7cdcc.jpg",alt:"Students with Indian flag decorations"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/19d309bdd3ce45c562dc8b1037673aa1.jpg",alt:"Students studying at desk"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/b73c864af2b5f179fe02de92e5328f44.jpg",alt:"Students with hands raised"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/8aafea05e951128177eb702805296966.jpg",alt:"Students in casual pose with orange banner"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/656bfb2c7726ed2f07d0ac18746acdd3.jpg",alt:"Large group of students and staff"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/88b2c105a597e8acd82a75c3015086f4.jpg",alt:"Three students with gold trophy"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/919a5ad8d89982157f73bb24290139cf.jpg",alt:"Group of students and faculty in classroom"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/8dd10ce3b6fcf52d1f26d38fc2d13d21.jpg",alt:"Students in classroom with orange curtains"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/10e454bd5d91e45d5130763928b281b6.jpg",alt:"Students studying with teacher"},
-          {url:"https://horizons-cdn.hostinger.com/9c17d587595a47af9bbf9522e3dcd2bc.jpg",alt:"Students on stage at Satmola event"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/9c0bc91eee9d8f76729f30d26bc240ee.jpg",alt:"Men in traditional dress at outdoor event"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/5155bec0515b5070f3ec20db67ef86e2.jpg",alt:"Group of students and staff in classroom"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/0425b3fef9826a1bdd45cb68b3ba4012.jpg",alt:"Man receiving award on stage"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/762fba8d9b726226402a03ebaafa3fce.jpg",alt:"Toppers Guru Event"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/d22a41d090068587fb995bfe5053cd45.jpg",alt:"Student Success Celebration"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/74f949a6607a6eadfd770f6071b44d8e.jpg",alt:"Classroom Session"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/6857e08b356b24ad16360005fd2cd425.jpg",alt:"Institute Environment"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/6c0eac23e84c3aaa2342a6caa65298a3.jpg",alt:"Faculty Interaction"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/5569e39fa9c767dbdcc7cbb10289321a.jpg",alt:"Award Ceremony"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/61ea273cada852d09e25b79885c38484.jpg",alt:"Group Photo"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/054ddb9eabaa612753f746243d9bd562.jpg",alt:"Seminar"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/11183e307ad9fc39c1ae86a788fc1db3.jpg",alt:"Student Activities"},
-          {url:"https://horizons-cdn.hostinger.com/9f63099e-a92d-4d2d-bf92-cda132a7fd77/1b2f5db38799e570bb447227713ce069.jpg",alt:"Toppers Guru Memories"}
-        ];
+        const filterBtns = document.querySelectorAll('.gallery-filter-bar .gallery-filter-btn');
+        const cards = document.querySelectorAll('#galleryGrid .gallery-card');
+        
+        // Filtering Logic
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const category = btn.getAttribute('data-category');
+            
+            cards.forEach(card => {
+              const cardCol = card.closest('.col-sm-6');
+              const cardCat = card.getAttribute('data-category');
+              if (category === 'all' || cardCat === category) {
+                cardCol.style.display = 'block';
+                setTimeout(() => {
+                  cardCol.style.opacity = '1';
+                  cardCol.style.transform = 'scale(1)';
+                }, 30);
+              } else {
+                cardCol.style.opacity = '0';
+                cardCol.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                  cardCol.style.display = 'none';
+                }, 300);
+              }
+            });
+          });
+        });
 
         let currentIndex = 0;
+        let activeImagesList = [];
         const modal = document.getElementById('lightboxModal');
         const modalImg = document.getElementById('lightboxImage');
 
         function openLightbox(index) {
-          currentIndex = index;
-          modalImg.src = imagesList[currentIndex].url;
-          modalImg.alt = imagesList[currentIndex].alt;
+          // Find the active filtered cards
+          const visibleCards = Array.from(document.querySelectorAll('.gallery-card'))
+            .filter(card => card.closest('.col-sm-6').style.display !== 'none');
+          
+          activeImagesList = visibleCards.map((card) => {
+            return {
+              url: card.querySelector('img').src,
+              alt: card.querySelector('img').alt,
+              originalIdx: parseInt(card.getAttribute('data-index'))
+            };
+          });
+
+          currentIndex = activeImagesList.findIndex(item => item.originalIdx === index);
+          if (currentIndex === -1) currentIndex = 0;
+
+          modalImg.src = activeImagesList[currentIndex].url;
+          modalImg.alt = activeImagesList[currentIndex].alt;
+          
           modal.style.display = 'flex';
+          setTimeout(() => {
+            modal.classList.add('active');
+          }, 10);
         }
 
         function closeLightbox() {
-          modal.style.display = 'none';
+          modalImg.classList.remove('zoomed');
+          modal.classList.remove('active');
+          setTimeout(() => {
+            modal.style.display = 'none';
+          }, 400);
         }
 
         function navigateLightbox(direction) {
+          if (activeImagesList.length === 0) return;
+          modalImg.classList.remove('zoomed');
           if (direction === 'prev') {
-            currentIndex = (currentIndex === 0) ? imagesList.length - 1 : currentIndex - 1;
+            currentIndex = (currentIndex === 0) ? activeImagesList.length - 1 : currentIndex - 1;
           } else {
-            currentIndex = (currentIndex === imagesList.length - 1) ? 0 : currentIndex + 1;
+            currentIndex = (currentIndex === activeImagesList.length - 1) ? 0 : currentIndex + 1;
           }
-          modalImg.src = imagesList[currentIndex].url;
-          modalImg.alt = imagesList[currentIndex].alt;
+          modalImg.src = activeImagesList[currentIndex].url;
+          modalImg.alt = activeImagesList[currentIndex].alt;
         }
 
+        // Toggle zoom inside lightbox on click
+        modalImg.addEventListener('click', (e) => {
+          e.stopPropagation(); // Avoid closing the modal
+          modalImg.classList.toggle('zoomed');
+        });
+
         // Click on gallery card
-        const cards = document.querySelectorAll('.gallery-card');
         cards.forEach(card => {
           card.addEventListener('click', () => {
             const index = parseInt(card.getAttribute('data-index'));
@@ -395,10 +437,16 @@
 
         // Prev & Next clicks
         const prevBtn = document.getElementById('lightboxPrevBtn');
-        if (prevBtn) prevBtn.addEventListener('click', () => navigateLightbox('prev'));
+        if (prevBtn) prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navigateLightbox('prev');
+        });
 
         const nextBtn = document.getElementById('lightboxNextBtn');
-        if (nextBtn) nextBtn.addEventListener('click', () => navigateLightbox('next'));
+        if (nextBtn) nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navigateLightbox('next');
+        });
 
         // Close on overlay click
         modal.addEventListener('click', (e) => {
@@ -409,7 +457,7 @@
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-          if (modal.style.display === 'flex') {
+          if (modal.style.display === 'flex' || modal.classList.contains('active')) {
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') navigateLightbox('prev');
             if (e.key === 'ArrowRight') navigateLightbox('next');

@@ -7347,10 +7347,10 @@ body.lang-hi [data-lang-hi] {
 
 /* --- Blog Page Specific Premium Styling --- */
 .blog-hero-premium-banner {
-  background: #081533 url('../Images/blog_page_banner.png') no-repeat center center !important;
+  background: #081533 url('../Images/blog_banner.png') no-repeat center center !important;
   background-image:
     linear-gradient(rgba(8, 21, 51, 0.75), rgba(8, 21, 51, 0.85)),
-    url('../Images/blog_page_banner.png') !important;
+    url('../Images/blog_banner.png') !important;
   background-size: cover !important;
   display: flex !important;
   align-items: center !important;
@@ -8371,10 +8371,10 @@ body.lang-hi [data-lang-hi] {
 
 /* --- About Hero: full dark banner (matches navbar) --- */
 .about-hero-premium-banner {
-  background: #081533 url('../Images/hero_banner.jpeg') no-repeat center right !important;
+  background: #081533 url('../Images/About_Banner.png') no-repeat center right !important;
   background-image:
     linear-gradient(rgba(8, 21, 51, 0.68), rgba(8, 21, 51, 0.68)),
-    url('../Images/hero_banner.jpeg') !important;
+    url('../Images/About_Banner.png') !important;
   background-size: cover !important;
   display: flex !important;
   align-items: center !important;
@@ -8643,4 +8643,315 @@ body.lang-hi [data-lang-hi] {
   letter-spacing: 0.8px !important;
   color: var(--text-muted) !important;
   margin: 0 !important;
+}
+
+/* ============================================================
+   CONTACT & GALLERY PAGES POLISHING
+   ============================================================ */
+
+/* --- Contact Page Specific Hero Banner --- */
+.contact-hero-premium-banner {
+  background: #081533 url('../Images/contact_banner.png') no-repeat right bottom !important;
+  background-image:
+    linear-gradient(rgba(8, 21, 51, 0.65), rgba(8, 21, 51, 0.65)),
+    url('../Images/contact_banner.png') !important;
+  background-position: right bottom !important;
+  background-size: cover !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 580px !important;
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+}
+
+@media (max-width: 991px) {
+  .contact-hero-premium-banner {
+    min-height: auto !important;
+    padding-top: 130px !important;
+    padding-bottom: 80px !important;
+    background-position: right bottom !important;
+  }
+}
+
+/* --- Gallery Page Specific Hero Banner --- */
+.gallery-hero-premium-banner {
+  background: #081533 url('../Images/Gallery_Banner.png') no-repeat center center !important;
+  background-image:
+    linear-gradient(rgba(8, 21, 51, 0.72), rgba(8, 21, 51, 0.72)),
+    url('../Images/Gallery_Banner.png') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 480px !important;
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+}
+
+@media (max-width: 991px) {
+  .gallery-hero-premium-banner {
+    min-height: auto !important;
+    padding-top: 130px !important;
+    padding-bottom: 80px !important;
+    background-position: center center !important;
+  }
+}
+
+/* --- Polished Contact Info Cards --- */
+.contact-info-card-premium {
+  background: white !important;
+  border: 1px solid rgba(15, 33, 76, 0.06) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  box-shadow: 0 10px 30px rgba(15, 33, 76, 0.02) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: flex !important;
+  align-items: start !important;
+  gap: 20px !important;
+}
+
+.contact-info-card-premium:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 35px rgba(15, 33, 76, 0.06) !important;
+  border-color: rgba(255, 110, 0, 0.15) !important;
+}
+
+.contact-card-icon-wrap {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  flex-shrink: 0 !important;
+  background: rgba(15, 33, 76, 0.05) !important;
+  color: var(--color-navy) !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(15, 33, 76, 0.05) !important;
+}
+
+.contact-info-card-premium:hover .contact-card-icon-wrap {
+  background: var(--color-orange) !important;
+  color: white !important;
+  box-shadow: 0 6px 15px rgba(255, 110, 0, 0.2) !important;
+  border-color: var(--color-orange) !important;
+}
+
+/* --- Polished Map Wrapper --- */
+.map-wrapper-premium {
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: var(--shadow-lg) !important;
+  border: 1px solid rgba(15, 33, 76, 0.08) !important;
+  transition: var(--transition-premium) !important;
+}
+
+.map-wrapper-premium:hover {
+  box-shadow: var(--shadow-xl) !important;
+}
+
+/* --- Gallery Filter Bar & Buttons --- */
+.gallery-filter-bar {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-bottom: 40px !important;
+}
+
+.gallery-filter-btn {
+  font-family: var(--font-display) !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: var(--color-navy) !important;
+  background-color: var(--neutral-slate-50) !important;
+  border: 1px solid rgba(15, 33, 76, 0.08) !important;
+  padding: 10px 24px !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.gallery-filter-btn:hover,
+.gallery-filter-btn.active {
+  background-color: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(255, 110, 0, 0.25) !important;
+}
+
+/* --- Gallery Grid Transitions & Lift --- */
+#galleryGrid .col-sm-6 {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.gallery-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 15px 30px rgba(15, 33, 76, 0.12) !important;
+}
+
+/* --- Premium Lightbox Modal --- */
+.lightbox-modal {
+  display: none !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9999 !important;
+  background: rgba(8, 21, 51, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0;
+  transition: opacity 0.4s ease !important;
+}
+
+.lightbox-modal.active {
+  opacity: 1 !important;
+}
+
+.lightbox-content {
+  position: relative !important;
+  width: 90% !important;
+  max-width: 1000px !important;
+  max-height: 85vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.lightbox-content img {
+  max-width: 100% !important;
+  max-height: 80vh !important;
+  border-radius: 12px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  object-fit: contain !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transform: scale(0.95) !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: zoom-in !important;
+}
+
+.lightbox-modal.active img {
+  transform: scale(1) !important;
+}
+
+.lightbox-modal.active img.zoomed {
+  transform: scale(1.5) !important;
+  cursor: zoom-out !important;
+}
+
+.lightbox-close {
+  position: absolute !important;
+  top: -50px !important;
+  right: 0 !important;
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  font-size: 38px !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0.8 !important;
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg) !important;
+  color: var(--color-orange) !important;
+  opacity: 1 !important;
+}
+
+.lightbox-nav {
+  position: absolute !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  z-index: 100 !important;
+  font-size: 18px !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.lightbox-nav:hover {
+  background: var(--color-orange) !important;
+  border-color: var(--color-orange) !important;
+  color: white !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 0 20px rgba(255, 110, 0, 0.4) !important;
+}
+
+.lightbox-prev {
+  left: -80px !important;
+}
+
+.lightbox-next {
+  right: -80px !important;
+}
+
+@media (max-width: 1199px) {
+  .lightbox-prev {
+    left: 20px !important;
+  }
+
+  .lightbox-next {
+    right: 20px !important;
+  }
+
+  .lightbox-close {
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 110 !important;
+  }
+}
+
+/* --- Social Buttons on Contact Page --- */
+.social-btn-contact {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--text-muted) !important;
+  background-color: var(--neutral-slate-50) !important;
+  border: 1px solid rgba(15, 33, 76, 0.08) !important;
+  transition: all 0.3s ease !important;
+  font-size: 16px !important;
+  text-decoration: none !important;
+}
+
+.social-btn-contact:hover {
+  color: white !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.social-btn-contact.fb:hover {
+  background-color: #1877F2 !important;
+  border-color: #1877F2 !important;
+}
+
+.social-btn-contact.ig:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  border-color: transparent !important;
+}
+
+.social-btn-contact.yt:hover {
+  background-color: #FF0000 !important;
+  border-color: #FF0000 !important;
 }

@@ -100,8 +100,8 @@ class Footer {
               <!-- Info and Branding -->
               <div class="col-lg-4">
                 <div class="footer-brand">
-                  <div class="bg-white d-inline-flex p-3 rounded-3 align-items-center mb-4 border">
-                    <img src="Images/Logo.png" alt="Toppers Guru Logo" style="height: 38px; width: auto;" />
+                  <div class="bg-white d-inline-flex rounded-3 align-items-center border">
+                    <img src="Images/Logo.png" alt="Toppers Guru Logo" style="height: 98px; width: auto;" />
                   </div>
                   <h4 class="footer-brand-title">Toppers Guru</h4>
                   <p class="footer-brand-tagline">Bhoolna Bhool Jaoge</p>
