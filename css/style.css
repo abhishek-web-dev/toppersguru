@@ -6634,20 +6634,21 @@ body.lang-hi [data-lang-hi] {
     url('../Images/courses_banner.jpeg') !important;
   background-position: right top !important;
   background-size: cover !important;
-  /* Use flexbox to center content vertically inside the 630px height */
+  /* Use flexbox to center content vertically inside the height */
   display: flex !important;
   align-items: center !important;
-  height: 630px !important;
-  padding-top: 80px !important;
+  min-height: 630px !important;
+  padding-top: 100px !important;
   /* Offset safe area for fixed transparent header */
-  padding-bottom: 0 !important;
+  padding-bottom: 60px !important;
 }
 
 /* Responsive height adjustment for mobile & tablet */
 @media (max-width: 991px) {
   .courses-hero-premium-banner {
-    padding-top: 120px !important;
-    padding-bottom: 90px !important;
+    min-height: auto !important;
+    padding-top: 130px !important;
+    padding-bottom: 80px !important;
     background-position: right top !important;
   }
 }
@@ -6762,24 +6763,25 @@ body.lang-hi [data-lang-hi] {
 
 /* --- Regular Courses Page Specific Hero Banner --- */
 .regular-courses-hero-premium-banner {
-  background: #081533 url('../Images/regular_courses_banner.png') no-repeat right top !important;
+  background: #081533 url('../Images/regular_courses_banner_02.png') no-repeat right center !important;
   background-image:
     linear-gradient(rgba(8, 21, 51, 0.65), rgba(8, 21, 51, 0.65)),
-    url('../Images/regular_courses_banner.png') !important;
-  background-position: right top !important;
+    url('../Images/regular_courses_banner_02.png') !important;
+  background-position: right center !important;
   background-size: cover !important;
   display: flex !important;
   align-items: center !important;
-  height: 500px !important;
-  padding-top: 80px !important;
-  padding-bottom: 0 !important;
+  min-height: 600px !important;
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
 }
 
 @media (max-width: 991px) {
   .regular-courses-hero-premium-banner {
-    padding-top: 120px !important;
-    padding-bottom: 90px !important;
-    background-position: right top !important;
+    min-height: auto !important;
+    padding-top: 130px !important;
+    padding-bottom: 80px !important;
+    background-position: right center !important;
   }
 }
 
@@ -7352,15 +7354,16 @@ body.lang-hi [data-lang-hi] {
   background-size: cover !important;
   display: flex !important;
   align-items: center !important;
-  height: 480px !important;
-  padding-top: 80px !important;
-  padding-bottom: 0 !important;
+  min-height: 480px !important;
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
 }
 
 @media (max-width: 991px) {
   .blog-hero-premium-banner {
-    padding-top: 120px !important;
-    padding-bottom: 90px !important;
+    min-height: auto !important;
+    padding-top: 130px !important;
+    padding-bottom: 80px !important;
     background-position: center center !important;
   }
 }

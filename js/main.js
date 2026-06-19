@@ -146,7 +146,7 @@ const translations = {
     regularCourses: {
       higherEd: "Higher Education Programs",
       title: "Regular Mode Courses",
-      desc: "Empower your career with recognized undergraduate and postgraduate degrees. We provide comprehensive admission guidance for top UGC approved universities across India.",
+      desc: "Empower your career with recognized undergraduate and <br> postgraduate degrees. We provide comprehensive admission <br> guidance for top UGC approved universities across India.",
       enrollNow: "Enroll Now",
       takeNextStep: "Take the Next Step in Your Education",
       admissionGuidance: "Admission Guidance & Assistance for Various UGC Approved Universities Across India",
@@ -459,7 +459,7 @@ const translations = {
     regularCourses: {
       higherEd: "उच्च शिक्षा कार्यक्रम",
       title: "रेगुलर मोड कोर्स",
-      desc: "मान्यता प्राप्त स्नातक और स्नातकोत्तर डिग्री के साथ अपने करियर को सशक्त बनाएं। हम भारत भर के शीर्ष यूजीसी अनुमोदित विश्वविद्यालयों के लिए व्यापक प्रवेश मार्गदर्शन प्रदान करते हैं।",
+      desc: "मान्यता प्राप्त स्नातक और स्नातकोत्तर डिग्री के साथ अपने करियर को सशक्त बनाएं। <br> हम भारत भर के शीर्ष यूजीसी अनुमोदित विश्वविद्यालयों के <br> लिए व्यापक प्रवेश मार्गदर्शन प्रदान करते हैं।",
       enrollNow: "अभी नामांकन करें",
       takeNextStep: "अपनी शिक्षा में अगला कदम उठाएं",
       admissionGuidance: "भारत भर के विभिन्न यूजीसी अनुमोदित विश्वविद्यालयों के लिए प्रवेश मार्गदर्शन और सहायता",
@@ -663,22 +663,22 @@ function getTranslation(lang, path) {
 function updateUILanguage(lang) {
   currentLang = lang;
   localStorage.setItem('app_language', lang);
-  
+
   // Set html lang attribute
   document.documentElement.setAttribute('lang', lang);
-  
+
   // Set body class
   if (lang === 'hi') {
     document.body.classList.add('lang-hi');
   } else {
     document.body.classList.remove('lang-hi');
   }
-  
+
   // Translate elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     const translation = getTranslation(lang, key);
-    
+
     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
       element.placeholder = translation;
     } else if (element.tagName === 'OPTION') {
@@ -779,17 +779,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formElement.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const name = formElement.querySelector('input[type="text"]')?.value.trim();
       const phone = formElement.querySelector('input[type="tel"]')?.value.trim();
       const email = formElement.querySelector('input[type="email"]')?.value.trim() || 'N/A';
       const course = formElement.querySelector('select')?.value;
-      
+
       if (!name || !phone || !course) {
         alert(currentLang === 'en' ? 'Please fill in all required fields marked with *' : 'कृपया * से चिह्नित सभी आवश्यक फ़ील्ड भरें');
         return;
       }
-      
+
       if (phone.length < 10) {
         alert(currentLang === 'en' ? 'Please enter a valid 10-digit mobile number' : 'कृपया एक मान्य 10-अंकीय मोबाइल नंबर दर्ज करें');
         return;
@@ -806,16 +806,16 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
         const originalHtml = submitBtn.innerHTML;
         submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>${currentLang === 'en' ? 'Submitting...' : 'जमा किया जा रहा है...'}`;
-        
+
         setTimeout(() => {
           // Reset Form
           formElement.reset();
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalHtml;
-          
+
           // Show on-page custom alert modal
           showSuccessAlert();
-          
+
           // Open default client email draft
           window.location.href = mailtoUrl;
         }, 800);
@@ -843,16 +843,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Dynamic Tab Switcher for Course Matcher (Inspired by College Vidya)
   const tabButtons = document.querySelectorAll('.course-pill-btn');
   const courseCards = document.querySelectorAll('[data-course-category]');
-  
+
   if (tabButtons.length > 0 && courseCards.length > 0) {
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         // Toggle active button
         tabButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         const category = btn.getAttribute('data-category');
-        
+
         // Show/hide cards
         courseCards.forEach(card => {
           const cardCategories = card.getAttribute('data-course-category').split(',');
@@ -888,16 +888,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToActiveIndex = (behavior = 'smooth') => {
       const visibleCards = getVisibleCards();
       if (visibleCards.length === 0) return;
-      
+
       const visibleCount = getVisibleCount();
       const maxIndex = Math.max(0, visibleCards.length - visibleCount);
-      
+
       if (activeIndex > maxIndex) activeIndex = maxIndex;
       if (activeIndex < 0) activeIndex = 0;
-      
+
       const targetCard = visibleCards[activeIndex];
       const targetScroll = targetCard.offsetLeft - scrollTrack.offsetLeft;
-      
+
       isScrolling = true;
       scrollTrack.scrollTo({ left: targetScroll, behavior });
     };
@@ -905,16 +905,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Calculate current active index based on scroll position
     const updateActiveIndexFromScroll = () => {
       if (isScrolling) return; // Ignore scroll events triggered by programmatic scrolling
-      
+
       const visibleCards = getVisibleCards();
       if (visibleCards.length === 0) return;
-      
+
       const scrollLeft = scrollTrack.scrollLeft;
       const trackLeft = scrollTrack.offsetLeft;
-      
+
       let closestIndex = 0;
       let minDiff = Infinity;
-      
+
       visibleCards.forEach((card, index) => {
         const diff = Math.abs((card.offsetLeft - trackLeft) - scrollLeft);
         if (diff < minDiff) {
@@ -922,7 +922,7 @@ document.addEventListener('DOMContentLoaded', () => {
           closestIndex = index;
         }
       });
-      
+
       activeIndex = closestIndex;
     };
 
@@ -934,7 +934,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTrack.addEventListener('scrollend', () => {
       isScrolling = false;
     });
-    
+
     // Fallback for browsers that don't support scrollend yet
     let scrollTimeout;
     scrollTrack.addEventListener('scroll', () => {
@@ -948,7 +948,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const visibleCards = getVisibleCards();
       const visibleCount = getVisibleCount();
       const maxIndex = Math.max(0, visibleCards.length - visibleCount);
-      
+
       if (activeIndex <= 0) {
         activeIndex = maxIndex; // Wrap around to end
       } else {
@@ -956,12 +956,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       scrollToActiveIndex();
     });
-    
+
     nextBtn.addEventListener('click', () => {
       const visibleCards = getVisibleCards();
       const visibleCount = getVisibleCount();
       const maxIndex = Math.max(0, visibleCards.length - visibleCount);
-      
+
       if (activeIndex >= maxIndex) {
         activeIndex = 0; // Wrap around to start
       } else {
@@ -994,14 +994,14 @@ document.addEventListener('DOMContentLoaded', () => {
       updateArrowVisibility();
       scrollToActiveIndex('instant'); // Instantly re-align layout on resize
     });
-    
+
     const startAutoSlide = () => {
       if (autoSlideInterval) clearInterval(autoSlideInterval);
       autoSlideInterval = setInterval(() => {
         const visibleCards = getVisibleCards();
         const visibleCount = getVisibleCount();
         const maxIndex = Math.max(0, visibleCards.length - visibleCount);
-        
+
         if (maxIndex > 0) {
           if (activeIndex >= maxIndex) {
             activeIndex = 0;
@@ -1012,28 +1012,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 3000);
     };
-    
+
     const stopAutoSlide = () => {
       if (autoSlideInterval) {
         clearInterval(autoSlideInterval);
         autoSlideInterval = null;
       }
     };
-    
+
     // Start auto slide initially
     startAutoSlide();
-    
+
     // Pause auto slide on hover/touch interactions to improve usability
     scrollTrack.addEventListener('mouseenter', stopAutoSlide);
     scrollTrack.addEventListener('mouseleave', startAutoSlide);
     scrollTrack.addEventListener('touchstart', stopAutoSlide, { passive: true });
     scrollTrack.addEventListener('touchend', startAutoSlide, { passive: true });
-    
+
     prevBtn.addEventListener('mouseenter', stopAutoSlide);
     prevBtn.addEventListener('mouseleave', startAutoSlide);
     nextBtn.addEventListener('mouseenter', stopAutoSlide);
     nextBtn.addEventListener('mouseleave', startAutoSlide);
-    
+
     // Reset timer on manual navigation clicks
     prevBtn.addEventListener('click', () => {
       stopAutoSlide();
@@ -1065,13 +1065,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const performHeroSearch = () => {
       const query = searchInput.value.trim().toLowerCase();
       if (!query) return;
-      
+
       // Scroll to courses section
       const coursesSection = document.getElementById('portalCoursesSection');
       if (coursesSection) {
         coursesSection.scrollIntoView({ behavior: 'smooth' });
       }
-      
+
       // Filter course cards based on search query
       courseCards.forEach(card => {
         const title = card.querySelector('.portal-card-title')?.textContent.toLowerCase() || '';
@@ -1117,7 +1117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             function countUp(currentTime) {
               const elapsed = currentTime - startTime;
               const progressRatio = Math.min(elapsed / duration, 1);
-              
+
               // Easing out cubic transition for smooth deceleration
               const easeOutCubic = 1 - Math.pow(1 - progressRatio, 3);
               const currentValue = Math.floor(easeOutCubic * targetValue);
@@ -1162,7 +1162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       certsDotsTrack.innerHTML = '';
       const visibleCount = getVisibleSlidesCount();
       const numDots = Math.max(1, totalSlides - visibleCount + 1);
-      
+
       const currentScroll = certsTrack.scrollLeft;
       const slideWidth = certSlides[0].offsetWidth;
       const activeDotIndex = Math.round(currentScroll / slideWidth);
@@ -1225,7 +1225,7 @@ function openCertLightbox(index) {
   activeCertIndex = index;
   const lightbox = document.getElementById('certLightbox');
   const lightboxImg = document.getElementById('lightboxActiveImg');
-  
+
   if (lightbox && lightboxImg) {
     lightboxImg.src = certImagesList[activeCertIndex];
     lightbox.classList.add('active');
@@ -1248,14 +1248,14 @@ function toggleCertLightboxClose(event) {
 
 function navigateLightbox(direction, event) {
   if (event) event.stopPropagation();
-  
+
   activeCertIndex += direction;
   if (activeCertIndex >= certImagesList.length) {
     activeCertIndex = 0; // Wrap to start
   } else if (activeCertIndex < 0) {
     activeCertIndex = certImagesList.length - 1; // Wrap to end
   }
-  
+
   const lightboxImg = document.getElementById('lightboxActiveImg');
   if (lightboxImg) {
     lightboxImg.src = certImagesList[activeCertIndex];
