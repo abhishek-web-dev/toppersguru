@@ -8955,3 +8955,164 @@ body.lang-hi [data-lang-hi] {
   background-color: #FF0000 !important;
   border-color: #FF0000 !important;
 }
+
+/* ==========================================================================
+   Responsive UI Audit Overrides & Utility Classes
+   ========================================================================== */
+
+/* --- Tailwind-compatible Max Width Utilities --- */
+.max-w-2xl {
+  max-width: 42rem !important;
+  width: 100% !important;
+}
+.max-w-3xl {
+  max-width: 48rem !important;
+  width: 100% !important;
+}
+.max-w-4xl {
+  max-width: 56rem !important;
+  width: 100% !important;
+}
+.max-w-5xl {
+  max-width: 64rem !important;
+  width: 100% !important;
+}
+
+/* --- Google Maps Premium Wrapper --- */
+.map-wrapper-premium {
+  height: 450px;
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-slate-200);
+}
+
+@media (max-width: 768px) {
+  .map-wrapper-premium {
+    height: 300px !important;
+  }
+}
+
+/* --- Collapsed Mobile/Tablet Menu Style Improvements (< 1200px) --- */
+@media (max-width: 1199.98px) {
+  .navbar-custom .navbar-collapse {
+    background: var(--neutral-white) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-radius: var(--border-radius-md) !important;
+    padding: 20px !important;
+    margin-top: 15px !important;
+    border: 1px solid var(--neutral-slate-200) !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+  }
+
+  .navbar-custom .navbar-nav {
+    gap: 8px !important;
+  }
+
+  /* Force links to be dark when collapsed inside the white card */
+  .navbar-custom .nav-link {
+    color: var(--text-body) !important;
+    padding: 10px 16px !important;
+  }
+
+  .navbar-custom .nav-link:hover {
+    color: var(--color-orange) !important;
+    background-color: rgba(var(--color-orange-rgb), 0.05) !important;
+  }
+
+  .navbar-custom .nav-link.active {
+    color: var(--color-navy) !important;
+    background-color: rgba(var(--color-navy-rgb), 0.06) !important;
+  }
+
+  /* Make sure the phone link and lang switcher inside collapsed menu are properly positioned and visible */
+  .navbar-custom .navbar-collapse .phone-link {
+    display: flex !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    color: var(--color-navy) !important;
+    padding: 8px 16px !important;
+  }
+
+  .navbar-custom .navbar-collapse .phone-link i {
+    color: var(--color-orange) !important;
+  }
+
+  .navbar-custom .navbar-collapse .lang-switch-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    background: var(--neutral-slate-50) !important;
+    border: 1.5px solid var(--neutral-slate-200) !important;
+    color: var(--color-navy) !important;
+  }
+
+  .navbar-custom .navbar-collapse .lang-switch-btn:hover {
+    border-color: var(--color-orange) !important;
+    background: rgba(var(--color-orange-rgb), 0.04) !important;
+    color: var(--color-orange) !important;
+  }
+
+  /* Override transparent header rules when menu is collapsed to keep it white/dark text */
+  .navbar-custom.navbar-transparent .navbar-collapse .nav-link {
+    color: var(--text-body) !important;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-collapse .nav-link:hover {
+    color: var(--color-orange) !important;
+    background-color: rgba(var(--color-orange-rgb), 0.05) !important;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-collapse .nav-link.active {
+    color: var(--color-navy) !important;
+    background-color: rgba(var(--color-navy-rgb), 0.06) !important;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-collapse .phone-link {
+    color: var(--color-navy) !important;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-collapse .phone-link i {
+    color: var(--color-orange) !important;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-collapse .lang-switch-btn {
+    background: var(--neutral-slate-50) !important;
+    border: 1.5px solid var(--neutral-slate-200) !important;
+    color: var(--color-navy) !important;
+  }
+}
+
+/* --- Responsive Typography Adjustments --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 34px !important;
+  }
+  .heading-section {
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 28px !important;
+    letter-spacing: -0.5px !important;
+    line-height: 1.25 !important;
+  }
+  .heading-section {
+    font-size: 24px !important;
+    letter-spacing: -0.5px !important;
+  }
+  .hero-desc {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* --- Form Padding adjustments for mobile --- */
+@media (max-width: 576px) {
+  .form-card, .form-card-premium {
+    padding: 24px 18px !important;
+  }
+}
