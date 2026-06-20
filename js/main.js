@@ -1220,6 +1220,51 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDots();
     window.addEventListener('resize', updateDots);
   }
+
+  // 7. Global Scroll Reveal & Animation Observer
+  const initScrollAnimations = () => {
+    // Find all grid/row containers and stagger their cards
+    document.querySelectorAll('.row, .grid, .gallery-preview-grid, #galleryGrid').forEach(container => {
+      const items = container.querySelectorAll(
+        '.premium-course-card, .portal-course-card, .gallery-card, .gallery-preview-item, ' +
+        '.contact-info-card-premium, .fee-card, .scroll-card-item, .card, ' +
+        '.testimonial-card, .stat-item-premium, .stat-item'
+      );
+      items.forEach((item, index) => {
+        item.classList.add('reveal-fade-up');
+        // Stagger delays (0ms, 80ms, 160ms, 240ms) repeating
+        item.style.transitionDelay = `${(index % 4) * 80}ms`;
+      });
+    });
+
+    // Find other general sections or stand-alone elements that should fade up
+    document.querySelectorAll('section:not(.hero-premium-banner):not(.courses-hero-premium-banner):not(.contact-hero-premium-banner):not(.gallery-hero-premium-banner):not(.higher-ed-section), .counselling-benefits-list, .admission-checklist, .admission-image-container').forEach(el => {
+      if (!el.classList.contains('reveal-fade-up') && !el.closest('.row') && !el.closest('.grid')) {
+        el.classList.add('reveal-fade-up');
+      }
+    });
+
+    // Intersection Observer config
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Bind observer to all target elements
+    document.querySelectorAll('.reveal-fade-up').forEach(el => {
+      revealObserver.observe(el);
+    });
+  };
+
+  // Run safe setup after a brief layout settle
+  setTimeout(initScrollAnimations, 50);
 });
 
 // 6. Global Accreditations Certificate Lightbox Modal Controller

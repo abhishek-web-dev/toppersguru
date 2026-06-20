@@ -153,14 +153,14 @@
               </div>
             </div>
             <!-- 12 -->
-            <div class="col-sm-6 col-md-4 col-lg-3">
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
               <div class="gallery-card cursor-pointer" data-index="11" data-category="events">
                 <img src="https://horizons-cdn.hostinger.com/9c17d587595a47af9bbf9522e3dcd2bc.jpg" alt="Students on stage at Satmola event" loading="lazy" />
                 <div class="gallery-overlay">
                   <div class="gallery-text">Students on stage at Satmola event</div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- 13 -->
             <div class="col-sm-6 col-md-4 col-lg-3">
               <div class="gallery-card cursor-pointer" data-index="12" data-category="events">
@@ -290,12 +290,12 @@
 
     <!-- Lightbox Modal Container -->
     <div class="lightbox-modal" id="lightboxModal">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrevBtn" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
       <div class="lightbox-content">
-        <button class="lightbox-close" id="lightboxCloseBtn">&times;</button>
-        <button class="lightbox-nav lightbox-prev" id="lightboxPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
         <img src="" alt="" id="lightboxImage" />
-        <button class="lightbox-nav lightbox-next" id="lightboxNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNextBtn" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
     <!-- Custom On-page Popup Dialog -->
@@ -331,11 +331,14 @@
     <script src="js/main.js?v=2.0"></script>
     
     <script>
-      // Auto-set copyright year
-      document.getElementById('copyrightYear').textContent = new Date().getFullYear();
-
       // Lightbox & Filter functionality directly wired
       document.addEventListener('DOMContentLoaded', () => {
+        // Auto-set copyright year safely
+        const copyrightElement = document.getElementById('copyrightYear');
+        if (copyrightElement) {
+          copyrightElement.textContent = new Date().getFullYear();
+        }
+
         const filterBtns = document.querySelectorAll('.gallery-filter-bar .gallery-filter-btn');
         const cards = document.querySelectorAll('#galleryGrid .gallery-card');
         
@@ -373,6 +376,7 @@
         const modalImg = document.getElementById('lightboxImage');
 
         function openLightbox(index) {
+          console.log('openLightbox called for original index:', index);
           // Find the active filtered cards
           const visibleCards = Array.from(document.querySelectorAll('.gallery-card'))
             .filter(card => card.closest('.col-sm-6').style.display !== 'none');
@@ -391,42 +395,58 @@
           modalImg.src = activeImagesList[currentIndex].url;
           modalImg.alt = activeImagesList[currentIndex].alt;
           
-          modal.style.display = 'flex';
-          setTimeout(() => {
-            modal.classList.add('active');
-          }, 10);
+          // Disable page scrolling
+          document.body.style.overflow = 'hidden';
+          
+          modal.classList.add('active');
+          console.log('Lightbox modal opened with active index:', currentIndex);
         }
 
         function closeLightbox() {
+          console.log('closeLightbox called');
           modalImg.classList.remove('zoomed');
           modal.classList.remove('active');
-          setTimeout(() => {
-            modal.style.display = 'none';
-          }, 400);
+          
+          // Enable page scrolling
+          document.body.style.overflow = '';
         }
 
         function navigateLightbox(direction) {
+          console.log('navigateLightbox called, direction:', direction);
           if (activeImagesList.length === 0) return;
           modalImg.classList.remove('zoomed');
-          if (direction === 'prev') {
-            currentIndex = (currentIndex === 0) ? activeImagesList.length - 1 : currentIndex - 1;
-          } else {
-            currentIndex = (currentIndex === activeImagesList.length - 1) ? 0 : currentIndex + 1;
-          }
-          modalImg.src = activeImagesList[currentIndex].url;
-          modalImg.alt = activeImagesList[currentIndex].alt;
+          modalImg.classList.add('changing');
+
+          setTimeout(() => {
+            if (direction === 'prev') {
+              currentIndex = (currentIndex === 0) ? activeImagesList.length - 1 : currentIndex - 1;
+            } else {
+              currentIndex = (currentIndex === activeImagesList.length - 1) ? 0 : currentIndex + 1;
+            }
+            
+            modalImg.onload = () => {
+              modalImg.classList.remove('changing');
+              modalImg.onload = null;
+            };
+            
+            modalImg.src = activeImagesList[currentIndex].url;
+            modalImg.alt = activeImagesList[currentIndex].alt;
+            console.log('Loaded next image at active index:', currentIndex);
+          }, 200);
         }
 
         // Toggle zoom inside lightbox on click
         modalImg.addEventListener('click', (e) => {
           e.stopPropagation(); // Avoid closing the modal
           modalImg.classList.toggle('zoomed');
+          console.log('Image zoom toggled inside lightbox');
         });
 
         // Click on gallery card
         cards.forEach(card => {
           card.addEventListener('click', () => {
             const index = parseInt(card.getAttribute('data-index'));
+            console.log('Gallery card clicked, element data-index:', index);
             openLightbox(index);
           });
         });
@@ -448,16 +468,17 @@
           navigateLightbox('next');
         });
 
-        // Close on overlay click
+        // Close on clicking outside the image
         modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
+          if (e.target !== modalImg && !e.target.closest('.lightbox-nav') && !e.target.closest('.lightbox-close')) {
+            console.log('Clicked outside image, closing lightbox');
             closeLightbox();
           }
         });
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-          if (modal.style.display === 'flex' || modal.classList.contains('active')) {
+          if (modal.classList.contains('active')) {
             if (e.key === 'Escape') closeLightbox();
             if (e.key === 'ArrowLeft') navigateLightbox('prev');
             if (e.key === 'ArrowRight') navigateLightbox('next');
